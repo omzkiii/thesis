@@ -1,7 +1,5 @@
 import osmnx as ox
-# import geopandas as gpd
-# from shapely.geometry import Point
-# from shapely.ops import nearest_points
+import geopandas as gpd
 
 
 def get_graph(place_name, amenities):
@@ -21,7 +19,11 @@ def get_graph(place_name, amenities):
         tags={"amenity": amenities},
     )
 
-    return graph, landmarks
+    # nodes_gdf = gpd.GeoDataFrame(
+    #     nodes, geometry=gpd.points_from_xy(nodes["x"], nodes["y"])
+    # )
+
+    return nodes, edges, landmarks
 
 
 if __name__ == "__main__":
