@@ -7,23 +7,22 @@ from steiner_network import steiner_network
 from tc import tc
 
 
-def generate(place_name, ameneties):
-    get_graph(place_name, ameneties)
+def generate(place_name, amenities):
+    get_graph(place_name, amenities)
     select_subgraph()
     odtc()
     steiner_network()
     construct_graph()
 
 
-# def evaluation():
-#     identify_service_nodes()
-#     select_catchment()
-#     odtc()
-#     tc()
-#     steiner_network()
-#     evaluate()
+def evaluation(place_name, amenities):
+    get_graph(place_name, amenities)
+    select_subgraph()
+    odtc()
+    tc()
+    steiner_network()
+    evaluate()
 
 
 if __name__ == "__main__":
     generate("Sampaloc, Manila", ["school", "college", "institute", "university"])
-    # evaluation()
