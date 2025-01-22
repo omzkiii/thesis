@@ -9,10 +9,11 @@ from tc import tc
 
 def generate(place_name, amenities):
     nodes, edges, landmarks = get_graph(place_name, amenities)
-    service_nodes, catchment_nodes = select_subgraph(nodes, landmarks)
+    # service_nodes, catchment_nodes = select_subgraph(nodes, landmarks)
+    select_subgraph(nodes, landmarks)
     odtc()
     steiner_network()
-    construct_graph(nodes, edges, landmarks, service_nodes, catchment_nodes)
+    # construct_graph(nodes, edges, landmarks, service_nodes, catchment_nodes)
 
 
 def evaluation(place_name, amenities):

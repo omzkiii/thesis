@@ -19,9 +19,11 @@ def get_graph(place_name, amenities):
         tags={"amenity": amenities},
     )
 
-    # nodes_gdf = gpd.GeoDataFrame(
-    #     nodes, geometry=gpd.points_from_xy(nodes["x"], nodes["y"])
-    # )
+    nodes_gdf = gpd.GeoDataFrame(
+        nodes, geometry=gpd.points_from_xy(nodes["x"], nodes["y"])
+    )
+
+    print(landmarks["name"])
 
     return nodes, edges, landmarks
 
