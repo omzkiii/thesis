@@ -23,8 +23,6 @@ def get_graph(place_name, amenities):
         nodes, geometry=gpd.points_from_xy(nodes["x"], nodes["y"])
     )
 
-    print(landmarks["name"])
-
     return nodes, edges, landmarks
 
 
