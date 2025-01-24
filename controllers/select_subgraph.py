@@ -1,39 +1,28 @@
-import geopandas as gpd
+import networkx as nx
 
 
-def select_subgraph(nodes, landmarks):
-    poi_geometries = landmarks["geometry"]
-
-    service_nodes = nodes[
-        nodes["geometry"].apply(
-            lambda node: any(
-                node.distance(poi) <= 0.0004 for poi in poi_geometries
-            )  # 0.004 degrees approx 400 meters
-        )
-    ]
-
-    catchment_nodes = nodes[
-        nodes["geometry"].apply(
-            lambda node: any(
-                0.004 <= node.distance(poi) > 0.0005 for poi in poi_geometries
-            )  # 0.004 degrees approx 400 meters
-        )
-    ]
-
+def select_subgraph(graph, nodes, landmarks):
     subgraphs = {}
     for _, landmark in landmarks.iterrows():
-        catchment = nodes["geometry"].apply(
-            lambda node: 0.004 <= node.distance(landmark["geometry"]) > 0.0004
-        )
-
-        service = nodes["geometry"].apply(
+        service_nodes = []
+        catchment_area = []
+        landmark_nodes = nodes["geometry"].apply(
             lambda node: 0.0004 <= node.distance(landmark["geometry"]) >= 0
         )
-        landmark_gdf = gpd.GeoDataFrame(
-            landmark.to_frame().T, geometry="geometry", crs=landmarks.crs
-        )
-        subgraphs[landmark["name"]] = (nodes[catchment], nodes[service], landmark_gdf)
-
+        for service in nodes[landmark_nodes].iterrows():
+            service_nodes.append(service[0])
+            for node in graph.nodes:
+                try:
+                    catchment = nx.shortest_path_length(
+                        graph, source=node, target=service[0], weight="length"
+                    )
+                    if catchment <= 400:
+                        catchment_area.append(node)
+                except Exception as e:
+                    pass
+        subraph = nx.subgraph(graph, catchment_area)
+        subgraphs[landmark["name"]] = (service_nodes, subraph)
+    print(subgraphs)
     return subgraphs
 
 

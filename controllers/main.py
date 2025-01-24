@@ -8,20 +8,20 @@ from tc import tc
 
 
 def generate(place_name, amenities):
-    nodes, edges, landmarks = get_graph(place_name, amenities)
-    subgraphs = select_subgraph(nodes, landmarks)
-    odtc()
-    steiner_network()
-    construct_graph(nodes, edges, subgraphs)
+    graph, nodes, edges, landmarks = get_graph(place_name, amenities)
+    subgraphs = select_subgraph(graph, nodes, landmarks)
+    # terminal_nodes = odtc()
+    # steiner_network(graph, nodes, edges, terminal_nodes)
+    # construct_graph(nodes, edges, subgraphs)
 
 
 def evaluation(place_name, amenities):
-    nodes, edges, landmarks = get_graph(place_name, amenities)
-    subgraphs = select_subgraph(nodes, landmarks)
+    # nodes, edges, landmarks = get_graph(place_name, amenities)
+    # subgraphs = select_subgraph(nodes, landmarks)
     odtc()
-    tc()
-    steiner_network()
-    evaluate()
+    # tc()
+    # steiner_network()
+    # evaluate()
 
 
 if __name__ == "__main__":

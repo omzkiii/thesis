@@ -10,36 +10,38 @@ def construct_graph(nodes, edges, subgraphs):
         tiles="CartoDB positron",  # Use a clean basemap
     )
 
+    base_map.save("test2.html")
+
     ## TESTER ONLY ---------------
 
-    catchment = subgraphs.get("University of Manila (Main)")[0]
-    service = subgraphs.get("University of Manila (Main)")[1]
-    landmark = subgraphs.get("University of Manila (Main)")[2]
-
-    landmarks_map = landmark.explore(
-        m=base_map,  # Add to the base map
-        color="blue",  # Color for POIs
-        marker_kwds={"radius": 8},  # Marker size
-        tooltip="name",  # Tooltip for POI names
-        popup=True,  # Enable popups for POIs
-    )
-
-    service_map = service.explore(
-        m=landmarks_map,
-        color="green",  # Highlight nodes near POIs in green
-        marker_kwds={"radius": 10},  # Marker size
-        tooltip=["osmid", "street_count"],  # Tooltip for node details
-        popup=False,  # Disable popups for nodes
-    )
-
-    catchment_map = catchment.explore(
-        m=service_map,
-        color="yellow",  # Highlight nodes near POIs in green
-        marker_kwds={"radius": 10},  # Marker size
-        tooltip=["osmid", "street_count"],  # Tooltip for node details
-        popup=False,  # Disable popups for nodes
-    )
-    catchment_map.save("test.html")
+    # catchment = subgraphs.get("University of Manila (Main)")[0]
+    # service = subgraphs.get("University of Manila (Main)")[1]
+    # landmark = subgraphs.get("University of Manila (Main)")[2]
+    #
+    # landmarks_map = landmark.explore(
+    #     m=base_map,  # Add to the base map
+    #     color="blue",  # Color for POIs
+    #     marker_kwds={"radius": 8},  # Marker size
+    #     tooltip="name",  # Tooltip for POI names
+    #     popup=True,  # Enable popups for POIs
+    # )
+    #
+    # service_map = service.explore(
+    #     m=landmarks_map,
+    #     color="green",  # Highlight nodes near POIs in green
+    #     marker_kwds={"radius": 10},  # Marker size
+    #     tooltip=["osmid", "street_count"],  # Tooltip for node details
+    #     popup=False,  # Disable popups for nodes
+    # )
+    #
+    # catchment_map = catchment.explore(
+    #     m=service_map,
+    #     color="yellow",  # Highlight nodes near POIs in green
+    #     marker_kwds={"radius": 10},  # Marker size
+    #     tooltip=["osmid", "street_count"],  # Tooltip for node details
+    #     popup=False,  # Disable popups for nodes
+    # )
+    # catchment_map.save("test.html")
 
     ## TESTER END --------------
 
