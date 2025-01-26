@@ -6,9 +6,14 @@ def select_subgraph(graph, nodes, landmarks):
     for _, landmark in landmarks.iterrows():
         service_nodes = []
         catchment_area = []
-        landmark_nodes = nodes["geometry"].apply(
-            lambda node: 0.0004 >= node.distance(landmark["geometry"]) >= 0
-        )
+        landmark_nodes = []
+        dist = 0.0004
+        while nodes[landmark_nodes].empty:
+            landmark_nodes = nodes["geometry"].apply(
+                lambda node: dist >= node.distance(landmark["geometry"]) >= 0
+            )
+            dist = dist + 0.0001
+            print(dist)
         for service in nodes[landmark_nodes].iterrows():
             service_nodes.append(service[0])
             for node in graph.nodes:
@@ -20,9 +25,10 @@ def select_subgraph(graph, nodes, landmarks):
                         catchment_area.append(node)
                 except Exception as e:
                     pass
-        if len(service_nodes) != 0:
-            subraph = graph.subgraph(catchment_area).copy()
-            subgraphs[landmark["name"]] = (service_nodes, subraph)
+        subraph = graph.subgraph(catchment_area).copy()
+        subgraphs[landmark["name"]] = (service_nodes, subraph)
+        # for subgraph in subgraphs.items():
+        #     print(subgraph[1][0])
     return subgraphs
 
 
