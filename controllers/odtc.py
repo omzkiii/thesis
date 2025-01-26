@@ -9,7 +9,7 @@ from decimal import Decimal
 
 def odtc(graph, origin_nodes, dest_nodes):
     """
-    Selects the central node in the graph
+    Selects the central node in the graph using Origin Destination TC
 
     Parameters
     ----------------------------------
