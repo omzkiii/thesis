@@ -1,29 +1,25 @@
 import osmnx as ox
-import geopandas as gpd
+import networkx as nx
 
 
 def get_graph(place_name, amenities):
-    # Set the place name
-    # place_name = "SAMPALOC, Manila"
+    graph = ox.graph_from_place(
+        place_name,
+        network_type="drive",
+        custom_filter='["highway"~"primary|primary_link|secondary|secondary_link|tertiary|tertiary_link"]',
+    )
 
-    # Download the graph network for the given place
-    graph = ox.graph_from_place(place_name, network_type="drive")
+    largest_scc = max(nx.strongly_connected_components(graph), key=len)
+    graph = graph.subgraph(largest_scc).copy()
 
-    # Convert graph to GeoDataFrames
-    nodes, edges = ox.graph_to_gdfs(graph, nodes=True)
+    nodes, edges = ox.graph_to_gdfs(graph)
 
-    # Fetch POIs for schools, colleges, hospitals, parks, etc.
     landmarks = ox.features_from_place(
         place_name,
-        # tags={"amenity": ["school", "college", "institute", "university"]},
         tags={"amenity": amenities},
     )
 
-    nodes_gdf = gpd.GeoDataFrame(
-        nodes, geometry=gpd.points_from_xy(nodes["x"], nodes["y"])
-    )
-
-    return nodes, edges, landmarks
+    return graph, nodes, edges, landmarks
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 import osmnx as ox
 
 
-def construct_graph(nodes, edges, subgraphs):
+def construct_graph(nodes, edges, subgraphs, landmarks):
     # nodes, edges = ox.graph_to_gdfs(graph, nodes=True)
 
     base_map = edges.explore(
@@ -10,13 +10,7 @@ def construct_graph(nodes, edges, subgraphs):
         tiles="CartoDB positron",  # Use a clean basemap
     )
 
-    ## TESTER ONLY ---------------
-
-    catchment = subgraphs.get("University of Manila (Main)")[0]
-    service = subgraphs.get("University of Manila (Main)")[1]
-    landmark = subgraphs.get("University of Manila (Main)")[2]
-
-    landmarks_map = landmark.explore(
+    landmarks_map = landmarks.explore(
         m=base_map,  # Add to the base map
         color="blue",  # Color for POIs
         marker_kwds={"radius": 8},  # Marker size
@@ -24,24 +18,31 @@ def construct_graph(nodes, edges, subgraphs):
         popup=True,  # Enable popups for POIs
     )
 
-    service_map = service.explore(
+    junction_map = nodes.explore(
         m=landmarks_map,
-        color="green",  # Highlight nodes near POIs in green
-        marker_kwds={"radius": 10},  # Marker size
-        tooltip=["osmid", "street_count"],  # Tooltip for node details
-        popup=False,  # Disable popups for nodes
+        color="red",  # Node color for junctions
+        tooltip=["osmid", "street_count"],  # Tooltip for junction details
+        marker_kwds={"radius": 3},  # Marker size
+        tiles="CartoDB positron",  # Basemap style
     )
+    print(subgraphs)
 
-    catchment_map = catchment.explore(
-        m=service_map,
+    sub_nodes, sub_edges = ox.graph_to_gdfs(subgraphs["Juan Luna High School"][1])
+    print("SUB NODES")
+    print(sub_nodes)
+    print("NODES")
+    print(nodes)
+    print(subgraphs["Juan Luna High School"][0])
+
+    catchment_map = sub_nodes.explore(
+        m=junction_map,
         color="yellow",  # Highlight nodes near POIs in green
         marker_kwds={"radius": 10},  # Marker size
         tooltip=["osmid", "street_count"],  # Tooltip for node details
         popup=False,  # Disable popups for nodes
     )
-    catchment_map.save("test.html")
 
-    ## TESTER END --------------
+    catchment_map.save("test2.html")
 
     # landmarks_map = landmarks.explore(
     #     m=base_map,  # Add to the base map
