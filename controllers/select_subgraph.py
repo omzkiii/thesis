@@ -7,7 +7,7 @@ def select_subgraph(graph, nodes, landmarks):
         service_nodes = []
         catchment_area = []
         landmark_nodes = nodes["geometry"].apply(
-            lambda node: 0.0004 <= node.distance(landmark["geometry"]) >= 0
+            lambda node: 0.0004 >= node.distance(landmark["geometry"]) >= 0
         )
         for service in nodes[landmark_nodes].iterrows():
             service_nodes.append(service[0])
@@ -20,9 +20,9 @@ def select_subgraph(graph, nodes, landmarks):
                         catchment_area.append(node)
                 except Exception as e:
                     pass
-        subraph = nx.subgraph(graph, catchment_area)
-        subgraphs[landmark["name"]] = (service_nodes, subraph)
-    print(subgraphs)
+        if len(service_nodes) != 0:
+            subraph = graph.subgraph(catchment_area).copy()
+            subgraphs[landmark["name"]] = (service_nodes, subraph)
     return subgraphs
 
 

@@ -5,7 +5,7 @@ def get_graph(place_name, amenities):
     graph = ox.graph_from_place(
         place_name,
         network_type="drive",
-        custom_filter='["highway"~"primary|primary_link|secondary|secondary_link"]',
+        custom_filter='["highway"~"primary|primary_link|secondary|secondary_link|tertiary|tertiary_link"]',
     )
 
     nodes, edges = ox.graph_to_gdfs(graph)
