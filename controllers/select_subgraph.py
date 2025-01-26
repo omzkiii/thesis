@@ -3,7 +3,8 @@ import networkx as nx
 
 def select_subgraph(graph, nodes, landmarks):
     subgraphs = {}
-    od = {}
+    origin_nodes = {}
+    dest_nodes = {}
     for _, landmark in landmarks.iterrows():
         service_nodes = []
         catchment_area = []
@@ -25,17 +26,13 @@ def select_subgraph(graph, nodes, landmarks):
                         catchment_area.append(node)
                 except Exception as e:
                     pass
-        origin_nodes = service_nodes
-        destination_nodes = [
+        origin_nodes[landmark["name"]] = service_nodes
+        dest_nodes[landmark["name"]] = [
             node for node in catchment_area if node not in service_nodes
         ]
-        od[landmark["name"]] = (origin_nodes, destination_nodes)
-        print(od)
         subraph = graph.subgraph(catchment_area).copy()
         subgraphs[landmark["name"]] = (service_nodes, subraph)
-        # for subgraph in subgraphs.items():
-        #     print(subgraph[1][0])
-    return subgraphs, od
+    return subgraphs, origin_nodes, dest_nodes
 
 
 if __name__ == "__main__":
