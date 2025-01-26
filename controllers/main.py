@@ -9,16 +9,16 @@ from tc import tc
 
 def generate(place_name, amenities):
     graph, nodes, edges, landmarks = get_graph(place_name, amenities)
-    subgraphs, origin_nodes, dest_nodes = select_subgraph(graph, nodes, landmarks)
-    terminal_nodes = odtc(graph, origin_nodes, dest_nodes)
+    subgraphs = select_subgraph(graph, nodes, landmarks)
+    terminal_nodes = odtc(subgraphs, graph)
     # steiner_network(graph, nodes, edges, terminal_nodes)
     # construct_graph(nodes, edges, subgraphs, landmarks)
 
 
 def evaluation(place_name, amenities):
-    # nodes, edges, landmarks = get_graph(place_name, amenities)
+    graph, nodes, edges, landmarks = get_graph(place_name, amenities)
     # subgraphs = select_subgraph(nodes, landmarks)
-    odtc()
+    # odtc()
     # tc()
     # steiner_network()
     # evaluate()
