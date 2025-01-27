@@ -19,10 +19,10 @@ def get_central_node(graph, origin_nodes, dest_nodes):
 
     Returns
     ----------------------------------
-    central_node: node id of central node
+    central_node: list with node id of central node/s
     """
     size = graph.number_of_nodes()
-    v_ratios = np.zeros((size, 1), dtype=Decimal)
+    v_ratios = dict.fromkeys(graph.nodes(),0)
     beta_value = 0.1
     leaf_nodes = get_leafnodes(graph)
 
@@ -49,15 +49,19 @@ def get_central_node(graph, origin_nodes, dest_nodes):
                             ratio = v_costs / all_paths_costs
                         v_ratios[v] += ratio
 
-    print("\t*END of usingNX fxn w/execution time:", time.time() - start, "\n\n")
+                        
+    print('\t*END of usingNX fxn w/execution time:', time.time() - start, '\n\n' )
+    
+    max_centrality = max(v_ratios.values())
 
-    central_node = v_ratios.max()
+    central_node = [k for k, v in v_ratios.items() if v == max_centrality]
+
 
     return central_node
 
 
 def get_leafnodes(G):
-    leaf_dictionary = dict.fromkeys(G.nodes(), 0)
+
     leaf_nodes = []
     is_directed_flag = nx.is_directed(G)
     for node in G.nodes():

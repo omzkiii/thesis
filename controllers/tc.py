@@ -22,7 +22,7 @@ def tc(graph):
     """
     all_nodes = list(graph.nodes())
     size = graph.number_of_nodes()
-    v_ratios = np.zeros((size, 1), dtype=Decimal)
+    v_ratios = dict.fromkeys(graph.nodes(),0)
     beta_value = 0.1
     leaf_nodes = get_leafnodes(graph)
     
@@ -54,14 +54,13 @@ def tc(graph):
                            
     print('\t*END of usingNX fxn w/execution time:', time.time() - start, '\n\n' )
     
-    central_node = v_ratios.max()
+    max_centrality = max(v_ratios.values())
 
-    return central_node
+    central_node = [k for k, v in v_ratios.items() if v == max_centrality]
 
 
 
 def get_leafnodes(G):
-    leaf_dictionary = dict.fromkeys(G.nodes(),0)
     leaf_nodes = []
     is_directed_flag = nx.is_directed(G)
     for node in G.nodes():
