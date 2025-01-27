@@ -26,13 +26,11 @@ def select_subgraph(graph, nodes, landmarks):
                         catchment_area.append(node)
                 except Exception as e:
                     pass
-        origin_nodes[landmark["name"]] = service_nodes
-        dest_nodes[landmark["name"]] = [
-            node for node in catchment_area if node not in service_nodes
-        ]
+        origin_nodes = service_nodes
+        dest_nodes = [node for node in catchment_area if node not in service_nodes]
         subraph = graph.subgraph(catchment_area).copy()
-        subgraphs[landmark["name"]] = (service_nodes, subraph)
-    return subgraphs, origin_nodes, dest_nodes
+        subgraphs[landmark["name"]] = (subraph, origin_nodes, dest_nodes)
+    return subgraphs
 
 
 if __name__ == "__main__":
