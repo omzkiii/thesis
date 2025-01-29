@@ -1,10 +1,10 @@
 import csv
 from datetime import datetime
 
-def evaluate(odtc_time, tc_time):
+def runtime(odtc_time, tc_time):
     filename = "execution_times.csv"
     
-    # Create file if it doesn't exist
+    # Create file with header if needed
     try:
         with open(filename, 'x', newline='') as f:
             writer = csv.writer(f)
@@ -20,3 +20,4 @@ def evaluate(odtc_time, tc_time):
             round(odtc_time, 4),
             round(tc_time, 4)
         ])
+

@@ -47,16 +47,6 @@ def get_central_node(graph):
                             all_paths_costs = path_cost(all_paths, beta_value)
                             v_costs = path_cost(v_paths, beta_value)
                             ratio = v_costs / all_paths_costs
-<<<<<<< HEAD
-                        v_ratios[v] += ratio       
-    execution_time = time.time() - start                
-    print('\t*END of usingNX fxn w/execution oras:', {execution_time}, '\n\n' )
-    
-    max_centrality = max(v_ratios.values())
-
-    central_node = [k for k, v in v_ratios.items() if v == max_centrality]
-    return execution_time
-=======
                         v_ratios[v] += ratio
 
     print("\t*END of usingNX fxn w/execution time:", time.time() - start, "\n\n")
@@ -66,7 +56,6 @@ def get_central_node(graph):
     central_node = [k for k, v in v_ratios.items() if v == max_centrality]
     central_node = central_node[0]
     return central_node
->>>>>>> origin/geo
 
 
 def get_leafnodes(G):
@@ -90,6 +79,7 @@ def path_cost(paths, beta_value):
 
 
 def tc(subgraphs):
+    start_time = time.time()
     central_nodes = set()
     for key, values in subgraphs.items():
         central_node = get_central_node(values[0])
@@ -98,10 +88,11 @@ def tc(subgraphs):
         print("central: ", central_node)
         print("=====================\n\n")
         central_nodes.add(central_node)
+    total_time = time.time() - start_time
     print(central_nodes)
-    return central_nodes
+    return central_nodes, total_time  # Return execution time
 
 
 if __name__ == "__main__":
-    #pass
-    tc()
+    pass
+    #tc()
