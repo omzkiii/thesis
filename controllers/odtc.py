@@ -22,7 +22,7 @@ def get_central_node(graph, origin_nodes, dest_nodes):
     central_node: list with node id of central node/s
     """
     size = graph.number_of_nodes()
-    v_ratios = dict.fromkeys(graph.nodes(),0)
+    v_ratios = dict.fromkeys(graph.nodes(), 0)
     beta_value = 0.1
     leaf_nodes = get_leafnodes(graph)
 
@@ -49,19 +49,17 @@ def get_central_node(graph, origin_nodes, dest_nodes):
                             ratio = v_costs / all_paths_costs
                         v_ratios[v] += ratio
 
-                        
-    print('\t*END of usingNX fxn w/execution time:', time.time() - start, '\n\n' )
-    
+    print("\t*END of usingNX fxn w/execution time:", time.time() - start, "\n\n")
+
     max_centrality = max(v_ratios.values())
 
     central_node = [k for k, v in v_ratios.items() if v == max_centrality]
-
+    central_node = central_node[0]
 
     return central_node
 
 
 def get_leafnodes(G):
-
     leaf_nodes = []
     is_directed_flag = nx.is_directed(G)
     for node in G.nodes():
@@ -81,10 +79,19 @@ def path_cost(paths, beta_value):
     return Decimal(paths_costs)
 
 
-def odtc(subgraphs, graph):
-    for values in subgraphs.values():
+def odtc(subgraphs):
+    central_nodes = set()
+    for key, values in subgraphs.items():
         central_node = get_central_node(values[0], values[1], values[2])
-        print(central_node)
+        print("=====================")
+        print(key)
+        print("origin: ", values[1])
+        print("dest: ", values[2])
+        print("central: ", central_node)
+        print("=====================\n\n")
+        central_nodes.add(central_node)
+    print(central_nodes)
+    return central_nodes
 
 
 if __name__ == "__main__":
