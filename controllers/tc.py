@@ -50,14 +50,14 @@ def tc(graph):
                             all_paths_costs = path_cost(all_paths, beta_value)
                             v_costs = path_cost(v_paths, beta_value)
                             ratio = v_costs / all_paths_costs
-                        v_ratios[v] += ratio
-                           
-    print('\t*END of usingNX fxn w/execution time:', time.time() - start, '\n\n' )
+                        v_ratios[v] += ratio       
+    execution_time = time.time() - start                
+    print('\t*END of usingNX fxn w/execution oras:', {execution_time}, '\n\n' )
     
     max_centrality = max(v_ratios.values())
 
     central_node = [k for k, v in v_ratios.items() if v == max_centrality]
-
+    return execution_time
 
 
 def get_leafnodes(G):
@@ -85,5 +85,5 @@ def path_cost(paths, beta_value):
 
 
 if __name__ == "__main__":
-    pass
-    # tc()
+    #pass
+    tc()

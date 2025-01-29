@@ -49,15 +49,15 @@ def get_central_node(graph, origin_nodes, dest_nodes):
                             ratio = v_costs / all_paths_costs
                         v_ratios[v] += ratio
 
-                        
-    print('\t*END of usingNX fxn w/execution time:', time.time() - start, '\n\n' )
+    execution_time = time.time() - start                    
+    print('\t*END of usingNX fxn w/execution time:', {execution_time}, '\n\n' )
     
     max_centrality = max(v_ratios.values())
 
     central_node = [k for k, v in v_ratios.items() if v == max_centrality]
 
 
-    return central_node
+    return central_node, execution_time
 
 
 def get_leafnodes(G):
@@ -81,11 +81,27 @@ def path_cost(paths, beta_value):
     return Decimal(paths_costs)
 
 
-def odtc(subgraphs, graph):
-    for values in subgraphs.values():
-        central_node = get_central_node(values[0], values[1], values[2])
-        print(central_node)
+# def odtc(subgraphs, graph):
+#    for values in subgraphs.values():
+#       central_node = get_central_node(values[0], values[1], values[2])
+#       print(central_node)
+#def odtc(subgraphs, graph):
+#    total_time = 0
+#    for values in subgraphs.values():
+#        start = time.time()
+#        central_node = get_central_node(values[0], values[1], values[2])
+#        elapsed = time.time() - start
+#        total_time += elapsed
+#        print(central_node)
+#    return total_time
 
+def odtc(subgraphs, graph):
+    total_odtc_time = 0
+    for values in subgraphs.values():
+        central_node, exec_time = get_central_node(values[0], values[1], values[2])  # Unpack return values
+        total_odtc_time += exec_time
+        print(central_node)
+    return total_odtc_time
 
 if __name__ == "__main__":
     pass
