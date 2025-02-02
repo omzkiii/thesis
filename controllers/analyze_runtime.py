@@ -22,7 +22,7 @@ def read_runtimes_from_csv(filename="execution_times.csv"):
     
     return odtc_runtimes, tc_runtimes
 
-def analyze_runtime_and_statistical_tests(filename="execution_times.csv"):
+def analyze_runtime(filename="execution_times.csv"):
     """
     Analyze runtime and perform statistical tests using data from CSV.
     Returns:
@@ -57,7 +57,7 @@ def analyze_runtime_and_statistical_tests(filename="execution_times.csv"):
 
 def show_results():
     try:
-        results = analyze_runtime_and_statistical_tests()
+        results = analyze_runtime()
         print("\n=== Runtime Analysis ===")
         print(f"Dataset size: {results['samples']} runs")
         print(f"Average ODTC time: {results['mean_odtc']:.2f} seconds")
@@ -69,7 +69,7 @@ def show_results():
         else:
             print("Conclusion: No significant difference found")
     except FileNotFoundError:
-        print("No data found. Run runtime.py first!")
+        print("No data found. Run main.py first!")
 
 if __name__ == "__main__":
     show_results()

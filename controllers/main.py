@@ -15,8 +15,8 @@ def generate(place_name, amenities):
     # construct_graph(nodes, edges, subgraphs, landmarks)
 
 
-def evaluation(place_name, amenities):
-    graph, nodes, edges, landmarks = get_graph(place_name, amenities)
+def evaluation(center_point, distance, amenities):
+    graph, nodes, edges, landmarks = get_graph(center_point, distance, amenities)
     subgraphs = select_subgraph(graph, nodes, landmarks)
     terminal_nodes, odtc_time = odtc(subgraphs)
     tc_nodes, tc_time = tc(subgraphs)
@@ -27,4 +27,32 @@ def evaluation(place_name, amenities):
 
 if __name__ == "__main__":
     #generate("Sampaloc, Manila", ["school", "college", "institute", "university"])
-    evaluation("Sampaloc, Manila", ["school", "college", "institute", "university"])
+    #evaluation("Sampaloc, Manila", ["school", "college", "institute", "university"])
+        # Example usage for Sampaloc, Manila coordinates
+    coordinates = (14.5983, 120.9862)  # Latitude, Longitude
+    distance_meters = 2000  # 2km radius
+    
+    evaluation(
+        coordinates,
+        distance_meters,
+        ["school", "college", "institute", "university"]
+    )
+
+    #total_runs = 500
+    #successful_runs = 0
+    
+    #for run_num in range(1, total_runs+1):
+    #    print(f"\n=== Run {run_num}/{total_runs} ===")
+    #    try:
+    #        evaluation(coordinates, distance_meters, ["school", "college", "institute", "university"])
+    #        successful_runs += 1
+    #    except KeyboardInterrupt:
+    #        print("\nUser interrupted the process")
+    #        break
+    #    except Exception as e:
+    #        print(f"Critical error: {str(e)}")
+    #        break
+    
+    #print(f"\nCompleted {successful_runs}/{total_runs} successful runs")
+    #if successful_runs > 0:
+    #    print("Check execution_times.csv for results")
