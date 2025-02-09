@@ -1,7 +1,9 @@
 import osmnx as ox
 
 
-def construct_graph(nodes, edges, subgraphs, landmarks, terminal_nodes, route):
+def construct_graph(
+    nodes, edges, subgraphs, landmarks, terminal_nodes, route, filename
+):
     # nodes, edges = ox.graph_to_gdfs(graph, nodes=True)
 
     base_map = edges.explore(
@@ -45,7 +47,7 @@ def construct_graph(nodes, edges, subgraphs, landmarks, terminal_nodes, route):
         popup=False,  # Disable popups for nodes
     )
 
-    catchment_map.save("test2.html")
+    catchment_map.save(f"{filename}.html")
 
     # landmarks_map = landmarks.explore(
     #     m=base_map,  # Add to the base map
