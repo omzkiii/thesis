@@ -90,7 +90,7 @@ def tc(subgraphs):
         central_nodes.add(central_node)
     total_time = time.time() - start_time
     print(central_nodes)
-    return central_nodes, total_time  # Return execution time
+    return central_nodes, total_time, len(central_nodes) # Return execution time
 
 
 if __name__ == "__main__":

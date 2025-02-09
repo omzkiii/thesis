@@ -108,7 +108,7 @@ def odtc(subgraphs):
         central_nodes.add(central_node)
     total_time = time.time() - start_time
     print(central_nodes)
-    return central_nodes, total_time
+    return central_nodes, total_time, len(central_nodes)
 
 if __name__ == "__main__":
     pass

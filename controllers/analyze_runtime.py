@@ -1,3 +1,6 @@
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
 import csv
 from collections import defaultdict
 from scipy.stats import shapiro, ttest_rel, wilcoxon
@@ -82,5 +85,19 @@ def show_results():
     except FileNotFoundError:
         print("No data found. Run main.py first!")
 
+def get_melted_runtime_data(csv_file="execution_times.csv"):
+    df = pd.read_csv(csv_file)
+    df.columns = df.columns.str.strip()
+    df = df.rename(columns={"graph_type": "Graph Type", "odtc_time": "ODTC Runtime", "tc_time": "TC Runtime"})
+    df_melted = df.melt(id_vars=["Graph Type"], value_vars=["ODTC Runtime", "TC Runtime"],
+                        var_name="Algorithm", value_name="Runtime")
+    return df_melted
+
+def plot_boxplot(ax, df_melted):
+    sns.boxplot(x="Graph Type", y="Runtime", hue="Algorithm", data=df_melted, ax=ax)
+    ax.set_title("Runtime Distribution by Graph Type")
+    ax.set_xlabel("Graph Type")
+    ax.set_ylabel("Runtime (seconds)")
+    ax.set_xticklabels(ax.get_xticklabels(), rotation=15)
 if __name__ == "__main__":
     show_results()
