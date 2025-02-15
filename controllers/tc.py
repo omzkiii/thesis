@@ -79,6 +79,7 @@ def path_cost(paths, beta_value):
 
 
 def tc(subgraphs):
+    start_time = time.time()
     central_nodes = set()
     for key, values in subgraphs.items():
         central_node = get_central_node(values[0])
@@ -87,10 +88,11 @@ def tc(subgraphs):
         print("central: ", central_node)
         print("=====================\n\n")
         central_nodes.add(central_node)
+    total_time = time.time() - start_time
     print(central_nodes)
-    return central_nodes
+    return central_nodes, total_time, len(central_nodes) # Return execution time
 
 
 if __name__ == "__main__":
     pass
-    # tc()
+    #tc()
