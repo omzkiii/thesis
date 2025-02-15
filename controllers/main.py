@@ -1,4 +1,5 @@
 from get_graph import get_graph
+from gui import gui
 from construct_graph import construct_graph
 from runtime import runtime
 from odtc import odtc
@@ -8,11 +9,13 @@ from tc import tc
 
 
 def generate(place_name, amenities):
+    filename = f"{place_name} - {amenities[0]}"
     graph, nodes, edges, landmarks = get_graph(place_name, amenities)
     subgraphs = select_subgraph(graph, nodes, landmarks)
     terminal_nodes = odtc(subgraphs)
-    steiner_network(graph, nodes, edges, terminal_nodes)
-    # construct_graph(nodes, edges, subgraphs, landmarks)
+    # terminal_nodes = random.sample(list(graph.nodes), 10)
+    route = steiner_network(graph, nodes, edges, terminal_nodes)
+    construct_graph(nodes, edges, subgraphs, landmarks, terminal_nodes, route, filename)
 
 
 def evaluation(center_point, distance, amenities):
@@ -58,3 +61,4 @@ if __name__ == "__main__":
     print(f"\nCompleted {successful_runs}/{total_runs} successful runs")
     if successful_runs > 0:
         print("Check execution_times.csv for results")
+    gui(generate)

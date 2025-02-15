@@ -49,7 +49,7 @@ def get_central_node(graph, origin_nodes, dest_nodes):
                             ratio = v_costs / all_paths_costs
                         v_ratios[v] += ratio
 
-    print("\t*END of usingNX fxn w/execution time:", time.time() - start, "\n\n")
+    # print("\t*END of usingNX fxn w/execution time:", time.time() - start, "\n\n")
 
     max_centrality = max(v_ratios.values())
 
@@ -99,16 +99,17 @@ def odtc(subgraphs):
     central_nodes = set()
     for key, values in subgraphs.items():
         central_node = get_central_node(values[0], values[1], values[2])
-        print("=====================")
-        print(key)
-        print("origin: ", values[1])
-        print("dest: ", values[2])
-        print("central: ", central_node)
-        print("=====================\n\n")
+        # print("=====================")
+        # print(key)
+        # print("origin: ", values[1])
+        # print("dest: ", values[2])
+        # print("central: ", central_node)
+        # print("=====================\n\n")
         central_nodes.add(central_node)
     total_time = time.time() - start_time
     print(central_nodes)
     return central_nodes, total_time, len(central_nodes)
+
 
 if __name__ == "__main__":
     pass

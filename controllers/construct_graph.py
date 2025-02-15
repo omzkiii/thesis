@@ -1,7 +1,9 @@
 import osmnx as ox
 
 
-def construct_graph(nodes, edges, subgraphs, landmarks):
+def construct_graph(
+    nodes, edges, subgraphs, landmarks, terminal_nodes, route, filename
+):
     # nodes, edges = ox.graph_to_gdfs(graph, nodes=True)
 
     base_map = edges.explore(
@@ -13,36 +15,39 @@ def construct_graph(nodes, edges, subgraphs, landmarks):
     landmarks_map = landmarks.explore(
         m=base_map,  # Add to the base map
         color="blue",  # Color for POIs
-        marker_kwds={"radius": 8},  # Marker size
+        marker_kwds={"radius": 5},  # Marker size
         tooltip="name",  # Tooltip for POI names
         popup=True,  # Enable popups for POIs
     )
 
     junction_map = nodes.explore(
         m=landmarks_map,
-        color="red",  # Node color for junctions
+        color="purple",  # Node color for junctions
         tooltip=["osmid", "street_count"],  # Tooltip for junction details
         marker_kwds={"radius": 3},  # Marker size
         tiles="CartoDB positron",  # Basemap style
     )
-    print(subgraphs)
 
-    sub_nodes, sub_edges = ox.graph_to_gdfs(subgraphs["Juan Luna High School"][1])
-    print("SUB NODES")
-    print(sub_nodes)
-    print("NODES")
-    print(nodes)
-    print(subgraphs["Juan Luna High School"][0])
-
-    catchment_map = sub_nodes.explore(
+    route_map = route.explore(
         m=junction_map,
+        color="red",
+        style={"weight": 10, "color": "red"},
+        marker_kwds={"radius": 10},  # Marker size
+        tiles="CartoDB positron",  # Basemap style
+    )
+
+    # print(subgraphs)
+    terminal = nodes[nodes.index.isin(terminal_nodes)]
+
+    catchment_map = terminal.explore(
+        m=route_map,
         color="yellow",  # Highlight nodes near POIs in green
         marker_kwds={"radius": 10},  # Marker size
         tooltip=["osmid", "street_count"],  # Tooltip for node details
         popup=False,  # Disable popups for nodes
     )
 
-    catchment_map.save("test2.html")
+    catchment_map.save(f"{filename}.html")
 
     # landmarks_map = landmarks.explore(
     #     m=base_map,  # Add to the base map
