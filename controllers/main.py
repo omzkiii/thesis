@@ -18,6 +18,13 @@ def generate(place_name, amenities):
     construct_graph(nodes, edges, subgraphs, landmarks, terminal_nodes, route, filename)
 
 
+def evaluation(location, distance, amenities):
+    graph, nodes, edges, landmarks = get_graph(location, distance, amenities)
+    subgraphs = select_subgraph(graph, nodes, landmarks)
+    odtc_nodes, odtc_time, odtc_central_nodes_count, total_origin_nodes, total_dest_nodes, total_odtc_nodes = odtc(subgraphs)
+    tc_nodes, tc_time, tc_central_nodes_count, total_tc_nodes = tc(subgraphs)
+    runtime(graph_type, location, odtc_time, odtc_central_nodes_count, total_origin_nodes, total_dest_nodes, total_odtc_nodes, tc_time, tc_central_nodes_count, total_tc_nodes)
+"""
 def evaluation(center_point, distance, amenities):
     graph, nodes, edges, landmarks = get_graph(center_point, distance, amenities)
     subgraphs = select_subgraph(graph, nodes, landmarks)
@@ -26,23 +33,28 @@ def evaluation(center_point, distance, amenities):
     # tc()
     # steiner_network()
     runtime(graph_type, place_name, odtc_time, tc_time, odtc_nodes_count, tc_nodes_count)
-
+"""
 
 if __name__ == "__main__":
-    #generate("Sampaloc, Manila", ["school", "college", "institute", "university"])
-    #evaluation("Sampaloc, Manila", ["school", "college", "institute", "university"])
-        # Example usage for Sampaloc, Manila coordinates
+
+    """
+    Instruction:
+    First input the type of graph
+
+    then if you have place_name use the "evaluation("Sampaloc, Manila", None, ["school", "college", "institute", "university"])
+
+    otherwise use the coordinates below of it
+    """
+    graph_type = "Ring"
+    evaluation("Sampaloc, Manila", None, ["school", "college", "institute", "university"])
     coordinates = (14.984113296438625, 120.90632193749528)  # Latitude, Longitude
     distance_meters = 2000  # 2km radius
-    place_name = "Ulingao, Bulacan"
-    graph_type = "Ring"
-    
-    #evaluation(
-    #    coordinates,
-    #    distance_meters,
-    #    ["school", "college", "institute", "university"]
-    #)
-
+    evaluation(
+        coordinates,
+        distance_meters,
+        ["school", "college", "institute", "university"]
+    )
+"""
     total_runs = 500
     successful_runs = 0
     
@@ -62,3 +74,4 @@ if __name__ == "__main__":
     if successful_runs > 0:
         print("Check execution_times.csv for results")
     gui(generate)
+"""

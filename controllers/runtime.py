@@ -1,14 +1,14 @@
 import csv
 from datetime import datetime
 
-def runtime(graph_type, place_name, odtc_time, tc_time, odtc_nodes_count, tc_nodes_count):
+def runtime(graph_type, place_name, odtc_time, odtc_central_nodes_count, total_origin_nodes, total_dest_nodes, total_odtc_nodes, tc_time, tc_central_nodes_count, total_tc_nodes):
     filename = "execution_times.csv"
     
     # Create file with header if needed
     try:
         with open(filename, 'x', newline='') as f:
             writer = csv.writer(f)
-            writer.writerow(['timestamp', 'graph_type', 'place_name', 'odtc_time', 'tc_time', 'odtc_nodes_count', 'tc_nodes_count'])
+            writer.writerow(['timestamp', 'graph_type', 'place_name or coordinates', 'odtc_time', 'odtc_central_nodes_count', 'total_origin_nodes', 'total_dest_nodes', 'total_odtc_nodes', 'tc_time', 'tc_central_nodes_count', 'total_tc_nodes'])
     except FileExistsError:
         pass
     
@@ -20,7 +20,11 @@ def runtime(graph_type, place_name, odtc_time, tc_time, odtc_nodes_count, tc_nod
             graph_type,
             place_name,
             round(odtc_time, 4),
+            odtc_central_nodes_count,  # New: Number of ODT Central Nodes
+            total_origin_nodes,
+            total_dest_nodes,
+            total_odtc_nodes,
             round(tc_time, 4),
-            odtc_nodes_count,  # New: Number of ODT Central Nodes
-            tc_nodes_count     # New: Number of TC Central Nodes
+            tc_central_nodes_count,     # New: Number of TC Central Nodes
+            total_tc_nodes
         ])
