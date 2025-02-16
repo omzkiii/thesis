@@ -16,10 +16,7 @@ def get_graph(center_point, distance, amenities):
     nodes, edges = ox.graph_to_gdfs(graph)
 
     landmarks = ox.features_from_point(
-        center_point,
-        tags={"amenity": amenities},
-        dist=distance
-
+        center_point, tags={"amenity": amenities}, dist=distance
     )
 
     return graph, nodes, edges, landmarks
@@ -29,9 +26,8 @@ if __name__ == "__main__":
     # Example usage for Sampaloc, Manila coordinates
     coordinates = (14.6197, 121.0053)  # Latitude, Longitude
     distance_meters = 1000  # 2km radius
-    
+
     graph, nodes, edges, landmarks = get_graph(
-        coordinates,
-        distance_meters,
-        ["school", "college", "institute", "university"]
+        coordinates, distance_meters, ["school", "college", "institute", "university"]
     )
+

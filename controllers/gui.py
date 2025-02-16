@@ -18,6 +18,7 @@ class WebEngineViewer(QWidget):
         else:
             generate_func(place, amenities)
             self.browser.setUrl(QUrl(f"file:///{file_path}"))
+            print(f"File not found: {file_path}")
 
         layout = QVBoxLayout()
         layout.addWidget(self.browser)
