@@ -52,8 +52,10 @@ def get_graph(location, distance=None, amenities=None):
     
     # Convert to GeoDataFrames
     nodes, edges = ox.graph_to_gdfs(graph)
-    
+
     return graph, nodes, edges, landmarks
 
 if __name__ == "__main__":
+
     pass
+

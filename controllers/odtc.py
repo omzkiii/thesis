@@ -56,7 +56,6 @@ def get_central_node(graph, origin_nodes, dest_nodes):
     central_node = [k for k, v in v_ratios.items() if v == max_centrality]
     central_node = central_node[0]
 
-
     return central_node
 
 
@@ -84,7 +83,7 @@ def path_cost(paths, beta_value):
 #    for values in subgraphs.values():
 #       central_node = get_central_node(values[0], values[1], values[2])
 #       print(central_node)
-#def odtc(subgraphs, graph):
+# def odtc(subgraphs, graph):
 #    total_time = 0
 #    for values in subgraphs.values():
 #        start = time.time()
@@ -93,6 +92,7 @@ def path_cost(paths, beta_value):
 #        total_time += elapsed
 #        print(central_node)
 #    return total_time
+
 
 def odtc(subgraphs):
     central_nodes = set()
