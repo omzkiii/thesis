@@ -55,7 +55,7 @@ def get_central_node(graph):
 
     central_node = [k for k, v in v_ratios.items() if v == max_centrality]
     central_node = central_node[0]
-    return central_node
+    return central_node, 
 
 
 def get_leafnodes(G):
@@ -79,6 +79,7 @@ def path_cost(paths, beta_value):
 
 
 def tc(subgraphs):
+    total_tc_nodes = 0
     start_time = time.time()
     central_nodes = set()
     for key, values in subgraphs.items():
@@ -88,9 +89,10 @@ def tc(subgraphs):
         print("central: ", central_node)
         print("=====================\n\n")
         central_nodes.add(central_node)
+        total_tc_nodes += values[0].number_of_nodes()
     total_time = time.time() - start_time
     print(central_nodes)
-    return central_nodes, total_time, len(central_nodes) # Return execution time
+    return central_nodes, total_time, len(central_nodes), total_tc_nodes
 
 
 if __name__ == "__main__":

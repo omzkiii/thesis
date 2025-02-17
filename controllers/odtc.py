@@ -95,20 +95,28 @@ def path_cost(paths, beta_value):
 
 
 def odtc(subgraphs):
-    start_time = time.time()
     central_nodes = set()
+    origin_nodes = set()
+    dest_nodes = set()
+    total_odtc_nodes = 0 
+    start_time = time.time()
     for key, values in subgraphs.items():
         central_node = get_central_node(values[0], values[1], values[2])
-        # print("=====================")
-        # print(key)
-        # print("origin: ", values[1])
-        # print("dest: ", values[2])
-        # print("central: ", central_node)
-        # print("=====================\n\n")
+        print("=====================")
+        print(key)
+        print("origin: ", values[1])
+        print("dest: ", values[2])
+        print("central: ", central_node)
+        print("=====================\n\n")
         central_nodes.add(central_node)
+        origin_nodes.update(values[1])
+        dest_nodes.update(values[2])
+        total_odtc_nodes += values[0].number_of_nodes()
     total_time = time.time() - start_time
     print(central_nodes)
-    return central_nodes, total_time, len(central_nodes)
+    total_origin_nodes = len(origin_nodes)
+    total_dest_nodes = len(dest_nodes)
+    return central_nodes, total_time, len(central_nodes), total_origin_nodes, total_dest_nodes, total_odtc_nodes
 
 
 if __name__ == "__main__":

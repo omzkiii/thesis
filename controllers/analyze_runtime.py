@@ -21,7 +21,7 @@ def read_runtimes_from_csv(filename="execution_times.csv"):
                 graph_type = row[1].strip()  # Graph type column
                 odtc_runtimes, tc_runtimes = runtimes[graph_type]
                 odtc_runtimes.append(float(row[3]))  # ODTC runtime
-                tc_runtimes.append(float(row[4]))  # TC runtime
+                tc_runtimes.append(float(row[9]))  # TC runtime
     except FileNotFoundError:
         raise FileNotFoundError(f"Runtime data file {filename} not found. Run evaluations first.")
     
