@@ -1,5 +1,4 @@
 from get_graph import get_graph
-from gui import gui
 from construct_graph import construct_graph
 from runtime import runtime
 from odtc import odtc
@@ -24,6 +23,8 @@ def evaluation(location, distance, amenities):
     odtc_nodes, odtc_time, odtc_central_nodes_count, total_origin_nodes, total_dest_nodes, total_odtc_nodes = odtc(subgraphs)
     tc_nodes, tc_time, tc_central_nodes_count, total_tc_nodes = tc(subgraphs)
     runtime(graph_type, location, odtc_time, odtc_central_nodes_count, total_origin_nodes, total_dest_nodes, total_odtc_nodes, tc_time, tc_central_nodes_count, total_tc_nodes)
+
+
 """
 def evaluation(center_point, distance, amenities):
     graph, nodes, edges, landmarks = get_graph(center_point, distance, amenities)
