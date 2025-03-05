@@ -56,6 +56,24 @@ def steiner_network(graph, nodes, edges, terminal_nodes):
             shortest_paths.update(zip(shortest_path_b, shortest_path_b[1:]))
 
     route = edges[edges.index.isin(list(shortest_paths))]
+    total_distance = route["length"].sum()
+    print("=================")
+    print("=================")
+    print("=================")
+    print("=================")
+    print("=================")
+    print("=================")
+    print("=================")
+    print("=================")
+    print(total_distance)
+    print("=================")
+    print("=================")
+    print("=================")
+    print("=================")
+    print("=================")
+    print("=================")
+    print("=================")
+    print("=================")
     return route
 
 

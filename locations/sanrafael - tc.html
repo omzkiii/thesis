@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_25f1ee06d5a3bb3f3f7ca505ab5ec03a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            margin: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_25f1ee06d5a3bb3f3f7ca505ab5ec03a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_25f1ee06d5a3bb3f3f7ca505ab5ec03a = L.map(
+                "map_25f1ee06d5a3bb3f3f7ca505ab5ec03a",
+                {
+                    center: [14.98966955, 120.9316436],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_25f1ee06d5a3bb3f3f7ca505ab5ec03a);
+
+            
+
+        
+    
+            var tile_layer_83c6d13aa3b381c5928fe53cb59dc9ed = L.tileLayer(
+                "https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_83c6d13aa3b381c5928fe53cb59dc9ed.addTo(map_25f1ee06d5a3bb3f3f7ca505ab5ec03a);
+        
+    
+            map_25f1ee06d5a3bb3f3f7ca505ab5ec03a.fitBounds(
+                [[14.9804093, 120.9264281], [14.9989298, 120.9368591]],
+                {}
+            );
+        
+    
+        function geo_json_a320e039bd5df21f4ea7b64f9ceba60c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.5, "weight": 2};
+            }
+        }
+        function geo_json_a320e039bd5df21f4ea7b64f9ceba60c_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.75};
+            }
+        }
+        function geo_json_a320e039bd5df21f4ea7b64f9ceba60c_pointToLayer(feature, latlng) {
+            var opts = {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3};
+            
+            let style = geo_json_a320e039bd5df21f4ea7b64f9ceba60c_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_a320e039bd5df21f4ea7b64f9ceba60c_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                            geo_json_a320e039bd5df21f4ea7b64f9ceba60c.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_a320e039bd5df21f4ea7b64f9ceba60c_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_a320e039bd5df21f4ea7b64f9ceba60c = L.geoJson(null, {
+                onEachFeature: geo_json_a320e039bd5df21f4ea7b64f9ceba60c_onEachFeature,
+            
+                style: geo_json_a320e039bd5df21f4ea7b64f9ceba60c_styler,
+                pointToLayer: geo_json_a320e039bd5df21f4ea7b64f9ceba60c_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_a320e039bd5df21f4ea7b64f9ceba60c_add (data) {
+            geo_json_a320e039bd5df21f4ea7b64f9ceba60c
+                .addData(data);
+        }
+            geo_json_a320e039bd5df21f4ea7b64f9ceba60c_add({"bbox": [120.9264281, 14.9804093, 120.9368591, 14.9989298], "features": [{"bbox": [120.9303583, 14.9966958, 120.9322594, 14.9989298], "geometry": {"coordinates": [[120.9303583, 14.9989298], [120.9311784, 14.9980075], [120.9316333, 14.997459], [120.9318932, 14.9971457], [120.9320025, 14.9970139], [120.9322594, 14.9966958]], "type": "LineString"}, "id": "(420760507, 892938565, 0)", "properties": {"highway": "secondary", "lanes": "2", "length": 321.61891654167954, "maxspeed": "40", "name": "Kalsadang Bago", "oneway": false, "osmid": "33440844", "reversed": "False"}, "type": "Feature"}, {"bbox": [120.9322594, 14.9864772, 120.9368591, 14.9966958], "geometry": {"coordinates": [[120.9322594, 14.9966958], [120.9324435, 14.9964614], [120.9327071, 14.9961403], [120.9328514, 14.995942], [120.9331146, 14.9955123], [120.9333915, 14.9950504], [120.9337556, 14.9943594], [120.9340701, 14.9937783], [120.9341818, 14.9936089], [120.93435, 14.9933223], [120.9344047, 14.9931572], [120.9344611, 14.9929059], [120.9345708, 14.9923921], [120.9347092, 14.9917127], [120.9347714, 14.9914338], [120.9347782, 14.9913986], [120.9347915, 14.9913253], [120.9348685, 14.9909986], [120.9350142, 14.990348], [120.9351735, 14.989748], [120.9352051, 14.9896855], [120.935411, 14.989267], [120.9355755, 14.9889774], [120.9359333, 14.98829], [120.9360194, 14.9881206], [120.9363471, 14.9874762], [120.9367961, 14.9865932], [120.9368591, 14.9864772]], "type": "LineString"}, "id": "(892938565, 8983524456, 0)", "properties": {"highway": "secondary", "lanes": "2", "length": 1251.8419020131225, "maxspeed": "40", "name": "Kalsadang Bago", "oneway": false, "osmid": "33440844", "reversed": "False"}, "type": "Feature"}, {"bbox": [120.9303583, 14.9966958, 120.9322594, 14.9989298], "geometry": {"coordinates": [[120.9322594, 14.9966958], [120.9320025, 14.9970139], [120.9318932, 14.9971457], [120.9316333, 14.997459], [120.9311784, 14.9980075], [120.9303583, 14.9989298]], "type": "LineString"}, "id": "(892938565, 420760507, 0)", "properties": {"highway": "secondary", "lanes": "2", "length": 321.6189165416796, "maxspeed": "40", "name": "Kalsadang Bago", "oneway": false, "osmid": "33440844", "reversed": "True"}, "type": "Feature"}, {"bbox": [120.9291761, 14.994399, 120.9322594, 14.9966958], "geometry": {"coordinates": [[120.9322594, 14.9966958], [120.9320589, 14.9964546], [120.9318818, 14.9962169], [120.9316802, 14.9959789], [120.931401, 14.9957067], [120.9312393, 14.9955244], [120.9310815, 14.9953466], [120.930346, 14.9946479], [120.9301106, 14.9945589], [120.9299604, 14.9945024], [120.9299418, 14.9944976], [120.929717, 14.9944403], [120.9294925, 14.994399], [120.9293064, 14.9944064], [120.9291761, 14.9944484]], "type": "LineString"}, "id": "(892938565, 1879407258, 0)", "properties": {"highway": "tertiary", "lanes": null, "length": 438.1095797563808, "maxspeed": null, "name": null, "oneway": false, "osmid": "[75636307, 177518511]", "reversed": "[False, True]"}, "type": "Feature"}, {"bbox": [120.9291761, 14.994399, 120.9322594, 14.9966958], "geometry": {"coordinates": [[120.9291761, 14.9944484], [120.9293064, 14.9944064], [120.9294925, 14.994399], [120.929717, 14.9944403], [120.9299418, 14.9944976], [120.9299604, 14.9945024], [120.9301106, 14.9945589], [120.930346, 14.9946479], [120.9310815, 14.9953466], [120.9312393, 14.9955244], [120.931401, 14.9957067], [120.9316802, 14.9959789], [120.9318818, 14.9962169], [120.9320589, 14.9964546], [120.9322594, 14.9966958]], "type": "LineString"}, "id": "(1879407258, 892938565, 0)", "properties": {"highway": "tertiary", "lanes": null, "length": 438.10957975638075, "maxspeed": null, "name": null, "oneway": false, "osmid": "[75636307, 177518511]", "reversed": "[False, True]"}, "type": "Feature"}, {"bbox": [120.9264281, 14.9804093, 120.9368591, 14.9864772], "geometry": {"coordinates": [[120.9264281, 14.9816484], [120.9265215, 14.9815929], [120.9269452, 14.9813318], [120.9275431, 14.9805389], [120.9276254, 14.9804093], [120.9317562, 14.9830141], [120.9348149, 14.9849869], [120.9350098, 14.9851126], [120.9357413, 14.9855844], [120.9358528, 14.9856563], [120.9361222, 14.9858543], [120.9362486, 14.9859548], [120.9368591, 14.9864772]], "type": "LineString"}, "id": "(8276841937, 8983524456, 0)", "properties": {"highway": "tertiary", "lanes": null, "length": 1392.2751149807116, "maxspeed": null, "name": "Purok 3", "oneway": false, "osmid": "[33504629, 96938447]", "reversed": "False"}, "type": "Feature"}, {"bbox": [120.9322594, 14.9864772, 120.9368591, 14.9966958], "geometry": {"coordinates": [[120.9368591, 14.9864772], [120.9367961, 14.9865932], [120.9363471, 14.9874762], [120.9360194, 14.9881206], [120.9359333, 14.98829], [120.9355755, 14.9889774], [120.935411, 14.989267], [120.9352051, 14.9896855], [120.9351735, 14.989748], [120.9350142, 14.990348], [120.9348685, 14.9909986], [120.9347915, 14.9913253], [120.9347782, 14.9913986], [120.9347714, 14.9914338], [120.9347092, 14.9917127], [120.9345708, 14.9923921], [120.9344611, 14.9929059], [120.9344047, 14.9931572], [120.93435, 14.9933223], [120.9341818, 14.9936089], [120.9340701, 14.9937783], [120.9337556, 14.9943594], [120.9333915, 14.9950504], [120.9331146, 14.9955123], [120.9328514, 14.995942], [120.9327071, 14.9961403], [120.9324435, 14.9964614], [120.9322594, 14.9966958]], "type": "LineString"}, "id": "(8983524456, 892938565, 0)", "properties": {"highway": "secondary", "lanes": "2", "length": 1251.841902013122, "maxspeed": "40", "name": "Kalsadang Bago", "oneway": false, "osmid": "33440844", "reversed": "True"}, "type": "Feature"}, {"bbox": [120.9264281, 14.9804093, 120.9368591, 14.9864772], "geometry": {"coordinates": [[120.9368591, 14.9864772], [120.9362486, 14.9859548], [120.9361222, 14.9858543], [120.9358528, 14.9856563], [120.9357413, 14.9855844], [120.9350098, 14.9851126], [120.9348149, 14.9849869], [120.9317562, 14.9830141], [120.9276254, 14.9804093], [120.9275431, 14.9805389], [120.9269452, 14.9813318], [120.9265215, 14.9815929], [120.9264281, 14.9816484]], "type": "LineString"}, "id": "(8983524456, 8276841937, 0)", "properties": {"highway": "tertiary", "lanes": null, "length": 1392.2751149807118, "maxspeed": null, "name": "Purok 3", "oneway": false, "osmid": "[33504629, 96938447]", "reversed": "True"}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_a320e039bd5df21f4ea7b64f9ceba60c.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["name", "highway", "length"];
+    let aliases = ["name", "highway", "length"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_a320e039bd5df21f4ea7b64f9ceba60c.addTo(map_25f1ee06d5a3bb3f3f7ca505ab5ec03a);
+        
+    
+        function geo_json_308c0c3024536fa1858f5aa129f6f65b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+        function geo_json_308c0c3024536fa1858f5aa129f6f65b_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.75};
+            }
+        }
+        function geo_json_308c0c3024536fa1858f5aa129f6f65b_pointToLayer(feature, latlng) {
+            var opts = {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3};
+            
+            let style = geo_json_308c0c3024536fa1858f5aa129f6f65b_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_308c0c3024536fa1858f5aa129f6f65b_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                            geo_json_308c0c3024536fa1858f5aa129f6f65b.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_308c0c3024536fa1858f5aa129f6f65b_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_308c0c3024536fa1858f5aa129f6f65b = L.geoJson(null, {
+                onEachFeature: geo_json_308c0c3024536fa1858f5aa129f6f65b_onEachFeature,
+            
+                style: geo_json_308c0c3024536fa1858f5aa129f6f65b_styler,
+                pointToLayer: geo_json_308c0c3024536fa1858f5aa129f6f65b_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_308c0c3024536fa1858f5aa129f6f65b_add (data) {
+            geo_json_308c0c3024536fa1858f5aa129f6f65b
+                .addData(data);
+        }
+            geo_json_308c0c3024536fa1858f5aa129f6f65b_add({"bbox": [120.9126341, 14.9798655, 120.9443772, 15.0150006], "features": [{"bbox": [120.9443772, 14.9814515, 120.9443772, 14.9814515], "geometry": {"coordinates": [120.9443772, 14.9814515], "type": "Point"}, "id": "(\u0027node\u0027, 7371738664)", "properties": {"__folium_color": "blue", "addr:province": "Bulacan", "addr:street": null, "addr:town": "San Rafael", "addr:village": "Caingin", "amenity": "school", "education_program": "specialized_education", "isced:level": "2-3", "name": "San Rafael National Trade School", "name:en": null, "operator": "San Rafael District of Bulacan Schools Division, DepEd", "operator:type": "public", "population:pupils:2012": "1291", "population:pupils:2015": "1291", "ref": "300773", "source": "Department of Education, Philippines", "source:date": "2012", "specialized_education": "trade", "start_date": "1988"}, "type": "Feature"}, {"bbox": [120.9126341, 14.997602, 120.9126341, 14.997602], "geometry": {"coordinates": [120.9126341, 14.997602], "type": "Point"}, "id": "(\u0027node\u0027, 7371755055)", "properties": {"__folium_color": "blue", "addr:province": "Bulacan", "addr:street": null, "addr:town": "San Rafael", "addr:village": null, "amenity": "school", "education_program": null, "isced:level": "1", "name": "Pinacpinacan Elementary School", "name:en": null, "operator": "San Rafael District of Bulacan Schools Division, DepEd", "operator:type": "public", "population:pupils:2012": "193", "population:pupils:2015": "226", "ref": "105127", "source": "Department of Education, Philippines", "source:date": "2012", "specialized_education": null, "start_date": "1957"}, "type": "Feature"}, {"bbox": [120.9300147, 14.9971665, 120.9308654, 14.9978725], "geometry": {"coordinates": [[[120.9300147, 14.9973459], [120.9301508, 14.9978725], [120.9306819, 14.9977378], [120.9308654, 14.9974844], [120.9306169, 14.9971665], [120.9300147, 14.9973459]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 123152320)", "properties": {"__folium_color": "blue", "addr:province": "Bulacan", "addr:street": null, "addr:town": "San Rafael", "addr:village": null, "amenity": "school", "education_program": null, "isced:level": "1", "name": "Capihan Elementary School", "name:en": null, "operator": "San Rafael District of Bulacan Schools Division, DepEd", "operator:type": "public", "population:pupils:2012": "434", "population:pupils:2015": "493", "ref": "105116", "source": "Department of Education, Philippines", "source:date": "2012", "specialized_education": null, "start_date": "1956"}, "type": "Feature"}, {"bbox": [120.9291986, 14.9798655, 120.9298986, 14.9806065], "geometry": {"coordinates": [[[120.9291986, 14.9804744], [120.9296358, 14.9798655], [120.9298986, 14.9798966], [120.9294038, 14.9806065], [120.9291986, 14.9804744]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 793542749)", "properties": {"__folium_color": "blue", "addr:province": "Bulacan", "addr:street": null, "addr:town": "San Rafael", "addr:village": null, "amenity": "school", "education_program": null, "isced:level": "1", "name": "Sampalok Elementary School", "name:en": null, "operator": "San Rafael District of Bulacan Schools Division, DepEd", "operator:type": "public", "population:pupils:2012": "327", "population:pupils:2015": "365", "ref": "105131", "source": "Department of Education, Philippines", "source:date": "2012", "specialized_education": null, "start_date": "1994"}, "type": "Feature"}, {"bbox": [120.9316555, 15.0077066, 120.9325393, 15.008895], "geometry": {"coordinates": [[[120.9325393, 15.0088782], [120.9317225, 15.008895], [120.9316555, 15.0081502], [120.9317178, 15.0078814], [120.9321886, 15.0077998], [120.9321758, 15.0077467], [120.9324139, 15.0077066], [120.9325393, 15.0088782]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 827600881)", "properties": {"__folium_color": "blue", "addr:province": "Bulacan", "addr:street": "Cagayan Valley Road", "addr:town": "San Rafael", "addr:village": null, "amenity": "school", "education_program": null, "isced:level": "1", "name": "San Roque Elementary School", "name:en": "San Roque Elementary School", "operator": "San Rafael District of Bulacan Schools Division, DepEd", "operator:type": "public", "population:pupils:2012": "797", "population:pupils:2015": "906", "ref": "105134", "source": "Department of Education, Philippines", "source:date": "2012", "specialized_education": null, "start_date": "1948"}, "type": "Feature"}, {"bbox": [120.9341145, 15.0141168, 120.9351773, 15.0150006], "geometry": {"coordinates": [[[120.9351773, 15.014547], [120.9349775, 15.0141168], [120.9345281, 15.0143529], [120.9344388, 15.0141701], [120.9341145, 15.0143237], [120.9342429, 15.0150006], [120.9351773, 15.014547]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1332757539)", "properties": {"__folium_color": "blue", "addr:province": null, "addr:street": null, "addr:town": null, "addr:village": null, "amenity": "school", "education_program": null, "isced:level": null, "name": "Microlink Institute of Science and Technology - San Rafael Campus", "name:en": null, "operator": null, "operator:type": null, "population:pupils:2012": null, "population:pupils:2015": null, "ref": null, "source": null, "source:date": null, "specialized_education": null, "start_date": null}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_308c0c3024536fa1858f5aa129f6f65b.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["name"];
+    let aliases = ["name"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+    geo_json_308c0c3024536fa1858f5aa129f6f65b.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["addr:province", "addr:town", "addr:village", "amenity", "education_program", "isced:level", "name", "operator", "operator:type", "population:pupils:2012", "population:pupils:2015", "ref", "source", "source:date", "specialized_education", "start_date", "addr:street", "name:en"];
+    let aliases = ["addr:province", "addr:town", "addr:village", "amenity", "education_program", "isced:level", "name", "operator", "operator:type", "population:pupils:2012", "population:pupils:2015", "ref", "source", "source:date", "specialized_education", "start_date", "addr:street", "name:en"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "className": "foliumpopup",
+});
+                     
+    
+            geo_json_308c0c3024536fa1858f5aa129f6f65b.addTo(map_25f1ee06d5a3bb3f3f7ca505ab5ec03a);
+        
+    
+        function geo_json_572f6cf1db6de64ad6e455710008815f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "purple", "fillColor": "purple", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+        function geo_json_572f6cf1db6de64ad6e455710008815f_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.75};
+            }
+        }
+        function geo_json_572f6cf1db6de64ad6e455710008815f_pointToLayer(feature, latlng) {
+            var opts = {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3};
+            
+            let style = geo_json_572f6cf1db6de64ad6e455710008815f_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_572f6cf1db6de64ad6e455710008815f_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                            geo_json_572f6cf1db6de64ad6e455710008815f.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_572f6cf1db6de64ad6e455710008815f_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_572f6cf1db6de64ad6e455710008815f = L.geoJson(null, {
+                onEachFeature: geo_json_572f6cf1db6de64ad6e455710008815f_onEachFeature,
+            
+                style: geo_json_572f6cf1db6de64ad6e455710008815f_styler,
+                pointToLayer: geo_json_572f6cf1db6de64ad6e455710008815f_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_572f6cf1db6de64ad6e455710008815f_add (data) {
+            geo_json_572f6cf1db6de64ad6e455710008815f
+                .addData(data);
+        }
+            geo_json_572f6cf1db6de64ad6e455710008815f_add({"bbox": [120.9264281, 14.9816484, 120.9368591, 14.9989298], "features": [{"bbox": [120.9303583, 14.9989298, 120.9303583, 14.9989298], "geometry": {"coordinates": [120.9303583, 14.9989298], "type": "Point"}, "id": "0", "properties": {"__folium_color": "purple", "osmid": 420760507, "street_count": 1, "x": 120.9303583, "y": 14.9989298}, "type": "Feature"}, {"bbox": [120.9322594, 14.9966958, 120.9322594, 14.9966958], "geometry": {"coordinates": [120.9322594, 14.9966958], "type": "Point"}, "id": "1", "properties": {"__folium_color": "purple", "osmid": 892938565, "street_count": 3, "x": 120.9322594, "y": 14.9966958}, "type": "Feature"}, {"bbox": [120.9291761, 14.9944484, 120.9291761, 14.9944484], "geometry": {"coordinates": [120.9291761, 14.9944484], "type": "Point"}, "id": "2", "properties": {"__folium_color": "purple", "osmid": 1879407258, "street_count": 1, "x": 120.9291761, "y": 14.9944484}, "type": "Feature"}, {"bbox": [120.9264281, 14.9816484, 120.9264281, 14.9816484], "geometry": {"coordinates": [120.9264281, 14.9816484], "type": "Point"}, "id": "3", "properties": {"__folium_color": "purple", "osmid": 8276841937, "street_count": 1, "x": 120.9264281, "y": 14.9816484}, "type": "Feature"}, {"bbox": [120.9368591, 14.9864772, 120.9368591, 14.9864772], "geometry": {"coordinates": [120.9368591, 14.9864772], "type": "Point"}, "id": "4", "properties": {"__folium_color": "purple", "osmid": 8983524456, "street_count": 4, "x": 120.9368591, "y": 14.9864772}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_572f6cf1db6de64ad6e455710008815f.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["osmid", "street_count"];
+    let aliases = ["osmid", "street_count"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_572f6cf1db6de64ad6e455710008815f.addTo(map_25f1ee06d5a3bb3f3f7ca505ab5ec03a);
+        
+    
+        function geo_json_d6c2d24f49d70ada576a564017287410_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "yellow", "fillColor": "yellow", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+        function geo_json_d6c2d24f49d70ada576a564017287410_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.75};
+            }
+        }
+        function geo_json_d6c2d24f49d70ada576a564017287410_pointToLayer(feature, latlng) {
+            var opts = {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3};
+            
+            let style = geo_json_d6c2d24f49d70ada576a564017287410_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_d6c2d24f49d70ada576a564017287410_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                            geo_json_d6c2d24f49d70ada576a564017287410.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_d6c2d24f49d70ada576a564017287410_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_d6c2d24f49d70ada576a564017287410 = L.geoJson(null, {
+                onEachFeature: geo_json_d6c2d24f49d70ada576a564017287410_onEachFeature,
+            
+                style: geo_json_d6c2d24f49d70ada576a564017287410_styler,
+                pointToLayer: geo_json_d6c2d24f49d70ada576a564017287410_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_d6c2d24f49d70ada576a564017287410_add (data) {
+            geo_json_d6c2d24f49d70ada576a564017287410
+                .addData(data);
+        }
+            geo_json_d6c2d24f49d70ada576a564017287410_add({"bbox": [120.9264281, 14.9816484, 120.9368591, 14.9989298], "features": [{"bbox": [120.9303583, 14.9989298, 120.9303583, 14.9989298], "geometry": {"coordinates": [120.9303583, 14.9989298], "type": "Point"}, "id": "0", "properties": {"__folium_color": "yellow", "osmid": 420760507, "street_count": 1, "x": 120.9303583, "y": 14.9989298}, "type": "Feature"}, {"bbox": [120.9291761, 14.9944484, 120.9291761, 14.9944484], "geometry": {"coordinates": [120.9291761, 14.9944484], "type": "Point"}, "id": "1", "properties": {"__folium_color": "yellow", "osmid": 1879407258, "street_count": 1, "x": 120.9291761, "y": 14.9944484}, "type": "Feature"}, {"bbox": [120.9264281, 14.9816484, 120.9264281, 14.9816484], "geometry": {"coordinates": [120.9264281, 14.9816484], "type": "Point"}, "id": "2", "properties": {"__folium_color": "yellow", "osmid": 8276841937, "street_count": 1, "x": 120.9264281, "y": 14.9816484}, "type": "Feature"}, {"bbox": [120.9368591, 14.9864772, 120.9368591, 14.9864772], "geometry": {"coordinates": [120.9368591, 14.9864772], "type": "Point"}, "id": "3", "properties": {"__folium_color": "yellow", "osmid": 8983524456, "street_count": 4, "x": 120.9368591, "y": 14.9864772}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_d6c2d24f49d70ada576a564017287410.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["osmid", "street_count"];
+    let aliases = ["osmid", "street_count"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_d6c2d24f49d70ada576a564017287410.addTo(map_25f1ee06d5a3bb3f3f7ca505ab5ec03a);
+        
+</script>
+</html>
