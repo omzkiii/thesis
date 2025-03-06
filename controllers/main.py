@@ -64,14 +64,38 @@ if __name__ == "__main__":
 
     otherwise use the coordinates below of it
     """
-    # graph_type = "Ring"
-    # evaluation(
-    #     "Sampaloc, Manila", None, ["school", "college", "institute", "university"]
-    # )
-    # coordinates = (14.984113296438625, 120.90632193749528)  # Latitude, Longitude
-    # distance_meters = 2000  # 2km radius
-    # evaluation(
-    #     coordinates, distance_meters, ["school", "college", "institute", "university"]
-    # )
-    # gui(generate)
-    generate("Sampaloc, Manila", ["school", "college", "institute", "university"])
+
+    
+    graph_type = "Grid"
+    evaluation("Quiapo, Manila", None, ["school", "college", "institute", "university"])
+    #coordinates = (14.6514, 121.0497)  # Latitude, Longitude
+    #distance_meters = 2000  # 2km radius
+    #evaluation(
+    #    coordinates,
+    #    distance_meters,
+    #    ["school", "college", "institute", "university"]
+    #)
+
+
+    #total_runs = 500
+    #successful_runs = 0
+
+    #for run_num in range(1, total_runs + 1):
+    #    print(f"\n=== Run {run_num}/{total_runs} ===")
+    #    try:
+    #        evaluation(
+    #           coordinates,
+    #            distance_meters,
+    #            ["school", "college", "institute", "university"],
+    #        )
+    #        successful_runs += 1
+    #    except KeyboardInterrupt:
+    #        print("\nUser interrupted the process")
+    #        break
+    #    except Exception as e:
+    #        print(f"Critical error: {str(e)}")
+    #        break
+
+    #print(f"\nCompleted {successful_runs}/{total_runs} successful runs")
+    #if successful_runs > 0:
+    #   print("Check execution_times.csv for results")
