@@ -55,7 +55,7 @@ def get_central_node(graph):
 
     central_node = [k for k, v in v_ratios.items() if v == max_centrality]
     central_node = central_node[0]
-    return central_node, 
+    return central_node
 
 
 def get_leafnodes(G):
@@ -97,4 +97,4 @@ def tc(subgraphs):
 
 if __name__ == "__main__":
     pass
-    #tc()
+    # tc()

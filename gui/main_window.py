@@ -6,6 +6,7 @@ from handlers.barchart_handler import generate_barchart
 from handlers.analysis_handlers import run_analysis
 from handlers.route_handler import launch_route_generator  
 
+
 class PageSwitcher:
     """Handles switching between pages for different graph types."""
     def __init__(self, parent, frames):
@@ -29,18 +30,34 @@ class PageSwitcher:
             self.current_index -= 1
             self.show_frame(self.current_index)
 
+
+def main_window():
+    root = tk.Tk()
+    root.title("Network Analysis GUI")
+    root.geometry("300x150")
+
+    Button(root, text="Open Analysis Window", command=analyze_runtime_window).pack(
+        pady=10
+    )
+    Button(root, text="Open Box Plot Window", command=plot_runtime_boxplot_window).pack(
+        pady=10
+    )
+
+    root.mainloop()
+
+
 def analyze_runtime_window():
     """Creates a window for runtime analysis results."""
     analysis_window = Toplevel()
     analysis_window.title("Runtime Analysis Results")
-    
+
     result_text = Text(analysis_window, height=15, width=80, wrap="word")
     result_text.pack(pady=10, padx=10, fill=tk.BOTH, expand=True)
-    
+
     scrollbar = Scrollbar(analysis_window, command=result_text.yview)
     scrollbar.pack(side="right", fill="y")
     result_text.config(yscrollcommand=scrollbar.set)
-    
+
     results = run_analysis()
     result_text.insert(tk.END, results)
 
@@ -50,8 +67,14 @@ def plot_runtime_window():
         csv_file_path = "execution_times.csv"
         df = pd.read_csv(csv_file_path)
         df.columns = df.columns.str.strip()
-        df = df.rename(columns={"graph_type": "Graph Type", "odtc_time": "ODTC Runtime", "tc_time": "TC Runtime"})
-        
+        df = df.rename(
+            columns={
+                "graph_type": "Graph Type",
+                "odtc_time": "ODTC Runtime",
+                "tc_time": "TC Runtime",
+            }
+        )
+
         graph_types = df["Graph Type"].unique()
         frames = []
 

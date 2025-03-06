@@ -1,5 +1,4 @@
 import networkx as nx
-import numpy as np
 import math
 import itertools
 import time
@@ -98,7 +97,7 @@ def odtc(subgraphs):
     central_nodes = set()
     origin_nodes = set()
     dest_nodes = set()
-    total_odtc_nodes = 0 
+    total_odtc_nodes = 0
     start_time = time.time()
     for key, values in subgraphs.items():
         central_node = get_central_node(values[0], values[1], values[2])
@@ -116,7 +115,14 @@ def odtc(subgraphs):
     print(central_nodes)
     total_origin_nodes = len(origin_nodes)
     total_dest_nodes = len(dest_nodes)
-    return central_nodes, total_time, len(central_nodes), total_origin_nodes, total_dest_nodes, total_odtc_nodes
+    return (
+        central_nodes,
+        total_time,
+        len(central_nodes),
+        total_origin_nodes,
+        total_dest_nodes,
+        total_odtc_nodes,
+    )
 
 
 if __name__ == "__main__":
