@@ -18,7 +18,7 @@ def generate(place_name, amenities):
     construct_graph(nodes, edges, subgraphs, landmarks, terminal_nodes, route, filename)
 
 
-def evaluation(location, distance, amenities):
+def evaluation(graph_type, location, distance, amenities):
     graph, nodes, edges, landmarks = get_graph(location, distance, amenities)
     subgraphs = select_subgraph(graph, nodes, landmarks)
     (
@@ -42,6 +42,11 @@ def evaluation(location, distance, amenities):
         tc_central_nodes_count,
         total_tc_nodes,
     )
+
+
+def evaluation_loop(graph_type, location, distance, amenities):
+    for _ in range(500):
+        evaluation(graph_type, location, distance, amenities)
 
 
 """

@@ -14,7 +14,7 @@ def runtime(
     tc_central_nodes_count,
     total_tc_nodes,
 ):
-    filename = "execution_times.csv"
+    filename = "execution_times1.csv"
 
     # Create file with header if needed
     try:
