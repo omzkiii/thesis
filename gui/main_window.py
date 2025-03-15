@@ -4,7 +4,8 @@ import pandas as pd
 from handlers.boxplot_handler import generate_boxplot
 from handlers.barchart_handler import generate_barchart
 from handlers.analysis_handlers import run_analysis
-from handlers.route_handler import launch_route_generator  
+from handlers.route_handler import launch_route_generator
+from handlers.normality_plots import generate_normality_plots
 
 
 class PageSwitcher:
@@ -31,21 +32,6 @@ class PageSwitcher:
             self.show_frame(self.current_index)
 
 
-def main_window():
-    root = tk.Tk()
-    root.title("Network Analysis GUI")
-    root.geometry("300x150")
-
-    Button(root, text="Open Analysis Window", command=analyze_runtime_window).pack(
-        pady=10
-    )
-    Button(root, text="Open Box Plot Window", command=plot_runtime_boxplot_window).pack(
-        pady=10
-    )
-
-    root.mainloop()
-
-
 def analyze_runtime_window():
     """Creates a window for runtime analysis results."""
     analysis_window = Toplevel()
@@ -60,6 +46,7 @@ def analyze_runtime_window():
 
     results = run_analysis()
     result_text.insert(tk.END, results)
+
 
 def plot_runtime_window():
     """Creates GUI window with box plots and bar charts for runtime analysis."""
@@ -113,17 +100,25 @@ def plot_runtime_window():
     except Exception as e:
         print(f"Error generating plot: {e}")
 
+
+def show_normality_test():
+    """Triggers the normality test plots."""
+    generate_normality_plots()
+
+
 def main_window():
     """Main Tkinter GUI window."""
     root = tk.Tk()
     root.title("Network Analysis GUI")
-    root.geometry("300x200")
+    root.geometry("300x250")
 
     Button(root, text="Open Analysis Window", command=analyze_runtime_window).pack(pady=5)
     Button(root, text="Open Runtime Analysis", command=plot_runtime_window).pack(pady=5)
-    Button(root, text="Generate Route", command=launch_route_generator).pack(pady=5)  # ✅ NEW BUTTON CALLING SEPARATE FILE
+    Button(root, text="Generate Route", command=launch_route_generator).pack(pady=5)
+    Button(root, text="Show Normality Test", command=show_normality_test).pack(pady=5)  # ✅ NEW BUTTON ADDED
 
     root.mainloop()
+
 
 if __name__ == "__main__":
     main_window()

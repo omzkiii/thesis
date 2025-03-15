@@ -46,12 +46,12 @@ def runtime(
                 datetime.now().isoformat(),
                 graph_type,
                 place_name,
-                round(odtc_time, 4),
+                round(odtc_time, 8),
                 odtc_central_nodes_count,  # New: Number of ODT Central Nodes
                 total_origin_nodes,
                 total_dest_nodes,
                 total_odtc_nodes,
-                round(tc_time, 4),
+                round(tc_time, 8),
                 tc_central_nodes_count,  # New: Number of TC Central Nodes
                 total_tc_nodes,
             ]
