@@ -68,8 +68,8 @@ if __name__ == "__main__":
     
     graph_type = "Ring"
     #evaluation("Quiapo, Manila", None, ["school", "college", "institute", "university"])
-    coordinates = (13.421866992931072, 123.32347392532115)  # Latitude, Longitude
-    distance_meters = 10000  
+    coordinates = ((14.6514, 121.0497))  # Latitude, Longitude
+    distance_meters = 2000  
     #evaluation(
     #    coordinates,
     #    distance_meters,
@@ -83,6 +83,7 @@ if __name__ == "__main__":
     for run_num in range(1, total_runs + 1):
         print(f"\n=== Run {run_num}/{total_runs} ===")
         try:
+            #evaluation("Quiapo, Manila", None, ["school", "college", "institute", "university"])
             evaluation(
                coordinates,
                 distance_meters,
