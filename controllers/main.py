@@ -6,6 +6,7 @@ from odtc import odtc
 from select_subgraph import select_subgraph
 from steiner_network import steiner_network
 from tc import tc
+from steiner_network import preload_steiner_network
 
 
 def generate(place_name, amenities):
@@ -13,9 +14,11 @@ def generate(place_name, amenities):
     graph, nodes, edges, landmarks = get_graph(place_name, amenities=amenities)
     subgraphs = select_subgraph(graph, nodes, landmarks)
     terminal_nodes = odtc(subgraphs)
-    # terminal_nodes = random.sample(list(graph.nodes), 10)
-    route = steiner_network(graph, nodes, edges, terminal_nodes[0])
-    construct_graph(nodes, edges, subgraphs, landmarks, terminal_nodes, route, filename)
+    # route = steiner_network(graph, nodes, edges, terminal_nodes[0])
+    route = preload_steiner_network(edges)
+    construct_graph(
+        nodes, edges, subgraphs, landmarks, terminal_nodes[0], route, filename
+    )
 
 
 def evaluation(graph_type, location, distance, amenities):

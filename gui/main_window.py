@@ -10,6 +10,7 @@ from handlers.normality_plots import generate_normality_plots
 
 class PageSwitcher:
     """Handles switching between pages for different graph types."""
+
     def __init__(self, parent, frames):
         self.parent = parent
         self.frames = frames
@@ -73,14 +74,22 @@ def plot_runtime_window():
 
         for graph_type in graph_types:
             df_filtered = df[df["Graph Type"] == graph_type]
-            df_melted = df_filtered.melt(id_vars=["Graph Type"], value_vars=["ODTC Runtime", "TC Runtime"],
-                                         var_name="Algorithm", value_name="Runtime")
+            df_melted = df_filtered.melt(
+                id_vars=["Graph Type"],
+                value_vars=["ODTC Runtime", "TC Runtime"],
+                var_name="Algorithm",
+                value_name="Runtime",
+            )
 
             for plot_type in ["Box Plot", "Bar Chart"]:
                 graph_sub_frame = Frame(plot_frame)
                 frames.append(graph_sub_frame)
 
-                label = tk.Label(graph_sub_frame, text=f"{plot_type} - {graph_type} Graph", font=("Arial", 12, "bold"))
+                label = tk.Label(
+                    graph_sub_frame,
+                    text=f"{plot_type} - {graph_type} Graph",
+                    font=("Arial", 12, "bold"),
+                )
                 label.pack()
 
                 if plot_type == "Box Plot":
@@ -92,8 +101,12 @@ def plot_runtime_window():
 
         nav_frame = Frame(plot_window)
         nav_frame.pack(side=tk.BOTTOM, fill=tk.X, pady=5)
-        Button(nav_frame, text="Previous", command=switcher.prev_page).pack(side=tk.LEFT, padx=5)
-        Button(nav_frame, text="Next", command=switcher.next_page).pack(side=tk.RIGHT, padx=5)
+        Button(nav_frame, text="Previous", command=switcher.prev_page).pack(
+            side=tk.LEFT, padx=5
+        )
+        Button(nav_frame, text="Next", command=switcher.next_page).pack(
+            side=tk.RIGHT, padx=5
+        )
 
     except FileNotFoundError:
         print("CSV file not found. Make sure execution_times.csv is available.")
@@ -112,7 +125,9 @@ def main_window():
     root.title("Network Analysis GUI")
     root.geometry("300x250")
 
-    Button(root, text="Open Analysis Window", command=analyze_runtime_window).pack(pady=5)
+    Button(root, text="Open Analysis Window", command=analyze_runtime_window).pack(
+        pady=5
+    )
     Button(root, text="Open Runtime Analysis", command=plot_runtime_window).pack(pady=5)
     Button(root, text="Generate Route", command=launch_route_generator).pack(pady=5)
     Button(root, text="Show Normality Test", command=show_normality_test).pack(pady=5)  # ✅ NEW BUTTON ADDED
