@@ -105,8 +105,7 @@ Checks if a location (e.g., city or neighborhood) has **strong node connection**
 .
 ├── controllers/
 │   ├── main.py                # Main simulation logic (ODTC vs TC)
-│   ├── analyze_runtime.py     # Performs statistical tests
-│   └── utils.py               # Helper functions (optional)
+│   └── analyze_runtime.py     # Performs statistical tests
 │
 ├── gui/
 │   ├── main_window.py         # Launch GUI
