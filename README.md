@@ -1,3 +1,14 @@
+## 📥 Cloning the Repository
+
+Make sure to clone the `geo2` branch:
+
+```bash
+git clone -b geo2 https://github.com/yourusername/yourrepo.git
+cd yourrepo
+```
+
+---
+
 ## 🔧 Environment Setup
 
 1. **Create a virtual environment** (recommended):
@@ -84,7 +95,7 @@ This opens a full GUI for:
 python displayCentralNodes.py
 ```
 
-Checks if a location (e.g., city or neighborhood) has **strong node centrality**, based on betweenness, closeness, or degree centrality.
+Checks if a location (e.g., city or neighborhood) has **strong node connection**,
 
 ---
 
