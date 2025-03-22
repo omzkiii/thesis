@@ -95,7 +95,7 @@ This opens a full GUI for:
 python displayCentralNodes.py
 ```
 
-Checks if a location (e.g., city or neighborhood) has **strong node centrality**, based on betweenness, closeness, or degree centrality.
+Checks if a location (e.g., city or neighborhood) has **strong node connection**,
 
 ---
 
