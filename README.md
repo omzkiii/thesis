@@ -1,3 +1,14 @@
+## 📥 Cloning the Repository
+
+Make sure to clone the `geo2` branch:
+
+```bash
+git clone -b geo2 https://github.com/yourusername/yourrepo.git
+cd yourrepo
+```
+
+---
+
 ## 🔧 Environment Setup
 
 1. **Create a virtual environment** (recommended):
