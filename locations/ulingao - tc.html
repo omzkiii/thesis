@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_1dba50895f0d031bc2b9cdc60b383576 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumpopup {
+                            margin: auto;
+                        }
+                       .foliumpopup table{
+                            margin: auto;
+                        }
+                        .foliumpopup tr{
+                            text-align: left;
+                        }
+                        .foliumpopup th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+    
+                    <style>
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    </style>
+            
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_1dba50895f0d031bc2b9cdc60b383576" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_1dba50895f0d031bc2b9cdc60b383576 = L.map(
+                "map_1dba50895f0d031bc2b9cdc60b383576",
+                {
+                    center: [14.9811552, 120.8942408],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+            L.control.scale().addTo(map_1dba50895f0d031bc2b9cdc60b383576);
+
+            
+
+        
+    
+            var tile_layer_86718d558b174a86fe4ce370cd43dbdc = L.tileLayer(
+                "https://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_86718d558b174a86fe4ce370cd43dbdc.addTo(map_1dba50895f0d031bc2b9cdc60b383576);
+        
+    
+            map_1dba50895f0d031bc2b9cdc60b383576.fitBounds(
+                [[14.9661478, 120.891889], [14.9961626, 120.8965926]],
+                {}
+            );
+        
+    
+        function geo_json_92b048b53be47d20d1116bd5d238579a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.5, "weight": 2};
+            }
+        }
+        function geo_json_92b048b53be47d20d1116bd5d238579a_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.75};
+            }
+        }
+        function geo_json_92b048b53be47d20d1116bd5d238579a_pointToLayer(feature, latlng) {
+            var opts = {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2, "stroke": true, "weight": 3};
+            
+            let style = geo_json_92b048b53be47d20d1116bd5d238579a_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_92b048b53be47d20d1116bd5d238579a_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                            geo_json_92b048b53be47d20d1116bd5d238579a.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_92b048b53be47d20d1116bd5d238579a_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_92b048b53be47d20d1116bd5d238579a = L.geoJson(null, {
+                onEachFeature: geo_json_92b048b53be47d20d1116bd5d238579a_onEachFeature,
+            
+                style: geo_json_92b048b53be47d20d1116bd5d238579a_styler,
+                pointToLayer: geo_json_92b048b53be47d20d1116bd5d238579a_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_92b048b53be47d20d1116bd5d238579a_add (data) {
+            geo_json_92b048b53be47d20d1116bd5d238579a
+                .addData(data);
+        }
+            geo_json_92b048b53be47d20d1116bd5d238579a_add({"bbox": [120.891889, 14.9661478, 120.8965926, 14.9961626], "features": [{"bbox": [120.891889, 14.9742584, 120.8945565, 14.9961626], "geometry": {"coordinates": [[120.8945565, 14.9742584], [120.8942467, 14.975642], [120.8941289, 14.976179], [120.8940813, 14.9763961], [120.8939428, 14.9770442], [120.8939019, 14.9772355], [120.8938409, 14.9775213], [120.8937746, 14.9778315], [120.8937159, 14.9781933], [120.8935974, 14.9789181], [120.893535, 14.9793011], [120.8935264, 14.9793537], [120.8934788, 14.9796456], [120.8934673, 14.9797161], [120.8934316, 14.9799299], [120.8933999, 14.9801389], [120.893325, 14.9806496], [120.8932977, 14.9808354], [120.8932173, 14.9813836], [120.8932004, 14.9814989], [120.8931276, 14.9819407], [120.8930276, 14.9829414], [120.892998, 14.9832373], [120.892978, 14.9834308], [120.8929645, 14.9835811], [120.8929551, 14.9836847], [120.892879, 14.9845302], [120.8927746, 14.9856902], [120.8927659, 14.9857993], [120.8927562, 14.9859016], [120.8926964, 14.9866704], [120.8926561, 14.987202], [120.8926039, 14.9878636], [120.8925904, 14.9879754], [120.8921436, 14.9934418], [120.892128, 14.9936324], [120.8920958, 14.9940262], [120.8919031, 14.996039], [120.891889, 14.9961626]], "type": "LineString"}, "id": "(1510839646, 1510855450, 0)", "properties": {"highway": "secondary", "lanes": "2", "length": 2455.3305884934953, "maxspeed": "60", "name": "Benigno S. Aquino Avenue", "oneway": false, "osmid": "[35996836, 1020799998]", "reversed": false}, "type": "Feature"}, {"bbox": [120.8945565, 14.9664457, 120.8965105, 14.9742584], "geometry": {"coordinates": [[120.8945565, 14.9742584], [120.8946142, 14.9739985], [120.8946192, 14.9739761], [120.8946425, 14.9738713], [120.894913, 14.9726547], [120.8949263, 14.9725982], [120.8949626, 14.9724437], [120.8951234, 14.9717589], [120.8951625, 14.9715923], [120.8952172, 14.9713595], [120.8952405, 14.9712604], [120.8953081, 14.9710146], [120.8953335, 14.970922], [120.8953758, 14.9707681], [120.8955124, 14.9702709], [120.8955437, 14.9701602], [120.8955986, 14.9699495], [120.8957859, 14.9692091], [120.8958248, 14.9690737], [120.8958553, 14.9689586], [120.8960162, 14.9683887], [120.8961208, 14.9679696], [120.8962241, 14.9675656], [120.8962342, 14.9675262], [120.896243, 14.9674917], [120.8963081, 14.967237], [120.8964659, 14.9666202], [120.8965105, 14.9664457]], "type": "LineString"}, "id": "(1510839646, 5082686160, 0)", "properties": {"highway": "secondary", "lanes": "2", "length": 893.882786971239, "maxspeed": "60", "name": "Benigno S. Aquino Avenue", "oneway": false, "osmid": "1020799998", "reversed": true}, "type": "Feature"}, {"bbox": [120.891889, 14.9742584, 120.8945565, 14.9961626], "geometry": {"coordinates": [[120.891889, 14.9961626], [120.8919031, 14.996039], [120.8920958, 14.9940262], [120.892128, 14.9936324], [120.8921436, 14.9934418], [120.8925904, 14.9879754], [120.8926039, 14.9878636], [120.8926561, 14.987202], [120.8926964, 14.9866704], [120.8927562, 14.9859016], [120.8927659, 14.9857993], [120.8927746, 14.9856902], [120.892879, 14.9845302], [120.8929551, 14.9836847], [120.8929645, 14.9835811], [120.892978, 14.9834308], [120.892998, 14.9832373], [120.8930276, 14.9829414], [120.8931276, 14.9819407], [120.8932004, 14.9814989], [120.8932173, 14.9813836], [120.8932977, 14.9808354], [120.893325, 14.9806496], [120.8933999, 14.9801389], [120.8934316, 14.9799299], [120.8934673, 14.9797161], [120.8934788, 14.9796456], [120.8935264, 14.9793537], [120.893535, 14.9793011], [120.8935974, 14.9789181], [120.8937159, 14.9781933], [120.8937746, 14.9778315], [120.8938409, 14.9775213], [120.8939019, 14.9772355], [120.8939428, 14.9770442], [120.8940813, 14.9763961], [120.8941289, 14.976179], [120.8942467, 14.975642], [120.8945565, 14.9742584]], "type": "LineString"}, "id": "(1510855450, 1510839646, 0)", "properties": {"highway": "secondary", "lanes": "2", "length": 2455.330588493495, "maxspeed": "60", "name": "Benigno S. Aquino Avenue", "oneway": false, "osmid": "[35996836, 1020799998]", "reversed": true}, "type": "Feature"}, {"bbox": [120.8963563, 14.9661478, 120.8965926, 14.9661558], "geometry": {"coordinates": [[120.8963563, 14.9661558], [120.8964791, 14.9661501], [120.8965926, 14.9661478]], "type": "LineString"}, "id": "(2107191607, 2107191609, 0)", "properties": {"highway": "tertiary", "lanes": null, "length": 25.401998490505484, "maxspeed": null, "name": null, "oneway": true, "osmid": "1185914307", "reversed": false}, "type": "Feature"}, {"bbox": [120.8965105, 14.9661478, 120.8965926, 14.9664457], "geometry": {"coordinates": [[120.8965926, 14.9661478], [120.8965105, 14.9664457]], "type": "LineString"}, "id": "(2107191609, 5082686160, 0)", "properties": {"highway": "secondary", "lanes": "2", "length": 34.27898959899905, "maxspeed": "60", "name": "Benigno S. Aquino Avenue", "oneway": false, "osmid": "1020799998", "reversed": false}, "type": "Feature"}, {"bbox": [120.8965105, 14.9661478, 120.8965926, 14.9664457], "geometry": {"coordinates": [[120.8965105, 14.9664457], [120.8965926, 14.9661478]], "type": "LineString"}, "id": "(5082686160, 2107191609, 0)", "properties": {"highway": "secondary", "lanes": "2", "length": 34.27898959899905, "maxspeed": "60", "name": "Benigno S. Aquino Avenue", "oneway": false, "osmid": "1020799998", "reversed": true}, "type": "Feature"}, {"bbox": [120.89632, 14.9662672, 120.8965105, 14.9664457], "geometry": {"coordinates": [[120.8965105, 14.9664457], [120.8964179, 14.9663644], [120.89632, 14.9662672]], "type": "LineString"}, "id": "(5082686160, 5082686161, 0)", "properties": {"highway": "tertiary", "lanes": null, "length": 28.52190990506618, "maxspeed": null, "name": null, "oneway": true, "osmid": "560616905", "reversed": false}, "type": "Feature"}, {"bbox": [120.8945565, 14.9664457, 120.8965105, 14.9742584], "geometry": {"coordinates": [[120.8965105, 14.9664457], [120.8964659, 14.9666202], [120.8963081, 14.967237], [120.896243, 14.9674917], [120.8962342, 14.9675262], [120.8962241, 14.9675656], [120.8961208, 14.9679696], [120.8960162, 14.9683887], [120.8958553, 14.9689586], [120.8958248, 14.9690737], [120.8957859, 14.9692091], [120.8955986, 14.9699495], [120.8955437, 14.9701602], [120.8955124, 14.9702709], [120.8953758, 14.9707681], [120.8953335, 14.970922], [120.8953081, 14.9710146], [120.8952405, 14.9712604], [120.8952172, 14.9713595], [120.8951625, 14.9715923], [120.8951234, 14.9717589], [120.8949626, 14.9724437], [120.8949263, 14.9725982], [120.894913, 14.9726547], [120.8946425, 14.9738713], [120.8946192, 14.9739761], [120.8946142, 14.9739985], [120.8945565, 14.9742584]], "type": "LineString"}, "id": "(5082686160, 1510839646, 0)", "properties": {"highway": "secondary", "lanes": "2", "length": 893.8827869712389, "maxspeed": "60", "name": "Benigno S. Aquino Avenue", "oneway": false, "osmid": "1020799998", "reversed": false}, "type": "Feature"}, {"bbox": [120.89632, 14.9661558, 120.8963563, 14.9662672], "geometry": {"coordinates": [[120.89632, 14.9662672], [120.8963563, 14.9661558]], "type": "LineString"}, "id": "(5082686161, 2107191607, 0)", "properties": {"highway": "tertiary", "lanes": null, "length": 12.986409820470943, "maxspeed": null, "name": null, "oneway": true, "osmid": "1185914308", "reversed": false}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_92b048b53be47d20d1116bd5d238579a.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["name", "highway", "length"];
+    let aliases = ["name", "highway", "length"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_92b048b53be47d20d1116bd5d238579a.addTo(map_1dba50895f0d031bc2b9cdc60b383576);
+        
+    
+        function geo_json_7f683910c59f9064e15088008a46856b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "blue", "fillColor": "blue", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+        function geo_json_7f683910c59f9064e15088008a46856b_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.75};
+            }
+        }
+        function geo_json_7f683910c59f9064e15088008a46856b_pointToLayer(feature, latlng) {
+            var opts = {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3};
+            
+            let style = geo_json_7f683910c59f9064e15088008a46856b_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_7f683910c59f9064e15088008a46856b_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                            geo_json_7f683910c59f9064e15088008a46856b.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_7f683910c59f9064e15088008a46856b_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_7f683910c59f9064e15088008a46856b = L.geoJson(null, {
+                onEachFeature: geo_json_7f683910c59f9064e15088008a46856b_onEachFeature,
+            
+                style: geo_json_7f683910c59f9064e15088008a46856b_styler,
+                pointToLayer: geo_json_7f683910c59f9064e15088008a46856b_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_7f683910c59f9064e15088008a46856b_add (data) {
+            geo_json_7f683910c59f9064e15088008a46856b
+                .addData(data);
+        }
+            geo_json_7f683910c59f9064e15088008a46856b_add({"bbox": [120.8910495, 14.9648599, 120.9245991, 14.997602], "features": [{"bbox": [120.9035647, 14.9928768, 120.9035647, 14.9928768], "geometry": {"coordinates": [120.9035647, 14.9928768], "type": "Point"}, "id": "(\u0027node\u0027, 7371722119)", "properties": {"__folium_color": "blue", "addr:city": null, "addr:province": "Bulacan", "addr:quarter": null, "addr:street": null, "addr:town": "San Rafael", "addr:village": "Paco", "amenity": "school", "denomination": null, "education_program": null, "isced:level": "1", "name": "Paco Elementary School", "operator": "San Rafael District of Bulacan Schools Division, DepEd", "operator:type": "public", "population:pupils:2012": "77", "population:pupils:2015": "89", "ref": "105122", "religion": null, "source": "Department of Education, Philippines", "source:date": "2012", "specialized_education": null, "start_date": "1994"}, "type": "Feature"}, {"bbox": [120.9126341, 14.997602, 120.9126341, 14.997602], "geometry": {"coordinates": [120.9126341, 14.997602], "type": "Point"}, "id": "(\u0027node\u0027, 7371755055)", "properties": {"__folium_color": "blue", "addr:city": null, "addr:province": "Bulacan", "addr:quarter": null, "addr:street": null, "addr:town": "San Rafael", "addr:village": null, "amenity": "school", "denomination": null, "education_program": null, "isced:level": "1", "name": "Pinacpinacan Elementary School", "operator": "San Rafael District of Bulacan Schools Division, DepEd", "operator:type": "public", "population:pupils:2012": "193", "population:pupils:2015": "226", "ref": "105127", "religion": null, "source": "Department of Education, Philippines", "source:date": "2012", "specialized_education": null, "start_date": "1957"}, "type": "Feature"}, {"bbox": [120.8946262, 14.9690537, 120.8956884, 14.9697491], "geometry": {"coordinates": [[[120.8947672, 14.9690537], [120.8946262, 14.9695399], [120.8955623, 14.9697491], [120.8956884, 14.9692856], [120.8947672, 14.9690537]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 600903396)", "properties": {"__folium_color": "blue", "addr:city": "Baliuag", "addr:province": "Bulacan", "addr:quarter": null, "addr:street": "Benigno S. Aquino Avenue", "addr:town": null, "addr:village": null, "amenity": "school", "denomination": null, "education_program": null, "isced:level": null, "name": "Montessori de Sagrada Familia High School Campus", "operator": "Montessori de Sagrada Familia", "operator:type": null, "population:pupils:2012": null, "population:pupils:2015": null, "ref": null, "religion": null, "source": null, "source:date": null, "specialized_education": null, "start_date": null}, "type": "Feature"}, {"bbox": [120.8958516, 14.9687937, 120.8972548, 14.9695878], "geometry": {"coordinates": [[[120.8958516, 14.9691938], [120.8964745, 14.9693964], [120.897063, 14.9695878], [120.8972548, 14.9692354], [120.8966394, 14.9689622], [120.8959662, 14.9687937], [120.8958516, 14.9691938]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 600903397)", "properties": {"__folium_color": "blue", "addr:city": "Baliuag", "addr:province": "Bulacan", "addr:quarter": null, "addr:street": "Benigno S. Aquino Avenue", "addr:town": null, "addr:village": null, "amenity": "school", "denomination": null, "education_program": null, "isced:level": null, "name": "Montessori de Sagrada Familia", "operator": null, "operator:type": null, "population:pupils:2012": null, "population:pupils:2015": null, "ref": null, "religion": null, "source": null, "source:date": null, "specialized_education": null, "start_date": null}, "type": "Feature"}, {"bbox": [120.908629, 14.9648599, 120.9097758, 14.9662566], "geometry": {"coordinates": [[[120.9092593, 14.9648599], [120.9091584, 14.9650493], [120.908629, 14.9659676], [120.9092325, 14.9662566], [120.9095512, 14.9657438], [120.9097758, 14.9653035], [120.9096647, 14.965256], [120.9097237, 14.9651128], [120.9092593, 14.9648599]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 604469378)", "properties": {"__folium_color": "blue", "addr:city": null, "addr:province": "Bulacan", "addr:quarter": "Sabang", "addr:street": "A. Mabini Street", "addr:town": "Baliuag", "addr:village": null, "amenity": "school", "denomination": null, "education_program": null, "isced:level": "0-1", "name": "Sabang Elementary School", "operator": "Baliuag North District of Bulacan Schools Division, DepEd", "operator:type": "public", "population:pupils:2012": "1399", "population:pupils:2015": "1542", "ref": "104746", "religion": null, "source": "Department of Education, Philippines", "source:date": "2012", "specialized_education": null, "start_date": "1920"}, "type": "Feature"}, {"bbox": [120.9169104, 14.9727739, 120.9178388, 14.9737639], "geometry": {"coordinates": [[[120.9169104, 14.9735365], [120.9175994, 14.9727739], [120.9178388, 14.9729532], [120.9176566, 14.973154], [120.9177397, 14.9732118], [120.9174083, 14.9735968], [120.917251, 14.9737639], [120.9169104, 14.9735365]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 605697143)", "properties": {"__folium_color": "blue", "addr:city": null, "addr:province": "Bulacan", "addr:quarter": null, "addr:street": "Daang Bakal", "addr:town": "San Rafael", "addr:village": null, "amenity": "school", "denomination": null, "education_program": null, "isced:level": "0-1", "name": "Ulingao Elementary School", "operator": "San Rafael District of Bulacan Schools Division, DepEd", "operator:type": "public", "population:pupils:2012": "371", "population:pupils:2015": "420", "ref": "105139", "religion": null, "source": "Department of Education, Philippines", "source:date": "2012", "specialized_education": null, "start_date": "1996"}, "type": "Feature"}, {"bbox": [120.9150867, 14.972899, 120.9160678, 14.9737], "geometry": {"coordinates": [[[120.9150867, 14.9734424], [120.9155532, 14.9737], [120.9156661, 14.9735268], [120.9158395, 14.9735815], [120.9160678, 14.9732396], [120.9155566, 14.972899], [120.9153253, 14.9730808], [120.9150867, 14.9734424]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 605697469)", "properties": {"__folium_color": "blue", "addr:city": null, "addr:province": "Bulacan", "addr:quarter": null, "addr:street": "Daang Bakal", "addr:town": "San Rafael", "addr:village": "Ulingao", "amenity": "school", "denomination": null, "education_program": "specialized_education", "isced:level": "2-3", "name": "Lydia D. Villangca Trade School \u2013 Annex", "operator": "San Rafael District of Bulacan Schools Division, DepEd", "operator:type": "public", "population:pupils:2012": "497", "population:pupils:2015": "497", "ref": "306718", "religion": null, "source": "Department of Education, Philippines", "source:date": "2012", "specialized_education": "trade", "start_date": "2008"}, "type": "Feature"}, {"bbox": [120.8910495, 14.9966458, 120.8917737, 14.9974024], "geometry": {"coordinates": [[[120.8916879, 14.9974024], [120.8910495, 14.9972858], [120.8912882, 14.9966458], [120.8917737, 14.9966821], [120.8916879, 14.9974024]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 788488670)", "properties": {"__folium_color": "blue", "addr:city": null, "addr:province": "Bulacan", "addr:quarter": null, "addr:street": "Benigno Aquino Avenue", "addr:town": "Baliuag", "addr:village": null, "amenity": "school", "denomination": null, "education_program": null, "isced:level": "1", "name": "J.V. Ycasiano Memorial School", "operator": "Baliuag North District of Bulacan Schools Division, DepEd", "operator:type": "public", "population:pupils:2012": "508", "population:pupils:2015": "582", "ref": "104744", "religion": null, "source": "Department of Education, Philippines", "source:date": "2012", "specialized_education": null, "start_date": "1949"}, "type": "Feature"}, {"bbox": [120.8943084, 14.9699739, 120.8948556, 14.9708316], "geometry": {"coordinates": [[[120.8944103, 14.9708238], [120.8943084, 14.9699739], [120.8948556, 14.9699972], [120.8947563, 14.9708316], [120.8944103, 14.9708238]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 788489897)", "properties": {"__folium_color": "blue", "addr:city": null, "addr:province": "Bulacan", "addr:quarter": null, "addr:street": "Benigno S. Aquino Avenue", "addr:town": "Baliuag", "addr:village": null, "amenity": "school", "denomination": null, "education_program": null, "isced:level": "0-1", "name": "Jacinto Ponce Elementary School", "operator": "Baliuag North District of Bulacan Schools Division, DepEd", "operator:type": "public", "population:pupils:2012": "1201", "population:pupils:2015": "1322", "ref": "104743", "religion": null, "source": "Department of Education, Philippines", "source:date": "2012", "specialized_education": null, "start_date": "1961"}, "type": "Feature"}, {"bbox": [120.8912668, 14.9856202, 120.8921103, 14.9864363], "geometry": {"coordinates": [[[120.8919293, 14.9864363], [120.8912668, 14.9863327], [120.8914022, 14.9856357], [120.8921103, 14.9856202], [120.8920459, 14.9860425], [120.8919293, 14.9864363]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 825467561)", "properties": {"__folium_color": "blue", "addr:city": null, "addr:province": "Bulacan", "addr:quarter": null, "addr:street": null, "addr:town": "Baliuag", "addr:village": "Santo Ni\u00f1o", "amenity": "school", "denomination": null, "education_program": null, "isced:level": "2-3", "name": "Santo Ni\u00f1o High School", "operator": "Baliuag North District of Bulacan Schools Division, DepEd", "operator:type": "public", "population:pupils:2012": "825", "population:pupils:2015": "825", "ref": "306712", "religion": null, "source": "Department of Education, Philippines", "source:date": "2012", "specialized_education": null, "start_date": "2008"}, "type": "Feature"}, {"bbox": [120.8953893, 14.9874701, 120.8965212, 14.9886076], "geometry": {"coordinates": [[[120.8953893, 14.9884573], [120.8956549, 14.9874701], [120.8965212, 14.9876774], [120.8961457, 14.9886076], [120.8953893, 14.9884573]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 825467571)", "properties": {"__folium_color": "blue", "addr:city": null, "addr:province": "Bulacan", "addr:quarter": null, "addr:street": "Dr. G Dela Merced Street", "addr:town": "Baliuag", "addr:village": null, "amenity": "school", "denomination": null, "education_program": null, "isced:level": "1", "name": "Dr. Guillermo dela Merced Memorial School", "operator": "Baliuag North District of Bulacan Schools Division, DepEd", "operator:type": "public", "population:pupils:2012": "754", "population:pupils:2015": "878", "ref": "104739", "religion": null, "source": "Department of Education, Philippines", "source:date": "2012", "specialized_education": null, "start_date": "1950"}, "type": "Feature"}, {"bbox": [120.9207953, 14.9737337, 120.9220387, 14.9747724], "geometry": {"coordinates": [[[120.9220387, 14.9740318], [120.9209737, 14.9747724], [120.9207953, 14.9745437], [120.9209885, 14.9743571], [120.9208808, 14.974182], [120.9216007, 14.9737337], [120.9217762, 14.97404], [120.9219882, 14.973897], [120.9220387, 14.9740318]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1326411896)", "properties": {"__folium_color": "blue", "addr:city": null, "addr:province": null, "addr:quarter": null, "addr:street": null, "addr:town": null, "addr:village": null, "amenity": "school", "denomination": "roman_catholic", "education_program": null, "isced:level": null, "name": "Sto. Ni\u00f1o Academy of San Rafael Bulacan Incorporated", "operator": null, "operator:type": "private", "population:pupils:2012": null, "population:pupils:2015": null, "ref": "400938", "religion": "christian", "source": null, "source:date": null, "specialized_education": null, "start_date": null}, "type": "Feature"}, {"bbox": [120.9226466, 14.9762448, 120.9245991, 14.9782821], "geometry": {"coordinates": [[[120.9245991, 14.9782821], [120.9234117, 14.9762448], [120.9226466, 14.9769855], [120.9245991, 14.9782821]]], "type": "Polygon"}, "id": "(\u0027way\u0027, 1326411899)", "properties": {"__folium_color": "blue", "addr:city": null, "addr:province": null, "addr:quarter": null, "addr:street": null, "addr:town": null, "addr:village": null, "amenity": "school", "denomination": null, "education_program": null, "isced:level": null, "name": "Baliwag Maritime Academy, Inc.", "operator": null, "operator:type": null, "population:pupils:2012": null, "population:pupils:2015": null, "ref": null, "religion": null, "source": null, "source:date": null, "specialized_education": null, "start_date": null}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_7f683910c59f9064e15088008a46856b.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["name"];
+    let aliases = ["name"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+    geo_json_7f683910c59f9064e15088008a46856b.bindPopup(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["addr:province", "addr:town", "addr:village", "amenity", "isced:level", "name", "operator", "operator:type", "population:pupils:2012", "population:pupils:2015", "ref", "source", "source:date", "start_date", "addr:city", "addr:street", "addr:quarter", "education_program", "specialized_education", "denomination", "religion"];
+    let aliases = ["addr:province", "addr:town", "addr:village", "amenity", "isced:level", "name", "operator", "operator:type", "population:pupils:2012", "population:pupils:2015", "ref", "source", "source:date", "start_date", "addr:city", "addr:street", "addr:quarter", "education_program", "specialized_education", "denomination", "religion"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i].toLocaleString()}</th>
+            
+            <td>${handleObject(layer.feature.properties[v]).toLocaleString()}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "className": "foliumpopup",
+});
+                     
+    
+            geo_json_7f683910c59f9064e15088008a46856b.addTo(map_1dba50895f0d031bc2b9cdc60b383576);
+        
+    
+        function geo_json_65d29a3bc717f39cbc92bffc888c04a6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "purple", "fillColor": "purple", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+        function geo_json_65d29a3bc717f39cbc92bffc888c04a6_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.75};
+            }
+        }
+        function geo_json_65d29a3bc717f39cbc92bffc888c04a6_pointToLayer(feature, latlng) {
+            var opts = {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 3, "stroke": true, "weight": 3};
+            
+            let style = geo_json_65d29a3bc717f39cbc92bffc888c04a6_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_65d29a3bc717f39cbc92bffc888c04a6_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                            geo_json_65d29a3bc717f39cbc92bffc888c04a6.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_65d29a3bc717f39cbc92bffc888c04a6_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_65d29a3bc717f39cbc92bffc888c04a6 = L.geoJson(null, {
+                onEachFeature: geo_json_65d29a3bc717f39cbc92bffc888c04a6_onEachFeature,
+            
+                style: geo_json_65d29a3bc717f39cbc92bffc888c04a6_styler,
+                pointToLayer: geo_json_65d29a3bc717f39cbc92bffc888c04a6_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_65d29a3bc717f39cbc92bffc888c04a6_add (data) {
+            geo_json_65d29a3bc717f39cbc92bffc888c04a6
+                .addData(data);
+        }
+            geo_json_65d29a3bc717f39cbc92bffc888c04a6_add({"bbox": [120.891889, 14.9661478, 120.8965926, 14.9961626], "features": [{"bbox": [120.8945565, 14.9742584, 120.8945565, 14.9742584], "geometry": {"coordinates": [120.8945565, 14.9742584], "type": "Point"}, "id": "0", "properties": {"__folium_color": "purple", "osmid": 1510839646, "street_count": 3, "x": 120.8945565, "y": 14.9742584}, "type": "Feature"}, {"bbox": [120.891889, 14.9961626, 120.891889, 14.9961626], "geometry": {"coordinates": [120.891889, 14.9961626], "type": "Point"}, "id": "1", "properties": {"__folium_color": "purple", "osmid": 1510855450, "street_count": 3, "x": 120.891889, "y": 14.9961626}, "type": "Feature"}, {"bbox": [120.8963563, 14.9661558, 120.8963563, 14.9661558], "geometry": {"coordinates": [120.8963563, 14.9661558], "type": "Point"}, "id": "2", "properties": {"__folium_color": "purple", "osmid": 2107191607, "street_count": 3, "x": 120.8963563, "y": 14.9661558}, "type": "Feature"}, {"bbox": [120.8965926, 14.9661478, 120.8965926, 14.9661478], "geometry": {"coordinates": [120.8965926, 14.9661478], "type": "Point"}, "id": "3", "properties": {"__folium_color": "purple", "osmid": 2107191609, "street_count": 3, "x": 120.8965926, "y": 14.9661478}, "type": "Feature"}, {"bbox": [120.8965105, 14.9664457, 120.8965105, 14.9664457], "geometry": {"coordinates": [120.8965105, 14.9664457], "type": "Point"}, "id": "4", "properties": {"__folium_color": "purple", "osmid": 5082686160, "street_count": 3, "x": 120.8965105, "y": 14.9664457}, "type": "Feature"}, {"bbox": [120.89632, 14.9662672, 120.89632, 14.9662672], "geometry": {"coordinates": [120.89632, 14.9662672], "type": "Point"}, "id": "5", "properties": {"__folium_color": "purple", "osmid": 5082686161, "street_count": 3, "x": 120.89632, "y": 14.9662672}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_65d29a3bc717f39cbc92bffc888c04a6.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["osmid", "street_count"];
+    let aliases = ["osmid", "street_count"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_65d29a3bc717f39cbc92bffc888c04a6.addTo(map_1dba50895f0d031bc2b9cdc60b383576);
+        
+    
+        function geo_json_1fb7a4579ffda96f9f3be9b409d2b35b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "yellow", "fillColor": "yellow", "fillOpacity": 0.5, "weight": 2};
+            }
+        }
+        function geo_json_1fb7a4579ffda96f9f3be9b409d2b35b_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillOpacity": 0.75};
+            }
+        }
+        function geo_json_1fb7a4579ffda96f9f3be9b409d2b35b_pointToLayer(feature, latlng) {
+            var opts = {"bubblingMouseEvents": true, "color": "#3388ff", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#3388ff", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 10, "stroke": true, "weight": 3};
+            
+            let style = geo_json_1fb7a4579ffda96f9f3be9b409d2b35b_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_1fb7a4579ffda96f9f3be9b409d2b35b_onEachFeature(feature, layer) {
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                            geo_json_1fb7a4579ffda96f9f3be9b409d2b35b.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === "function"){
+                        const highlightStyle = geo_json_1fb7a4579ffda96f9f3be9b409d2b35b_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_1fb7a4579ffda96f9f3be9b409d2b35b = L.geoJson(null, {
+                onEachFeature: geo_json_1fb7a4579ffda96f9f3be9b409d2b35b_onEachFeature,
+            
+                style: geo_json_1fb7a4579ffda96f9f3be9b409d2b35b_styler,
+                pointToLayer: geo_json_1fb7a4579ffda96f9f3be9b409d2b35b_pointToLayer,
+            ...{
+}
+        });
+
+        function geo_json_1fb7a4579ffda96f9f3be9b409d2b35b_add (data) {
+            geo_json_1fb7a4579ffda96f9f3be9b409d2b35b
+                .addData(data);
+        }
+            geo_json_1fb7a4579ffda96f9f3be9b409d2b35b_add({"bbox": [120.891889, 14.9661478, 120.8965926, 14.9961626], "features": [{"bbox": [120.8945565, 14.9742584, 120.8945565, 14.9742584], "geometry": {"coordinates": [120.8945565, 14.9742584], "type": "Point"}, "id": "0", "properties": {"__folium_color": "yellow", "osmid": 1510839646, "street_count": 3, "x": 120.8945565, "y": 14.9742584}, "type": "Feature"}, {"bbox": [120.891889, 14.9961626, 120.891889, 14.9961626], "geometry": {"coordinates": [120.891889, 14.9961626], "type": "Point"}, "id": "1", "properties": {"__folium_color": "yellow", "osmid": 1510855450, "street_count": 3, "x": 120.891889, "y": 14.9961626}, "type": "Feature"}, {"bbox": [120.8965926, 14.9661478, 120.8965926, 14.9661478], "geometry": {"coordinates": [120.8965926, 14.9661478], "type": "Point"}, "id": "2", "properties": {"__folium_color": "yellow", "osmid": 2107191609, "street_count": 3, "x": 120.8965926, "y": 14.9661478}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+    geo_json_1fb7a4579ffda96f9f3be9b409d2b35b.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create('div');
+    
+    let handleObject = feature=>typeof(feature)=='object' ? JSON.stringify(feature) : feature;
+    let fields = ["osmid", "street_count"];
+    let aliases = ["osmid", "street_count"];
+    let table = '<table>' +
+        String(
+        fields.map(
+        (v,i)=>
+        `<tr>
+            <th>${aliases[i]}</th>
+            
+            <td>${handleObject(layer.feature.properties[v])}</td>
+        </tr>`).join(''))
+    +'</table>';
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  "sticky": true,
+  "className": "foliumtooltip",
+});
+                     
+    
+            geo_json_1fb7a4579ffda96f9f3be9b409d2b35b.addTo(map_1dba50895f0d031bc2b9cdc60b383576);
+        
+</script>
+</html>

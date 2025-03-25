@@ -1,40 +1,46 @@
-import geopandas as gpd
+import networkx as nx
+import time
 
 
-def select_subgraph(nodes, landmarks):
-    poi_geometries = landmarks["geometry"]
-
-    service_nodes = nodes[
-        nodes["geometry"].apply(
-            lambda node: any(
-                node.distance(poi) <= 0.0004 for poi in poi_geometries
-            )  # 0.004 degrees approx 400 meters
-        )
-    ]
-
-    catchment_nodes = nodes[
-        nodes["geometry"].apply(
-            lambda node: any(
-                0.004 <= node.distance(poi) > 0.0005 for poi in poi_geometries
-            )  # 0.004 degrees approx 400 meters
-        )
-    ]
-
+def select_subgraph(graph, nodes, landmarks):
     subgraphs = {}
+    origin_nodes = {}
+    dest_nodes = {}
     for _, landmark in landmarks.iterrows():
-        catchment = nodes["geometry"].apply(
-            lambda node: 0.004 <= node.distance(landmark["geometry"]) > 0.0004
-        )
+        service_nodes = []
+        catchment_area = []
+        landmark_nodes = []
+        dist = 0.0004
+        while nodes[landmark_nodes].empty:
+            landmark_nodes = nodes["geometry"].apply(
+                lambda node: dist >= node.distance(landmark["geometry"]) >= 0
+            )
+            dist = dist + 0.0001
+        for service in nodes[landmark_nodes].iterrows():
+            service_nodes.append(service[0])
+            for node in graph.nodes:
+                try:
+                    catchment = nx.shortest_path_length(
+                        graph, source=node, target=service[0], weight="length"
+                    )
+                    if catchment <= 400:
+                        catchment_area.append(node)
+                except Exception as e:
+                    pass
 
-        service = nodes["geometry"].apply(
-            lambda node: 0.0004 <= node.distance(landmark["geometry"]) >= 0
-        )
-        landmark_gdf = gpd.GeoDataFrame(
-            landmark.to_frame().T, geometry="geometry", crs=landmarks.crs
-        )
-        subgraphs[landmark["name"]] = (nodes[catchment], nodes[service], landmark_gdf)
-
+        print(landmark)
+        origin_nodes = service_nodes
+        dest_nodes = [node for node in catchment_area if node not in service_nodes]
+        subraph = graph.subgraph(catchment_area).copy()
+        subgraphs[landmark["name"]] = (subraph, origin_nodes, dest_nodes)
     return subgraphs
+
+
+def select_subgraph_benchmark(graph, nodes, landmarks):
+    start_time = time.time()
+    select_subgraph(graph, nodes, landmarks)
+    runtime = time.time() - start_time
+    return runtime
 
 
 if __name__ == "__main__":
