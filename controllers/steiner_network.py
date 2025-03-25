@@ -55,7 +55,7 @@ def steiner_network(graph, nodes, edges, terminal_nodes):
     print("=================")
     print(total_distance)
     print("=================")
-    with open("routes_modified.json", "w") as file:
+    with open("routes_station.json", "w") as file:
         json.dump(list(shortest_paths), file, indent=4)
     path_check(edges, list(shortest_paths))
     return route

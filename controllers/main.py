@@ -1,12 +1,11 @@
-from get_graph import get_graph
-from gui import gui
-from construct_graph import construct_graph
-from runtime import runtime
-from odtc import odtc
-from select_subgraph import select_subgraph
-from steiner_network import steiner_network
-from tc import tc
-from steiner_network import preload_steiner_network
+from .get_graph import get_graph
+from .construct_graph import construct_graph
+from .runtime import runtime
+from .odtc import odtc
+from .select_subgraph import select_subgraph
+from .steiner_network import steiner_network
+from .tc import tc
+from .steiner_network import preload_steiner_network
 
 
 def generate(place_name, amenities):
@@ -14,8 +13,8 @@ def generate(place_name, amenities):
     graph, nodes, edges, landmarks = get_graph(place_name, amenities=amenities)
     subgraphs = select_subgraph(graph, nodes, landmarks)
     terminal_nodes = odtc(subgraphs)
-    # route = steiner_network(graph, nodes, edges, terminal_nodes[0])
-    route = preload_steiner_network(edges)
+    route = steiner_network(graph, nodes, edges, terminal_nodes[0])
+    # route = preload_steiner_network(edges)
     construct_graph(
         nodes, edges, subgraphs, landmarks, terminal_nodes[0], route, filename
     )
@@ -73,17 +72,15 @@ if __name__ == "__main__":
     otherwise use the coordinates below of it
     """
 
-    
     graph_type = "Ring"
-    #evaluation("Quiapo, Manila", None, ["school", "college", "institute", "university"])
-    coordinates = ((14.6514, 121.0497))  # Latitude, Longitude
-    distance_meters = 2000  
-    #evaluation(
+    # evaluation("Quiapo, Manila", None, ["school", "college", "institute", "university"])
+    coordinates = (14.6514, 121.0497)  # Latitude, Longitude
+    distance_meters = 2000
+    # evaluation(
     #    coordinates,
     #    distance_meters,
     #    ["school", "college", "institute", "university"]
-    #)
-
+    # )
 
     total_runs = 500
     successful_runs = 0
@@ -91,9 +88,10 @@ if __name__ == "__main__":
     for run_num in range(1, total_runs + 1):
         print(f"\n=== Run {run_num}/{total_runs} ===")
         try:
-            #evaluation("Quiapo, Manila", None, ["school", "college", "institute", "university"])
+            # evaluation("Quiapo, Manila", None, ["school", "college", "institute", "university"])
             evaluation(
-               coordinates,
+                graph_type,
+                coordinates,
                 distance_meters,
                 ["school", "college", "institute", "university"],
             )
@@ -107,4 +105,4 @@ if __name__ == "__main__":
 
     print(f"\nCompleted {successful_runs}/{total_runs} successful runs")
     if successful_runs > 0:
-       print("Check execution_times.csv for results")
+        print("Check execution_times.csv for results")

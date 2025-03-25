@@ -130,7 +130,9 @@ def main_window():
     )
     Button(root, text="Open Runtime Analysis", command=plot_runtime_window).pack(pady=5)
     Button(root, text="Generate Route", command=launch_route_generator).pack(pady=5)
-    Button(root, text="Show Normality Test", command=show_normality_test).pack(pady=5)  # ✅ NEW BUTTON ADDED
+    Button(root, text="Show Normality Test", command=show_normality_test).pack(
+        pady=5
+    )  # ✅ NEW BUTTON ADDED
 
     root.mainloop()
 
