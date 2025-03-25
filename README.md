@@ -1,43 +1,46 @@
-## 📥 Cloning the Repository
+# Origin-Destination Transportation Centrality
+
+## Setup
+### Cloning the Repository
 
 Make sure to clone the `geo2` branch:
 
-```bash
+```sh
 git clone -b geo2 https://github.com/yourusername/yourrepo.git
 cd yourrepo
 ```
 
 ---
 
-## 🔧 Environment Setup
+### Environment Setup
 
-1. **Create a virtual environment** (recommended):
+1. **Create a virtual environment**:
    ```bash
    python -m venv env
    ```
 
 2. **Activate the virtual environment**:
 
-   - On Windows:
-     ```bash
-     .\env\Scripts\activate
-     ```
+- On Windows:
+```sh
+.\env\Scripts\activate
+```
 
-   - On macOS/Linux:
-     ```bash
-     source env/bin/activate
-     ```
+- On macOS/Linux:
+```sh
+source env/bin/activate
+```
 
 3. **Install the required packages**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+```sh
+pip install -r requirements.txt
+```
 
 ---
 
-## 🚀 How to Use
+## ODTC Runtime Analysis
 
-### 1️⃣ Run Simulation (Generate 500 ODTC & TC Runtimes)
+### 1. Run Simulation (Generate 500 ODTC & TC Runtimes)
 
 ```bash
 python controllers/main.py
@@ -45,25 +48,27 @@ python controllers/main.py
 
 This will simulate **500 iterations** of ODTC and TC across a given area.
 
-#### 🔹 Usage:
+####  Usage:
 - If you have a **place name**:
-  ```python
-  evaluation("Quiapo, Manila", None, ["school", "college", "institute", "university"])
-  ```
+```python
+evaluation("Quiapo, Manila", None, ["school", "college", "institute", "university"])
+```
 - If you have **coordinates**:
-  ```python
-  evaluation(
-      coordinates,  # e.g., (14.5995, 120.9842)
-      distance_meters,  # e.g., 1000
-      ["school", "college", "institute", "university"]
-  )
-  ```
+```python
+evaluation(
+    coordinates,  # e.g., (14.5995, 120.9842)
+    distance_meters,  # e.g., 1000
+    ["school", "college", "institute", "university"]
+)
+```
 
-✅ Be sure to set the `graph_type` variable manually to label the output as **Grid**, **Scale-Free**, or **Ring**.
+> [!NOTE]
+> Be sure to set the `graph_type` variable manually to label the output as **Grid**, **Scale-Free**, or **Ring**.
+
 
 ---
 
-### 2️⃣ Analyze Runtime Statistics
+### 2. Analyze Runtime Statistics
 
 ```bash
 python controllers/analyze_runtime.py
@@ -76,7 +81,7 @@ Performs:
 
 ---
 
-### 3️⃣ Launch the GUI (Graphical Analysis + Visualization)
+### 3. Launch the GUI (Graphical Analysis + Visualization)
 
 ```bash
 python gui/main_window.py
@@ -89,39 +94,32 @@ This opens a full GUI for:
 
 ---
 
-### 4️⃣ Display Central Nodes from Any Location
+### 4. Display Central Nodes from Any Location
 
 ```bash
 python displayCentralNodes.py
 ```
 
-Checks if a location (e.g., city or neighborhood) has **strong node connection**,
+---
+
+> [!IMPORTANT]
+> - Make sure `execution_times.csv` exists before running the GUI or analyzer.
+> - If you're modifying the simulation or GUI, keep your virtual environment activated.
+
 
 ---
 
-## 📁 Project Structure
+## ODTD/Steiner Network Route Construction
 
-```
-.
-├── controllers/
-│   ├── main.py                # Main simulation logic (ODTC vs TC)
-│   └── analyze_runtime.py     # Performs statistical tests
-│
-├── gui/
-│   ├── main_window.py         # Launch GUI
-│   └── handlers/              # GUI graph handlers (bar, box, normality)
-│
-├── displayCentralNodes.py     # CLI tool for analyzing centrality of a location
-├── execution_times.csv        # Output file for simulation results
-├── requirements.txt           # Python package dependencies
-└── README.md                  # You’re here!
+To run the main gui:
+```sh
+python ./main.py
 ```
 
----
+The program will output an HTML file.
+Since the algorthim takes a long time to process the program will used the generated HTML if there is any.
+To generate a new one simply delete the HTML file of the desired location.
+The HTML files are named as "app/{location} - {amenities}.html"
 
-## 📌 Notes
 
-- Make sure `execution_times.csv` exists before running the GUI or analyzer.
-- If you're modifying the simulation or GUI, keep your virtual environment activated.
 
----
