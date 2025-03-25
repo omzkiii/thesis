@@ -114,8 +114,11 @@ python ./main.py
 ```
 
 The program will output an HTML file.
+
 Since the algorthim takes a long time to process the program will used the generated HTML if there is any.
+
 To generate a new one simply delete the HTML file of the desired location.
+
 The HTML files are named as "app/{location} - {amenities}.html"
 
 
