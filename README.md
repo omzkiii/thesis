@@ -3,11 +3,9 @@
 ## Setup
 ### Cloning the Repository
 
-Make sure to clone the `geo2` branch:
-
 ```sh
-git clone -b geo2 https://github.com/yourusername/yourrepo.git
-cd yourrepo
+git https://github.com/omzkiii/thesis.git
+cd thesis
 ```
 
 ---
@@ -100,7 +98,6 @@ This opens a full GUI for:
 python displayCentralNodes.py
 ```
 
----
 
 > [!IMPORTANT]
 > - Make sure `execution_times.csv` exists before running the GUI or analyzer.
