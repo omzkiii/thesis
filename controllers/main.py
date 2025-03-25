@@ -13,7 +13,6 @@ def generate(place_name, amenities):
     graph, nodes, edges, landmarks = get_graph(place_name, amenities=amenities)
     subgraphs = select_subgraph(graph, nodes, landmarks)
     terminal_nodes = odtc(subgraphs)
-    # terminal_nodes = random.sample(list(graph.nodes), 10)
     route = steiner_network(graph, nodes, edges, terminal_nodes[0])
     construct_graph(nodes, edges, subgraphs, landmarks, terminal_nodes, route, filename)
 
@@ -44,59 +43,67 @@ def evaluation(location, distance, amenities):
     )
 
 
-"""
-def evaluation(center_point, distance, amenities):
-    graph, nodes, edges, landmarks = get_graph(center_point, distance, amenities)
-    subgraphs = select_subgraph(graph, nodes, landmarks)
-    odtc_nodes, odtc_time, odtc_nodes_count = odtc(subgraphs)
-    tc_nodes, tc_time, tc_nodes_count = tc(subgraphs)
-    # tc()
-    # steiner_network()
-    runtime(graph_type, place_name, odtc_time, tc_time, odtc_nodes_count, tc_nodes_count)
-"""
-
 if __name__ == "__main__":
-    """
-    Instruction:
-    First input the type of graph
+    print("=== Transportation Centrality Evaluation ===")
 
-    then if you have place_name use the "evaluation("Sampaloc, Manila", None, ["school", "college", "institute", "university"])
+    # Input: Graph type
+    valid_graph_types = ["Grid", "Scale-Free", "Ring"]
+    while True:
+        graph_type = input("Enter graph type (Grid / Scale-Free / Ring): ").strip()
+        if graph_type in valid_graph_types:
+            break
+        print("Invalid input. Please enter one of: Grid, Scale-Free, Ring")
 
-    otherwise use the coordinates below of it
-    """
+    # Input: Location type
+    while True:
+        location_type = input("Do you want to input a place name or coordinates? (place/coord): ").strip().lower()
+        if location_type in ["place", "coord"]:
+            break
+        print("Invalid input. Please enter either 'place' or 'coord'.")
 
-    
-    graph_type = "Ring"
-    #evaluation("Quiapo, Manila", None, ["school", "college", "institute", "university"])
-    coordinates = ((14.6514, 121.0497))  # Latitude, Longitude
-    distance_meters = 2000  
-    #evaluation(
-    #    coordinates,
-    #    distance_meters,
-    #    ["school", "college", "institute", "university"]
-    #)
+    # Location input
+    if location_type == "place":
+        place_name = input("Enter place name (e.g., 'Sampaloc, Manila'): ").strip()
+        coordinates = None
+        distance_meters = None
+        location = place_name
+    else:
+        try:
+            lat = float(input("Enter latitude (e.g., 14.6514): ").strip())
+            lon = float(input("Enter longitude (e.g., 121.0497): ").strip())
+            coordinates = (lat, lon)
+            location = coordinates
+        except ValueError:
+            print("Invalid latitude or longitude input.")
+            exit(1)
 
+        while True:
+            try:
+                distance_meters = int(input("Enter search radius in meters (e.g., 2000): ").strip())
+                if distance_meters > 0:
+                    break
+                else:
+                    print("Distance must be a positive number.")
+            except ValueError:
+                print("Please enter a valid number for distance.")
 
+    # Run settings
     total_runs = 500
     successful_runs = 0
+    print(f"\nRunning evaluation for {total_runs} runs...")
 
     for run_num in range(1, total_runs + 1):
         print(f"\n=== Run {run_num}/{total_runs} ===")
         try:
-            #evaluation("Quiapo, Manila", None, ["school", "college", "institute", "university"])
-            evaluation(
-               coordinates,
-                distance_meters,
-                ["school", "college", "institute", "university"],
-            )
+            evaluation(location, distance_meters, ["school", "college", "institute", "university"])
             successful_runs += 1
         except KeyboardInterrupt:
-            print("\nUser interrupted the process")
+            print("\nUser interrupted the process.")
             break
         except Exception as e:
-            print(f"Critical error: {str(e)}")
+            print(f"Critical error during run {run_num}: {str(e)}")
             break
 
-    print(f"\nCompleted {successful_runs}/{total_runs} successful runs")
+    print(f"\nCompleted {successful_runs}/{total_runs} successful runs.")
     if successful_runs > 0:
-       print("Check execution_times.csv for results")
+        print("Check execution_times.csv for results.")
