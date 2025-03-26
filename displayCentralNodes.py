@@ -56,7 +56,7 @@ def constructGraph(nodes, edges, landmarks, terminal_nodes, filename):
         popup=False,
     )
 
-    catchment_map.save(f"./locations/test{filename}.html")
+    catchment_map.save(f"./locations/new{filename}.html")
 
 
 if __name__ == "__main__":
@@ -96,7 +96,7 @@ if __name__ == "__main__":
     # print("==============================================")
     # print("TONDO")
     # display_central("Tondo", "Tondo, Manila", amenities)
-    display_central("Sampaloc", "Sampaloc, Manila", amenities)
+    # display_central("Sampaloc", "Sampaloc, Manila", amenities)
 # print("==============================================")
 # print("==============================================")
 # print("==============================================")
@@ -140,9 +140,9 @@ if __name__ == "__main__":
 # print("==============================================")
 # print("==============================================")
 # print("Kasibu")
-# display_central(
-#    "Kasibu, Nueva Vizcaya",
-#    (16.27746639609076, 121.25314524596845),
-#    distance=10000,
-#    amenities=amenities,
-# )
+ display_central(
+    "Nabua, Camarines Sur",
+    (13.421866992931072, 123.32347392532115),
+    distance=10000,
+    amenities=amenities,
+ )

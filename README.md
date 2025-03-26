@@ -49,20 +49,12 @@ This will simulate **500 iterations** of ODTC and TC across a given area.
 ####  Usage:
 - If you have a **place name**:
 ```python
-evaluation("Quiapo, Manila", None, ["school", "college", "institute", "university"])
+ Baranagay/District, City (e.g., Sampaloc, Manila)
 ```
 - If you have **coordinates**:
 ```python
-evaluation(
-    coordinates,  # e.g., (14.5995, 120.9842)
-    distance_meters,  # e.g., 1000
-    ["school", "college", "institute", "university"]
-)
+Provide the latitute (e.g., 14.6514) and longitude (e.g., 121.0497)
 ```
-
-> [!NOTE]
-> Be sure to set the `graph_type` variable manually to label the output as **Grid**, **Scale-Free**, or **Ring**.
-
 
 ---
 

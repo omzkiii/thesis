@@ -1,11 +1,11 @@
-from .get_graph import get_graph
-from .construct_graph import construct_graph
-from .runtime import runtime
-from .odtc import odtc
-from .select_subgraph import select_subgraph
-from .steiner_network import steiner_network
-from .tc import tc
-from .steiner_network import preload_steiner_network
+from get_graph import get_graph
+from gui import gui
+from construct_graph import construct_graph
+from runtime import runtime
+from odtc import odtc
+from select_subgraph import select_subgraph
+from steiner_network import steiner_network
+from tc import tc
 
 
 def generate(place_name, amenities):
@@ -14,13 +14,10 @@ def generate(place_name, amenities):
     subgraphs = select_subgraph(graph, nodes, landmarks)
     terminal_nodes = odtc(subgraphs)
     route = steiner_network(graph, nodes, edges, terminal_nodes[0])
-    # route = preload_steiner_network(edges)
-    construct_graph(
-        nodes, edges, subgraphs, landmarks, terminal_nodes[0], route, filename
-    )
+    construct_graph(nodes, edges, subgraphs, landmarks, terminal_nodes, route, filename)
 
 
-def evaluation(graph_type, location, distance, amenities):
+def evaluation(location, distance, amenities):
     graph, nodes, edges, landmarks = get_graph(location, distance, amenities)
     subgraphs = select_subgraph(graph, nodes, landmarks)
     (
@@ -45,22 +42,6 @@ def evaluation(graph_type, location, distance, amenities):
         total_tc_nodes,
     )
 
-
-def evaluation_loop(graph_type, location, distance, amenities):
-    for _ in range(500):
-        evaluation(graph_type, location, distance, amenities)
-
-
-"""
-def evaluation(center_point, distance, amenities):
-    graph, nodes, edges, landmarks = get_graph(center_point, distance, amenities)
-    subgraphs = select_subgraph(graph, nodes, landmarks)
-    odtc_nodes, odtc_time, odtc_nodes_count = odtc(subgraphs)
-    tc_nodes, tc_time, tc_nodes_count = tc(subgraphs)
-    # tc()
-    # steiner_network()
-    runtime(graph_type, place_name, odtc_time, tc_time, odtc_nodes_count, tc_nodes_count)
-"""
 
 if __name__ == "__main__":
     print("=== Transportation Centrality Evaluation ===")
@@ -107,7 +88,7 @@ if __name__ == "__main__":
                 print("Please enter a valid number for distance.")
 
     # Run settings
-    total_runs = 500
+    total_runs = 1
     successful_runs = 0
     print(f"\nRunning evaluation for {total_runs} runs...")
 
