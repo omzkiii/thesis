@@ -82,15 +82,15 @@ def path_cost(paths, beta_value):
 #    for values in subgraphs.values():
 #       central_node = get_central_node(values[0], values[1], values[2])
 #       print(central_node)
-# def odtc(subgraphs, graph):
-#    total_time = 0
-#    for values in subgraphs.values():
-#        start = time.time()
-#        central_node = get_central_node(values[0], values[1], values[2])
-#        elapsed = time.time() - start
-#        total_time += elapsed
-#        print(central_node)
-#    return total_time
+# def odtc_benchmark(subgraphs, graph):
+#     total_time = 0
+#     for values in subgraphs.values():
+#         start = time.time()
+#         central_node = get_central_node(values[0], values[1], values[2])
+#         elapsed = time.time() - start
+#         total_time += elapsed
+#         print(central_node)
+#     return total_time
 
 
 def odtc(subgraphs):
@@ -127,4 +127,3 @@ def odtc(subgraphs):
 
 if __name__ == "__main__":
     pass
-    # odtc()

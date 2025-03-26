@@ -45,7 +45,7 @@ class MainApp(QWidget):
         )
 
         self.amenity_dropdown = QComboBox()
-        self.amenity_dropdown.addItems(["Schools", "Offices", "Hospitals"])
+        self.amenity_dropdown.addItems(["Schools", "Bus Stations", "Clinic"])
 
         # Button to open the selected HTML file
         self.button = QPushButton("Generate Route")
@@ -61,7 +61,11 @@ class MainApp(QWidget):
         self.setGeometry(200, 200, 300, 150)
 
     def openRouteHtml(self):
-        amenities_dict = {"Schools": ["school", "college", "institute", "university"]}
+        amenities_dict = {
+            "Schools": ["school", "college", "institute", "university"],
+            "Bus Stations": ["station", "bus_station", "stop", "train_station"],
+            "Clinic": ["clinic"],
+        }
         place = self.place_dropdown.currentText()
         amenity = amenities_dict.get(self.amenity_dropdown.currentText())
         self.web_viewer = WebEngineViewer(place, amenity, self.generate_func)

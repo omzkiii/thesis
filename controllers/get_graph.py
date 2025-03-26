@@ -5,7 +5,7 @@ import networkx as nx
 def get_graph(location, distance=None, amenities=None):
     """
     Fetch a graph and landmarks from OSM based on a location, which can be either:
-    - A place name (string)
+    - A place n
     - A tuple of coordinates (latitude, longitude)
 
     Parameters:

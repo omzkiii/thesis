@@ -12,9 +12,13 @@ def display_central(name, loc, distance=None, amenities=amenities):
     graph, nodes, edges, landmarks = get_graph(
         loc, distance=distance, amenities=amenities
     )
+    print("DONE SELECTING GETTING GRAPH")
     subgraphs = select_subgraph(graph, nodes, landmarks)
+    print("DONE SELECTING SUBGRAPH")
     odtc_terminal = odtc(subgraphs)
+    print("DONE ODTC")
     tc_terminal = tc(subgraphs)
+    print("DONE TC")
     constructGraph(nodes, edges, landmarks, odtc_terminal[0], odtc_name)
     constructGraph(nodes, edges, landmarks, tc_terminal[0], tc_name)
 
@@ -52,7 +56,7 @@ def constructGraph(nodes, edges, landmarks, terminal_nodes, filename):
         popup=False,
     )
 
-    catchment_map.save(f"./locations/{filename}.html")
+    catchment_map.save(f"./locations/test{filename}.html")
 
 
 if __name__ == "__main__":
@@ -90,54 +94,55 @@ if __name__ == "__main__":
     # print("==============================================")
     # print("==============================================")
     # print("==============================================")
-     print("TONDO")
-     display_central("Tondo", "Tondo, Manila", amenities)
-    # print("==============================================")
-    # print("==============================================")
-    # print("==============================================")
-    # print("QUIAPO")
-    # display_central("quiapo", "Quiapo, Manila", amenities)
-    # print("==============================================")
-    # print("==============================================")
-    # print("==============================================")
-    # print("ROTONDA")
-    # display_central("rotonda", (14.6197, 121.0053), distance=2000, amenities=amenities)
-    # print("==============================================")
-    # print("==============================================")
-    # print("==============================================")
+    # print("TONDO")
+    # display_central("Tondo", "Tondo, Manila", amenities)
+    display_central("Sampaloc", "Sampaloc, Manila", amenities)
+# print("==============================================")
+# print("==============================================")
+# print("==============================================")
+# print("QUIAPO")
+# display_central("quiapo", "Quiapo, Manila", amenities)
+# print("==============================================")
+# print("==============================================")
+# print("==============================================")
+# print("ROTONDA")
+# display_central("rotonda", (14.6197, 121.0053), distance=2000, amenities=amenities)
+# print("==============================================")
+# print("==============================================")
+# print("==============================================")
 
-    # ring
-    #print("==============================================")
-    #print("==============================================")
-    #print("==============================================")
-    #print("qcmc")
-    #display_central("qcmc", (14.6514, 121.0497), distance=2000, amenities=amenities)
-    #display_central(
-    #    "pandi",
-    #    (14.875681235504679, 120.91910898845774),
-    #    distance=2000,
-    #    amenities=amenities,
-    #)
-    #print("==============================================")
-    #print("==============================================")
-    #print("==============================================")
-    #print("ulingao")
-    #display_central(
-    #    "ulingao",
-    #    (14.984113296438625, 120.90632193749528),
-    #    distance=2000,
-    #    amenities=amenities,
-    #)
-    #print("==============================================")
-    #print("==============================================")
-    #print("==============================================")
-    #print("==============================================")
-    #print("==============================================")
-    #print("==============================================")
-    #print("Kasibu")
-    #display_central(
-    #    "Kasibu, Nueva Vizcaya",
-    #    (16.27746639609076, 121.25314524596845),
-    #    distance=10000,
-    #    amenities=amenities,
-    #)
+# ring
+# print("==============================================")
+# print("==============================================")
+# print("==============================================")
+# print("qcmc")
+# display_central("qcmc", (14.6514, 121.0497), distance=2000, amenities=amenities)
+# display_central(
+#    "pandi",
+#    (14.875681235504679, 120.91910898845774),
+#    distance=2000,
+#    amenities=amenities,
+# )
+# print("==============================================")
+# print("==============================================")
+# print("==============================================")
+# print("ulingao")
+# display_central(
+#    "ulingao",
+#    (14.984113296438625, 120.90632193749528),
+#    distance=2000,
+#    amenities=amenities,
+# )
+# print("==============================================")
+# print("==============================================")
+# print("==============================================")
+# print("==============================================")
+# print("==============================================")
+# print("==============================================")
+# print("Kasibu")
+# display_central(
+#    "Kasibu, Nueva Vizcaya",
+#    (16.27746639609076, 121.25314524596845),
+#    distance=10000,
+#    amenities=amenities,
+# )
