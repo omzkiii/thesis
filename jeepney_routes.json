@@ -1,0 +1,2653 @@
+[
+    {
+        "type": "node",
+        "id": 56118764,
+        "lat": 14.6061245,
+        "lon": 120.9748775,
+        "tags": {
+            "highway": "traffic_signals"
+        }
+    },
+    {
+        "type": "node",
+        "id": 56125470,
+        "lat": 14.6066217,
+        "lon": 120.9734967
+    },
+    {
+        "type": "node",
+        "id": 56125473,
+        "lat": 14.6058164,
+        "lon": 120.9702511
+    },
+    {
+        "type": "node",
+        "id": 59738977,
+        "lat": 14.6017676,
+        "lon": 120.9881513,
+        "tags": {
+            "highway": "traffic_signals"
+        }
+    },
+    {
+        "type": "node",
+        "id": 67756746,
+        "lat": 14.6037206,
+        "lon": 120.9824917
+    },
+    {
+        "type": "node",
+        "id": 111048370,
+        "lat": 14.6027964,
+        "lon": 120.9903678
+    },
+    {
+        "type": "node",
+        "id": 159496507,
+        "lat": 14.6061447,
+        "lon": 120.9712508
+    },
+    {
+        "type": "node",
+        "id": 161606716,
+        "lat": 14.6041522,
+        "lon": 120.9799947
+    },
+    {
+        "type": "node",
+        "id": 161609420,
+        "lat": 14.6064977,
+        "lon": 120.969918
+    },
+    {
+        "type": "node",
+        "id": 165753069,
+        "lat": 14.6063336,
+        "lon": 120.9742926
+    },
+    {
+        "type": "node",
+        "id": 168190828,
+        "lat": 14.6050769,
+        "lon": 120.9776065,
+        "tags": {
+            "highway": "traffic_signals"
+        }
+    },
+    {
+        "type": "node",
+        "id": 168194356,
+        "lat": 14.6043092,
+        "lon": 120.9897976
+    },
+    {
+        "type": "node",
+        "id": 223698482,
+        "lat": 14.6033684,
+        "lon": 120.9846205
+    },
+    {
+        "type": "node",
+        "id": 223783057,
+        "lat": 14.6053388,
+        "lon": 120.9769244,
+        "tags": {
+            "highway": "traffic_signals"
+        }
+    },
+    {
+        "type": "node",
+        "id": 393564400,
+        "lat": 14.6044203,
+        "lon": 120.9792848
+    },
+    {
+        "type": "node",
+        "id": 1152395994,
+        "lat": 14.6035306,
+        "lon": 120.9837099,
+        "tags": {
+            "highway": "traffic_signals",
+            "traffic_signals:countdown": "yes"
+        }
+    },
+    {
+        "type": "node",
+        "id": 1343559745,
+        "lat": 14.603653,
+        "lon": 120.9829422
+    },
+    {
+        "type": "node",
+        "id": 1501266957,
+        "lat": 14.6012877,
+        "lon": 120.9891914,
+        "tags": {
+            "crossing": "traffic_signals",
+            "highway": "crossing"
+        }
+    },
+    {
+        "type": "node",
+        "id": 1630895445,
+        "lat": 14.6039803,
+        "lon": 120.9806179,
+        "tags": {
+            "highway": "traffic_signals",
+            "traffic_signals": "traffic_lights"
+        }
+    },
+    {
+        "type": "node",
+        "id": 1657448901,
+        "lat": 14.6054587,
+        "lon": 120.9766053
+    },
+    {
+        "type": "node",
+        "id": 1733866053,
+        "lat": 14.6064985,
+        "lon": 120.9727051
+    },
+    {
+        "type": "node",
+        "id": 1912498445,
+        "lat": 14.6031082,
+        "lon": 120.9852624,
+        "tags": {
+            "highway": "motorway_junction"
+        }
+    },
+    {
+        "type": "node",
+        "id": 1912498447,
+        "lat": 14.6033068,
+        "lon": 120.9848259
+    },
+    {
+        "type": "node",
+        "id": 1976181712,
+        "lat": 14.6032583,
+        "lon": 120.984948
+    },
+    {
+        "type": "node",
+        "id": 3397733553,
+        "lat": 14.600529,
+        "lon": 120.9908416
+    },
+    {
+        "type": "node",
+        "id": 3598103868,
+        "lat": 14.6022375,
+        "lon": 120.9871293,
+        "tags": {
+            "highway": "traffic_signals",
+            "traffic_signals": "traffic_lights"
+        }
+    },
+    {
+        "type": "node",
+        "id": 3739170431,
+        "lat": 14.6037637,
+        "lon": 120.9823906
+    },
+    {
+        "type": "node",
+        "id": 3739170432,
+        "lat": 14.603816,
+        "lon": 120.9819692,
+        "tags": {
+            "highway": "traffic_signals",
+            "traffic_signals": "traffic_lights"
+        }
+    },
+    {
+        "type": "node",
+        "id": 3739170433,
+        "lat": 14.6038307,
+        "lon": 120.9818701,
+        "tags": {
+            "highway": "traffic_signals",
+            "traffic_signals": "traffic_lights"
+        }
+    },
+    {
+        "type": "node",
+        "id": 3739170434,
+        "lat": 14.6039226,
+        "lon": 120.9811587
+    },
+    {
+        "type": "node",
+        "id": 4219087654,
+        "lat": 14.6060255,
+        "lon": 120.9751401
+    },
+    {
+        "type": "node",
+        "id": 4237234675,
+        "lat": 14.6060559,
+        "lon": 120.9709528
+    },
+    {
+        "type": "node",
+        "id": 4237234676,
+        "lat": 14.605971,
+        "lon": 120.9706795
+    },
+    {
+        "type": "node",
+        "id": 5728642897,
+        "lat": 14.6005931,
+        "lon": 120.990709
+    },
+    {
+        "type": "node",
+        "id": 5728642898,
+        "lat": 14.6008851,
+        "lon": 120.9900652
+    },
+    {
+        "type": "node",
+        "id": 5729211760,
+        "lat": 14.6028998,
+        "lon": 120.9856933
+    },
+    {
+        "type": "node",
+        "id": 5800650247,
+        "lat": 14.606629,
+        "lon": 120.9733234
+    },
+    {
+        "type": "node",
+        "id": 6329601470,
+        "lat": 14.6017889,
+        "lon": 120.9881069,
+        "tags": {
+            "crossing": "traffic_signals",
+            "highway": "crossing",
+            "supervised": "no"
+        }
+    },
+    {
+        "type": "node",
+        "id": 6329601473,
+        "lat": 14.6017368,
+        "lon": 120.9882173,
+        "tags": {
+            "crossing": "traffic_signals",
+            "highway": "crossing",
+            "supervised": "no"
+        }
+    },
+    {
+        "type": "node",
+        "id": 6615950311,
+        "lat": 14.6056716,
+        "lon": 120.9760466
+    },
+    {
+        "type": "node",
+        "id": 6615950312,
+        "lat": 14.6057481,
+        "lon": 120.9758412
+    },
+    {
+        "type": "node",
+        "id": 6618416843,
+        "lat": 14.6004313,
+        "lon": 120.9909673,
+        "tags": {
+            "crossing": "traffic_signals",
+            "highway": "traffic_signals"
+        }
+    },
+    {
+        "type": "node",
+        "id": 6636993464,
+        "lat": 14.604378,
+        "lon": 120.9793889
+    },
+    {
+        "type": "node",
+        "id": 6642567709,
+        "lat": 14.600641,
+        "lon": 120.9912264
+    },
+    {
+        "type": "node",
+        "id": 6642567710,
+        "lat": 14.6005492,
+        "lon": 120.9911181
+    },
+    {
+        "type": "node",
+        "id": 7571871012,
+        "lat": 14.6048712,
+        "lon": 120.9781322
+    },
+    {
+        "type": "node",
+        "id": 7571871013,
+        "lat": 14.6048122,
+        "lon": 120.9782898
+    },
+    {
+        "type": "node",
+        "id": 7577067155,
+        "lat": 14.6013281,
+        "lon": 120.9909626
+    },
+    {
+        "type": "node",
+        "id": 7779527588,
+        "lat": 14.6036477,
+        "lon": 120.9832139,
+        "tags": {
+            "description": "Recto",
+            "highway": "bus_stop",
+            "public_transport": "platform"
+        }
+    },
+    {
+        "type": "node",
+        "id": 7900777564,
+        "lat": 14.602313,
+        "lon": 120.9905637,
+        "tags": {
+            "name": "UE",
+            "public_transport": "stop_position",
+            "share_taxi": "yes"
+        }
+    },
+    {
+        "type": "node",
+        "id": 7900777565,
+        "lat": 14.6040061,
+        "lon": 120.9899125,
+        "tags": {
+            "name": "Gastambide",
+            "public_transport": "stop_position",
+            "share_taxi": "yes"
+        }
+    },
+    {
+        "type": "node",
+        "id": 7900777568,
+        "lat": 14.6023019,
+        "lon": 120.9905269,
+        "tags": {
+            "highway": "bus_stop",
+            "name": "UE",
+            "public_transport": "platform"
+        }
+    },
+    {
+        "type": "node",
+        "id": 7900777569,
+        "lat": 14.6039932,
+        "lon": 120.9898738,
+        "tags": {
+            "highway": "bus_stop",
+            "name": "Gastambide",
+            "public_transport": "platform"
+        }
+    },
+    {
+        "type": "node",
+        "id": 8310996526,
+        "lat": 14.6045851,
+        "lon": 120.9788763
+    },
+    {
+        "type": "node",
+        "id": 8434658680,
+        "lat": 14.6022014,
+        "lon": 120.9872059,
+        "tags": {
+            "highway": "traffic_signals",
+            "traffic_signals": "traffic_lights"
+        }
+    },
+    {
+        "type": "node",
+        "id": 8434658685,
+        "lat": 14.6010498,
+        "lon": 120.9897054
+    },
+    {
+        "type": "node",
+        "id": 8647480822,
+        "lat": 14.6027277,
+        "lon": 120.9860623
+    },
+    {
+        "type": "node",
+        "id": 8711018687,
+        "lat": 14.6020363,
+        "lon": 120.9875672,
+        "tags": {
+            "crossing": "uncontrolled",
+            "highway": "crossing",
+            "supervised": "no"
+        }
+    },
+    {
+        "type": "node",
+        "id": 9802350241,
+        "lat": 14.6063619,
+        "lon": 120.97212
+    },
+    {
+        "type": "node",
+        "id": 9802350242,
+        "lat": 14.6064733,
+        "lon": 120.9739067
+    },
+    {
+        "type": "node",
+        "id": 9836555648,
+        "lat": 14.6040386,
+        "lon": 120.9802725
+    },
+    {
+        "type": "node",
+        "id": 9836555650,
+        "lat": 14.6039682,
+        "lon": 120.9807618
+    },
+    {
+        "type": "node",
+        "id": 9873878532,
+        "lat": 14.6043324,
+        "lon": 120.9795087,
+        "tags": {
+            "highway": "traffic_signals",
+            "traffic_signals": "signal"
+        }
+    },
+    {
+        "type": "node",
+        "id": 11206887481,
+        "lat": 14.6014933,
+        "lon": 120.9887454,
+        "tags": {
+            "crossing": "marked",
+            "crossing:markings": "zebra",
+            "highway": "crossing",
+            "supervised": "no"
+        }
+    },
+    {
+        "type": "node",
+        "id": 11524478695,
+        "lat": 14.6017781,
+        "lon": 120.9881293
+    },
+    {
+        "type": "node",
+        "id": 12073758741,
+        "lat": 14.60619,
+        "lon": 120.971411
+    },
+    {
+        "type": "way",
+        "id": 12254952,
+        "bounds": {
+            "minlat": 14.600641,
+            "minlon": 120.9903678,
+            "maxlat": 14.6027964,
+            "maxlon": 120.9912264
+        },
+        "nodes": [
+            111048370,
+            7900777564,
+            7577067155,
+            6642567709
+        ],
+        "geometry": [
+            {
+                "lat": 14.6027964,
+                "lon": 120.9903678
+            },
+            {
+                "lat": 14.602313,
+                "lon": 120.9905637
+            },
+            {
+                "lat": 14.6013281,
+                "lon": 120.9909626
+            },
+            {
+                "lat": 14.600641,
+                "lon": 120.9912264
+            }
+        ],
+        "tags": {
+            "alt_name": "Gastambide Street",
+            "highway": "residential",
+            "lanes": "2",
+            "name": "Dalupan Street",
+            "old_name": "Gastambide Street",
+            "old_name:en": "Gastambide Street",
+            "old_name:es": "Calle Gastambide",
+            "oneway": "yes",
+            "postal_code": "1008"
+        }
+    },
+    {
+        "type": "way",
+        "id": 103499338,
+        "bounds": {
+            "minlat": 14.6063619,
+            "minlon": 120.97212,
+            "maxlat": 14.606629,
+            "maxlon": 120.9734967
+        },
+        "nodes": [
+            56125470,
+            5800650247,
+            1733866053,
+            9802350241
+        ],
+        "geometry": [
+            {
+                "lat": 14.6066217,
+                "lon": 120.9734967
+            },
+            {
+                "lat": 14.606629,
+                "lon": 120.9733234
+            },
+            {
+                "lat": 14.6064985,
+                "lon": 120.9727051
+            },
+            {
+                "lat": 14.6063619,
+                "lon": 120.97212
+            }
+        ],
+        "tags": {
+            "highway": "secondary",
+            "lanes": "4",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "old_name": "Calle Nueva",
+            "old_name:2": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "width": "10.5",
+            "wikipedia": "en:Recto Avenue"
+        }
+    },
+    {
+        "type": "way",
+        "id": 150158645,
+        "bounds": {
+            "minlat": 14.6044203,
+            "minlon": 120.9782898,
+            "maxlat": 14.6048122,
+            "maxlon": 120.9792848
+        },
+        "nodes": [
+            393564400,
+            8310996526,
+            7571871013
+        ],
+        "geometry": [
+            {
+                "lat": 14.6044203,
+                "lon": 120.9792848
+            },
+            {
+                "lat": 14.6045851,
+                "lon": 120.9788763
+            },
+            {
+                "lat": 14.6048122,
+                "lon": 120.9782898
+            }
+        ],
+        "tags": {
+            "highway": "secondary",
+            "lanes": "3",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "old_name": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "surface": "asphalt"
+        }
+    },
+    {
+        "type": "way",
+        "id": 150158647,
+        "bounds": {
+            "minlat": 14.6004313,
+            "minlon": 120.9882173,
+            "maxlat": 14.6017368,
+            "maxlon": 120.9909673
+        },
+        "nodes": [
+            6618416843,
+            3397733553,
+            5728642897,
+            5728642898,
+            8434658685,
+            1501266957,
+            11206887481,
+            6329601473
+        ],
+        "geometry": [
+            {
+                "lat": 14.6004313,
+                "lon": 120.9909673
+            },
+            {
+                "lat": 14.600529,
+                "lon": 120.9908416
+            },
+            {
+                "lat": 14.6005931,
+                "lon": 120.990709
+            },
+            {
+                "lat": 14.6008851,
+                "lon": 120.9900652
+            },
+            {
+                "lat": 14.6010498,
+                "lon": 120.9897054
+            },
+            {
+                "lat": 14.6012877,
+                "lon": 120.9891914
+            },
+            {
+                "lat": 14.6014933,
+                "lon": 120.9887454
+            },
+            {
+                "lat": 14.6017368,
+                "lon": 120.9882173
+            }
+        ],
+        "tags": {
+            "cycleway:lane": "advisory",
+            "cycleway:right": "lane",
+            "highway": "secondary",
+            "lanes": "3",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "name:etymology": "Claro M. Recto",
+            "old_name": "Calzada de Iris",
+            "old_name:2": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "source:maxspeed": "MMDA",
+            "wikipedia": "en:Recto Avenue"
+        }
+    },
+    {
+        "type": "way",
+        "id": 186866770,
+        "bounds": {
+            "minlat": 14.6031082,
+            "minlon": 120.984948,
+            "maxlat": 14.6032583,
+            "maxlon": 120.9852624
+        },
+        "nodes": [
+            1912498445,
+            1976181712
+        ],
+        "geometry": [
+            {
+                "lat": 14.6031082,
+                "lon": 120.9852624
+            },
+            {
+                "lat": 14.6032583,
+                "lon": 120.984948
+            }
+        ],
+        "tags": {
+            "foot": "no",
+            "highway": "secondary",
+            "lanes": "3",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "name:etymology": "Claro M. Recto",
+            "old_name": "Paseo de Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "source:maxspeed": "MMDA",
+            "wikipedia": "en:Recto Avenue"
+        }
+    },
+    {
+        "type": "way",
+        "id": 354449750,
+        "bounds": {
+            "minlat": 14.6027964,
+            "minlon": 120.9897976,
+            "maxlat": 14.6043092,
+            "maxlon": 120.9903678
+        },
+        "nodes": [
+            111048370,
+            7900777565,
+            168194356
+        ],
+        "geometry": [
+            {
+                "lat": 14.6027964,
+                "lon": 120.9903678
+            },
+            {
+                "lat": 14.6040061,
+                "lon": 120.9899125
+            },
+            {
+                "lat": 14.6043092,
+                "lon": 120.9897976
+            }
+        ],
+        "tags": {
+            "alt_name": "Gastambide Street",
+            "highway": "residential",
+            "lanes": "2",
+            "name": "Dalupan Street",
+            "old_name": "Gastambide Street",
+            "old_name:en": "Gastambide Street",
+            "old_name:es": "Calle Gastambide",
+            "postal_code": "1008"
+        }
+    },
+    {
+        "type": "way",
+        "id": 370192578,
+        "bounds": {
+            "minlat": 14.6033068,
+            "minlon": 120.9837099,
+            "maxlat": 14.6035306,
+            "maxlon": 120.9848259
+        },
+        "nodes": [
+            1912498447,
+            223698482,
+            1152395994
+        ],
+        "geometry": [
+            {
+                "lat": 14.6033068,
+                "lon": 120.9848259
+            },
+            {
+                "lat": 14.6033684,
+                "lon": 120.9846205
+            },
+            {
+                "lat": 14.6035306,
+                "lon": 120.9837099
+            }
+        ],
+        "tags": {
+            "foot": "use_sidepath",
+            "highway": "secondary",
+            "lanes": "3",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "old_name": "Calle de San Bernardo",
+            "old_name:2": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "source:maxspeed": "MMDA",
+            "wikipedia": "en:Recto Avenue"
+        }
+    },
+    {
+        "type": "way",
+        "id": 402902177,
+        "bounds": {
+            "minlat": 14.6028998,
+            "minlon": 120.9852624,
+            "maxlat": 14.6031082,
+            "maxlon": 120.9856933
+        },
+        "nodes": [
+            5729211760,
+            1912498445
+        ],
+        "geometry": [
+            {
+                "lat": 14.6028998,
+                "lon": 120.9856933
+            },
+            {
+                "lat": 14.6031082,
+                "lon": 120.9852624
+            }
+        ],
+        "tags": {
+            "foot": "use_sidepath",
+            "highway": "secondary",
+            "lanes": "3",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "name:etymology": "Claro M. Recto",
+            "old_name": "Calzada de Iris",
+            "old_name:2": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "source:maxspeed": "MMDA",
+            "wikipedia": "en:Recto Avenue"
+        }
+    },
+    {
+        "type": "way",
+        "id": 424276548,
+        "bounds": {
+            "minlat": 14.6060559,
+            "minlon": 120.9709528,
+            "maxlat": 14.6061447,
+            "maxlon": 120.9712508
+        },
+        "nodes": [
+            159496507,
+            4237234675
+        ],
+        "geometry": [
+            {
+                "lat": 14.6061447,
+                "lon": 120.9712508
+            },
+            {
+                "lat": 14.6060559,
+                "lon": 120.9709528
+            }
+        ],
+        "tags": {
+            "highway": "secondary",
+            "lanes": "3",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "old_name": "Paseo de Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "smoothness": "intermediate",
+            "surface": "asphalt",
+            "width": "10.5",
+            "wikipedia": "en:Recto Avenue"
+        }
+    },
+    {
+        "type": "way",
+        "id": 424276549,
+        "bounds": {
+            "minlat": 14.605971,
+            "minlon": 120.9706795,
+            "maxlat": 14.6060559,
+            "maxlon": 120.9709528
+        },
+        "nodes": [
+            4237234675,
+            4237234676
+        ],
+        "geometry": [
+            {
+                "lat": 14.6060559,
+                "lon": 120.9709528
+            },
+            {
+                "lat": 14.605971,
+                "lon": 120.9706795
+            }
+        ],
+        "tags": {
+            "bridge": "yes",
+            "highway": "secondary",
+            "lanes": "3",
+            "layer": "1",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "old_name": "Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "width": "10.5"
+        }
+    },
+    {
+        "type": "way",
+        "id": 424276550,
+        "bounds": {
+            "minlat": 14.6058164,
+            "minlon": 120.9702511,
+            "maxlat": 14.605971,
+            "maxlon": 120.9706795
+        },
+        "nodes": [
+            4237234676,
+            56125473
+        ],
+        "geometry": [
+            {
+                "lat": 14.605971,
+                "lon": 120.9706795
+            },
+            {
+                "lat": 14.6058164,
+                "lon": 120.9702511
+            }
+        ],
+        "tags": {
+            "highway": "secondary",
+            "lanes": "3",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "old_name": "Paseo de Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "width": "10.5",
+            "wikipedia": "en:Recto Avenue"
+        }
+    },
+    {
+        "type": "way",
+        "id": 704477923,
+        "bounds": {
+            "minlat": 14.6056716,
+            "minlon": 120.9758412,
+            "maxlat": 14.6057481,
+            "maxlon": 120.9760466
+        },
+        "nodes": [
+            6615950311,
+            6615950312
+        ],
+        "geometry": [
+            {
+                "lat": 14.6056716,
+                "lon": 120.9760466
+            },
+            {
+                "lat": 14.6057481,
+                "lon": 120.9758412
+            }
+        ],
+        "tags": {
+            "bridge": "yes",
+            "bridge:name": "Claro M. Recto Bridge I",
+            "highway": "secondary",
+            "lanes": "4",
+            "layer": "1",
+            "lit": "yes",
+            "maxspeed": "60",
+            "maxweight": "20",
+            "name": "C. M. Recto Avenue",
+            "old_name": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "turn:lanes": "through|through|through|right"
+        }
+    },
+    {
+        "type": "way",
+        "id": 704758043,
+        "bounds": {
+            "minlat": 14.6017676,
+            "minlon": 120.9881069,
+            "maxlat": 14.6017889,
+            "maxlon": 120.9881513
+        },
+        "nodes": [
+            59738977,
+            11524478695,
+            6329601470
+        ],
+        "geometry": [
+            {
+                "lat": 14.6017676,
+                "lon": 120.9881513
+            },
+            {
+                "lat": 14.6017781,
+                "lon": 120.9881293
+            },
+            {
+                "lat": 14.6017889,
+                "lon": 120.9881069
+            }
+        ],
+        "tags": {
+            "cycleway:right": "lane",
+            "highway": "secondary",
+            "lanes": "3",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "name:etymology": "Claro M. Recto",
+            "old_name": "Calzada de Iris",
+            "old_name:2": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "source:maxspeed": "MMDA",
+            "wikipedia": "en:Recto Avenue"
+        }
+    },
+    {
+        "type": "way",
+        "id": 774949162,
+        "bounds": {
+            "minlat": 14.603816,
+            "minlon": 120.9818701,
+            "maxlat": 14.6038307,
+            "maxlon": 120.9819692
+        },
+        "nodes": [
+            3739170432,
+            3739170433
+        ],
+        "geometry": [
+            {
+                "lat": 14.603816,
+                "lon": 120.9819692
+            },
+            {
+                "lat": 14.6038307,
+                "lon": 120.9818701
+            }
+        ],
+        "tags": {
+            "highway": "secondary",
+            "lanes": "2",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "old_name": "Calle de San Bernardo",
+            "old_name:2": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "source:maxspeed": "MMDA",
+            "wikipedia": "en:Recto Avenue"
+        }
+    },
+    {
+        "type": "way",
+        "id": 774949165,
+        "bounds": {
+            "minlat": 14.6038307,
+            "minlon": 120.9806179,
+            "maxlat": 14.6039803,
+            "maxlon": 120.9818701
+        },
+        "nodes": [
+            3739170433,
+            3739170434,
+            9836555650,
+            1630895445
+        ],
+        "geometry": [
+            {
+                "lat": 14.6038307,
+                "lon": 120.9818701
+            },
+            {
+                "lat": 14.6039226,
+                "lon": 120.9811587
+            },
+            {
+                "lat": 14.6039682,
+                "lon": 120.9807618
+            },
+            {
+                "lat": 14.6039803,
+                "lon": 120.9806179
+            }
+        ],
+        "tags": {
+            "destination": "Tutuban Center",
+            "highway": "secondary",
+            "lanes": "2",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "old_name:2": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "sidewalk": "right",
+            "source:maxspeed": "MMDA",
+            "wikipedia": "en:Recto Avenue"
+        }
+    },
+    {
+        "type": "way",
+        "id": 795473374,
+        "bounds": {
+            "minlat": 14.6039803,
+            "minlon": 120.9799947,
+            "maxlat": 14.6041522,
+            "maxlon": 120.9806179
+        },
+        "nodes": [
+            1630895445,
+            9836555648,
+            161606716
+        ],
+        "geometry": [
+            {
+                "lat": 14.6039803,
+                "lon": 120.9806179
+            },
+            {
+                "lat": 14.6040386,
+                "lon": 120.9802725
+            },
+            {
+                "lat": 14.6041522,
+                "lon": 120.9799947
+            }
+        ],
+        "tags": {
+            "highway": "secondary",
+            "lanes": "3",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "old_name": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "surface": "asphalt"
+        }
+    },
+    {
+        "type": "way",
+        "id": 806249264,
+        "bounds": {
+            "minlat": 14.6037206,
+            "minlon": 120.9819692,
+            "maxlat": 14.603816,
+            "maxlon": 120.9824917
+        },
+        "nodes": [
+            67756746,
+            3739170431,
+            3739170432
+        ],
+        "geometry": [
+            {
+                "lat": 14.6037206,
+                "lon": 120.9824917
+            },
+            {
+                "lat": 14.6037637,
+                "lon": 120.9823906
+            },
+            {
+                "lat": 14.603816,
+                "lon": 120.9819692
+            }
+        ],
+        "tags": {
+            "foot": "use_sidepath",
+            "highway": "secondary",
+            "lanes": "2",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "old_name": "Calle de San Bernardo",
+            "old_name:2": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "sidewalk": "right",
+            "source:maxspeed": "MMDA",
+            "turn:lanes": "through|through;right",
+            "wikipedia": "en:Recto Avenue"
+        }
+    },
+    {
+        "type": "way",
+        "id": 809883215,
+        "bounds": {
+            "minlat": 14.6048712,
+            "minlon": 120.9769244,
+            "maxlat": 14.6053388,
+            "maxlon": 120.9781322
+        },
+        "nodes": [
+            7571871012,
+            168190828,
+            223783057
+        ],
+        "geometry": [
+            {
+                "lat": 14.6048712,
+                "lon": 120.9781322
+            },
+            {
+                "lat": 14.6050769,
+                "lon": 120.9776065
+            },
+            {
+                "lat": 14.6053388,
+                "lon": 120.9769244
+            }
+        ],
+        "tags": {
+            "highway": "secondary",
+            "lanes": "3",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "old_name": "Calle del Gral. Izquierdo",
+            "old_name:2": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "surface": "asphalt"
+        }
+    },
+    {
+        "type": "way",
+        "id": 809883216,
+        "bounds": {
+            "minlat": 14.6048122,
+            "minlon": 120.9781322,
+            "maxlat": 14.6048712,
+            "maxlon": 120.9782898
+        },
+        "nodes": [
+            7571871013,
+            7571871012
+        ],
+        "geometry": [
+            {
+                "lat": 14.6048122,
+                "lon": 120.9782898
+            },
+            {
+                "lat": 14.6048712,
+                "lon": 120.9781322
+            }
+        ],
+        "tags": {
+            "bridge": "yes",
+            "bridge:name": "Claro M. Recto Bridge II",
+            "highway": "secondary",
+            "lanes": "3",
+            "layer": "1",
+            "lit": "yes",
+            "maxspeed": "60",
+            "maxweight": "20",
+            "name": "C. M. Recto Avenue",
+            "old_name": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "surface": "asphalt"
+        }
+    },
+    {
+        "type": "way",
+        "id": 820063544,
+        "bounds": {
+            "minlat": 14.6032583,
+            "minlon": 120.9848259,
+            "maxlat": 14.6033068,
+            "maxlon": 120.984948
+        },
+        "nodes": [
+            1976181712,
+            1912498447
+        ],
+        "geometry": [
+            {
+                "lat": 14.6032583,
+                "lon": 120.984948
+            },
+            {
+                "lat": 14.6033068,
+                "lon": 120.9848259
+            }
+        ],
+        "tags": {
+            "foot": "use_sidepath",
+            "highway": "secondary",
+            "lanes": "3",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "name:etymology": "Claro M. Recto",
+            "old_name": "Calle de San Bernardo",
+            "old_name:2": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "source:maxspeed": "MMDA",
+            "wikipedia": "en:Recto Avenue"
+        }
+    },
+    {
+        "type": "way",
+        "id": 820063563,
+        "bounds": {
+            "minlat": 14.6058164,
+            "minlon": 120.969918,
+            "maxlat": 14.6064977,
+            "maxlon": 120.9702511
+        },
+        "nodes": [
+            56125473,
+            161609420
+        ],
+        "geometry": [
+            {
+                "lat": 14.6058164,
+                "lon": 120.9702511
+            },
+            {
+                "lat": 14.6064977,
+                "lon": 120.969918
+            }
+        ],
+        "tags": {
+            "designation": "national_tertiary_road",
+            "highway": "secondary",
+            "lanes": "3",
+            "lit": "yes",
+            "mapillary": "463993471332946",
+            "name": "Juan Luna Street",
+            "name:en": "Juan Luna Street",
+            "name:es": "Calle Juan Luna",
+            "name:etymology": "Juan Luna y Novicio",
+            "name:etymology:wikidata": "Q28867",
+            "name:tl": "Kalye Juan Luna",
+            "old_name": "Lemery Street",
+            "old_name:en": "Lemery Street",
+            "old_name:es": "Calle de Lemery",
+            "old_name:etymology": "Jos\u00e9 Nicolas Francisco Pablo Lemery \u00e9 Ibarrola Ney y Gonz\u00e1lez",
+            "old_name:etymology:wikidata": "Q11051292",
+            "old_name:tl": "Kalye Lemery",
+            "oneway": "yes",
+            "surface": "concrete",
+            "width": "10.5"
+        }
+    },
+    {
+        "type": "way",
+        "id": 825090426,
+        "bounds": {
+            "minlat": 14.6004313,
+            "minlon": 120.9909673,
+            "maxlat": 14.600641,
+            "maxlon": 120.9912264
+        },
+        "nodes": [
+            6642567709,
+            6642567710,
+            6618416843
+        ],
+        "geometry": [
+            {
+                "lat": 14.600641,
+                "lon": 120.9912264
+            },
+            {
+                "lat": 14.6005492,
+                "lon": 120.9911181
+            },
+            {
+                "lat": 14.6004313,
+                "lon": 120.9909673
+            }
+        ],
+        "tags": {
+            "cycleway:lane": "advisory",
+            "cycleway:right": "lane",
+            "highway": "secondary",
+            "lanes": "2",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "Legarda Street",
+            "name:en": "Legarda Street",
+            "name:es": "Calle Legarda",
+            "name:etymology": "Benito Legarda",
+            "name:etymology:wikidata": "Q2386168",
+            "name:etymology:wikipedia": "es:Benito Legarda",
+            "name:tl": "Kalye Legarda",
+            "old_name": "Calle Alix",
+            "oneway": "yes",
+            "ref": "180",
+            "source:maxspeed": "MMDA Regulation 17-003",
+            "surface": "asphalt"
+        }
+    },
+    {
+        "type": "way",
+        "id": 825090447,
+        "bounds": {
+            "minlat": 14.6035306,
+            "minlon": 120.9824917,
+            "maxlat": 14.6037206,
+            "maxlon": 120.9837099
+        },
+        "nodes": [
+            1152395994,
+            1343559745,
+            67756746
+        ],
+        "geometry": [
+            {
+                "lat": 14.6035306,
+                "lon": 120.9837099
+            },
+            {
+                "lat": 14.603653,
+                "lon": 120.9829422
+            },
+            {
+                "lat": 14.6037206,
+                "lon": 120.9824917
+            }
+        ],
+        "tags": {
+            "foot": "use_sidepath",
+            "highway": "secondary",
+            "lanes": "3",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "old_name": "Calle de San Bernardo",
+            "old_name:2": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "sidewalk": "right",
+            "source:maxspeed": "MMDA",
+            "wikipedia": "en:Recto Avenue"
+        }
+    },
+    {
+        "type": "way",
+        "id": 833362287,
+        "bounds": {
+            "minlat": 14.6041522,
+            "minlon": 120.9793889,
+            "maxlat": 14.604378,
+            "maxlon": 120.9799947
+        },
+        "nodes": [
+            161606716,
+            9873878532,
+            6636993464
+        ],
+        "geometry": [
+            {
+                "lat": 14.6041522,
+                "lon": 120.9799947
+            },
+            {
+                "lat": 14.6043324,
+                "lon": 120.9795087
+            },
+            {
+                "lat": 14.604378,
+                "lon": 120.9793889
+            }
+        ],
+        "tags": {
+            "highway": "secondary",
+            "lanes": "3",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "old_name": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "surface": "asphalt"
+        }
+    },
+    {
+        "type": "way",
+        "id": 907189370,
+        "bounds": {
+            "minlat": 14.6057481,
+            "minlon": 120.9748775,
+            "maxlat": 14.6061245,
+            "maxlon": 120.9758412
+        },
+        "nodes": [
+            6615950312,
+            4219087654,
+            56118764
+        ],
+        "geometry": [
+            {
+                "lat": 14.6057481,
+                "lon": 120.9758412
+            },
+            {
+                "lat": 14.6060255,
+                "lon": 120.9751401
+            },
+            {
+                "lat": 14.6061245,
+                "lon": 120.9748775
+            }
+        ],
+        "tags": {
+            "highway": "secondary",
+            "lanes": "4",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "old_name": "Calle Nueva",
+            "old_name:2": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "turn:lanes": "through|through|through|right",
+            "width": "10.5",
+            "wikipedia": "en:Recto Avenue"
+        }
+    },
+    {
+        "type": "way",
+        "id": 908375510,
+        "bounds": {
+            "minlat": 14.6017889,
+            "minlon": 120.9872059,
+            "maxlat": 14.6022014,
+            "maxlon": 120.9881069
+        },
+        "nodes": [
+            6329601470,
+            8711018687,
+            8434658680
+        ],
+        "geometry": [
+            {
+                "lat": 14.6017889,
+                "lon": 120.9881069
+            },
+            {
+                "lat": 14.6020363,
+                "lon": 120.9875672
+            },
+            {
+                "lat": 14.6022014,
+                "lon": 120.9872059
+            }
+        ],
+        "tags": {
+            "cycleway:lane": "advisory",
+            "cycleway:right": "lane",
+            "highway": "secondary",
+            "lanes": "3",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "name:etymology": "Claro M. Recto",
+            "oneway": "yes",
+            "ref": "145",
+            "source:maxspeed": "MMDA"
+        }
+    },
+    {
+        "type": "way",
+        "id": 908375514,
+        "bounds": {
+            "minlat": 14.6022375,
+            "minlon": 120.9856933,
+            "maxlat": 14.6028998,
+            "maxlon": 120.9871293
+        },
+        "nodes": [
+            3598103868,
+            8647480822,
+            5729211760
+        ],
+        "geometry": [
+            {
+                "lat": 14.6022375,
+                "lon": 120.9871293
+            },
+            {
+                "lat": 14.6027277,
+                "lon": 120.9860623
+            },
+            {
+                "lat": 14.6028998,
+                "lon": 120.9856933
+            }
+        ],
+        "tags": {
+            "foot": "use_sidepath",
+            "highway": "secondary",
+            "lanes": "3",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "name:etymology": "Claro M. Recto",
+            "oneway": "yes",
+            "ref": "145",
+            "source:maxspeed": "MMDA"
+        }
+    },
+    {
+        "type": "way",
+        "id": 933593306,
+        "bounds": {
+            "minlat": 14.6022014,
+            "minlon": 120.9871293,
+            "maxlat": 14.6022375,
+            "maxlon": 120.9872059
+        },
+        "nodes": [
+            8434658680,
+            3598103868
+        ],
+        "geometry": [
+            {
+                "lat": 14.6022014,
+                "lon": 120.9872059
+            },
+            {
+                "lat": 14.6022375,
+                "lon": 120.9871293
+            }
+        ],
+        "tags": {
+            "highway": "secondary",
+            "lanes": "3",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "name:etymology": "Claro M. Recto",
+            "oneway": "yes",
+            "ref": "145",
+            "source:maxspeed": "MMDA"
+        }
+    },
+    {
+        "type": "way",
+        "id": 940624479,
+        "bounds": {
+            "minlat": 14.6017368,
+            "minlon": 120.9881513,
+            "maxlat": 14.6017676,
+            "maxlon": 120.9882173
+        },
+        "nodes": [
+            6329601473,
+            59738977
+        ],
+        "geometry": [
+            {
+                "lat": 14.6017368,
+                "lon": 120.9882173
+            },
+            {
+                "lat": 14.6017676,
+                "lon": 120.9881513
+            }
+        ],
+        "tags": {
+            "cycleway:lane": "advisory",
+            "cycleway:right": "lane",
+            "highway": "secondary",
+            "lanes": "3",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "name:etymology": "Claro M. Recto",
+            "old_name": "Calzada de Iris",
+            "old_name:2": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "source:maxspeed": "MMDA",
+            "wikipedia": "en:Recto Avenue"
+        }
+    },
+    {
+        "type": "way",
+        "id": 1067692180,
+        "bounds": {
+            "minlat": 14.6061447,
+            "minlon": 120.9712508,
+            "maxlat": 14.6063619,
+            "maxlon": 120.97212
+        },
+        "nodes": [
+            9802350241,
+            12073758741,
+            159496507
+        ],
+        "geometry": [
+            {
+                "lat": 14.6063619,
+                "lon": 120.97212
+            },
+            {
+                "lat": 14.60619,
+                "lon": 120.971411
+            },
+            {
+                "lat": 14.6061447,
+                "lon": 120.9712508
+            }
+        ],
+        "tags": {
+            "highway": "secondary",
+            "lanes": "3",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "old_name": "Calle Nueva",
+            "old_name:2": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "width": "10.5",
+            "wikipedia": "en:Recto Avenue"
+        }
+    },
+    {
+        "type": "way",
+        "id": 1067692181,
+        "bounds": {
+            "minlat": 14.6064733,
+            "minlon": 120.9734967,
+            "maxlat": 14.6066217,
+            "maxlon": 120.9739067
+        },
+        "nodes": [
+            9802350242,
+            56125470
+        ],
+        "geometry": [
+            {
+                "lat": 14.6064733,
+                "lon": 120.9739067
+            },
+            {
+                "lat": 14.6066217,
+                "lon": 120.9734967
+            }
+        ],
+        "tags": {
+            "highway": "secondary",
+            "lanes": "3",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "old_name": "Calle Nueva",
+            "old_name:2": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "source:maxspeed": "MMDA Regulation 17-003",
+            "width": "10.5",
+            "wikipedia": "en:Recto Avenue"
+        }
+    },
+    {
+        "type": "way",
+        "id": 1067692182,
+        "bounds": {
+            "minlat": 14.6061245,
+            "minlon": 120.9742926,
+            "maxlat": 14.6063336,
+            "maxlon": 120.9748775
+        },
+        "nodes": [
+            56118764,
+            165753069
+        ],
+        "geometry": [
+            {
+                "lat": 14.6061245,
+                "lon": 120.9748775
+            },
+            {
+                "lat": 14.6063336,
+                "lon": 120.9742926
+            }
+        ],
+        "tags": {
+            "highway": "secondary",
+            "lanes": "4",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "old_name": "Calle Nueva",
+            "old_name:2": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "width": "10.5",
+            "wikipedia": "en:Recto Avenue"
+        }
+    },
+    {
+        "type": "way",
+        "id": 1072020720,
+        "bounds": {
+            "minlat": 14.604378,
+            "minlon": 120.9792848,
+            "maxlat": 14.6044203,
+            "maxlon": 120.9793889
+        },
+        "nodes": [
+            6636993464,
+            393564400
+        ],
+        "geometry": [
+            {
+                "lat": 14.604378,
+                "lon": 120.9793889
+            },
+            {
+                "lat": 14.6044203,
+                "lon": 120.9792848
+            }
+        ],
+        "tags": {
+            "highway": "secondary",
+            "lanes": "3",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "old_name": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "surface": "asphalt"
+        }
+    },
+    {
+        "type": "way",
+        "id": 1083811183,
+        "bounds": {
+            "minlat": 14.6053388,
+            "minlon": 120.9760466,
+            "maxlat": 14.6056716,
+            "maxlon": 120.9769244
+        },
+        "nodes": [
+            223783057,
+            1657448901,
+            6615950311
+        ],
+        "geometry": [
+            {
+                "lat": 14.6053388,
+                "lon": 120.9769244
+            },
+            {
+                "lat": 14.6054587,
+                "lon": 120.9766053
+            },
+            {
+                "lat": 14.6056716,
+                "lon": 120.9760466
+            }
+        ],
+        "tags": {
+            "highway": "secondary",
+            "lanes": "4",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "old_name": "Calle del Gral. Izquierdo",
+            "old_name:2": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "surface": "asphalt",
+            "turn:lanes": "through|through|through|right"
+        }
+    },
+    {
+        "type": "way",
+        "id": 1302144011,
+        "bounds": {
+            "minlat": 14.6063336,
+            "minlon": 120.9739067,
+            "maxlat": 14.6064733,
+            "maxlon": 120.9742926
+        },
+        "nodes": [
+            165753069,
+            9802350242
+        ],
+        "geometry": [
+            {
+                "lat": 14.6063336,
+                "lon": 120.9742926
+            },
+            {
+                "lat": 14.6064733,
+                "lon": 120.9739067
+            }
+        ],
+        "tags": {
+            "highway": "secondary",
+            "lanes": "4",
+            "lit": "yes",
+            "maxspeed": "60",
+            "name": "C. M. Recto Avenue",
+            "old_name": "Calle Nueva",
+            "old_name:2": "Calle Azcarraga",
+            "oneway": "yes",
+            "ref": "145",
+            "short_name": "Recto",
+            "width": "10.5",
+            "wikipedia": "en:Recto Avenue"
+        }
+    },
+    {
+        "type": "relation",
+        "id": 11613216,
+        "bounds": {
+            "minlat": 14.6004313,
+            "minlon": 120.969918,
+            "maxlat": 14.606629,
+            "maxlon": 120.9912264
+        },
+        "members": [
+            {
+                "type": "node",
+                "ref": 7900777569,
+                "role": "platform",
+                "lat": 14.6039932,
+                "lon": 120.9898738
+            },
+            {
+                "type": "node",
+                "ref": 7900777568,
+                "role": "platform",
+                "lat": 14.6023019,
+                "lon": 120.9905269
+            },
+            {
+                "type": "node",
+                "ref": 7779527588,
+                "role": "platform",
+                "lat": 14.6036477,
+                "lon": 120.9832139
+            },
+            {
+                "type": "way",
+                "ref": 354449750,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6027964,
+                        "lon": 120.9903678
+                    },
+                    {
+                        "lat": 14.6040061,
+                        "lon": 120.9899125
+                    },
+                    {
+                        "lat": 14.6043092,
+                        "lon": 120.9897976
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 12254952,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6027964,
+                        "lon": 120.9903678
+                    },
+                    {
+                        "lat": 14.602313,
+                        "lon": 120.9905637
+                    },
+                    {
+                        "lat": 14.6013281,
+                        "lon": 120.9909626
+                    },
+                    {
+                        "lat": 14.600641,
+                        "lon": 120.9912264
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 825090426,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.600641,
+                        "lon": 120.9912264
+                    },
+                    {
+                        "lat": 14.6005492,
+                        "lon": 120.9911181
+                    },
+                    {
+                        "lat": 14.6004313,
+                        "lon": 120.9909673
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 150158647,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6004313,
+                        "lon": 120.9909673
+                    },
+                    {
+                        "lat": 14.600529,
+                        "lon": 120.9908416
+                    },
+                    {
+                        "lat": 14.6005931,
+                        "lon": 120.990709
+                    },
+                    {
+                        "lat": 14.6008851,
+                        "lon": 120.9900652
+                    },
+                    {
+                        "lat": 14.6010498,
+                        "lon": 120.9897054
+                    },
+                    {
+                        "lat": 14.6012877,
+                        "lon": 120.9891914
+                    },
+                    {
+                        "lat": 14.6014933,
+                        "lon": 120.9887454
+                    },
+                    {
+                        "lat": 14.6017368,
+                        "lon": 120.9882173
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 940624479,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6017368,
+                        "lon": 120.9882173
+                    },
+                    {
+                        "lat": 14.6017676,
+                        "lon": 120.9881513
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 704758043,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6017676,
+                        "lon": 120.9881513
+                    },
+                    {
+                        "lat": 14.6017781,
+                        "lon": 120.9881293
+                    },
+                    {
+                        "lat": 14.6017889,
+                        "lon": 120.9881069
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 908375510,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6017889,
+                        "lon": 120.9881069
+                    },
+                    {
+                        "lat": 14.6020363,
+                        "lon": 120.9875672
+                    },
+                    {
+                        "lat": 14.6022014,
+                        "lon": 120.9872059
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 933593306,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6022014,
+                        "lon": 120.9872059
+                    },
+                    {
+                        "lat": 14.6022375,
+                        "lon": 120.9871293
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 908375514,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6022375,
+                        "lon": 120.9871293
+                    },
+                    {
+                        "lat": 14.6027277,
+                        "lon": 120.9860623
+                    },
+                    {
+                        "lat": 14.6028998,
+                        "lon": 120.9856933
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 402902177,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6028998,
+                        "lon": 120.9856933
+                    },
+                    {
+                        "lat": 14.6031082,
+                        "lon": 120.9852624
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 186866770,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6031082,
+                        "lon": 120.9852624
+                    },
+                    {
+                        "lat": 14.6032583,
+                        "lon": 120.984948
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 820063544,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6032583,
+                        "lon": 120.984948
+                    },
+                    {
+                        "lat": 14.6033068,
+                        "lon": 120.9848259
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 370192578,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6033068,
+                        "lon": 120.9848259
+                    },
+                    {
+                        "lat": 14.6033684,
+                        "lon": 120.9846205
+                    },
+                    {
+                        "lat": 14.6035306,
+                        "lon": 120.9837099
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 825090447,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6035306,
+                        "lon": 120.9837099
+                    },
+                    {
+                        "lat": 14.603653,
+                        "lon": 120.9829422
+                    },
+                    {
+                        "lat": 14.6037206,
+                        "lon": 120.9824917
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 806249264,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6037206,
+                        "lon": 120.9824917
+                    },
+                    {
+                        "lat": 14.6037637,
+                        "lon": 120.9823906
+                    },
+                    {
+                        "lat": 14.603816,
+                        "lon": 120.9819692
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 774949162,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.603816,
+                        "lon": 120.9819692
+                    },
+                    {
+                        "lat": 14.6038307,
+                        "lon": 120.9818701
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 774949165,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6038307,
+                        "lon": 120.9818701
+                    },
+                    {
+                        "lat": 14.6039226,
+                        "lon": 120.9811587
+                    },
+                    {
+                        "lat": 14.6039682,
+                        "lon": 120.9807618
+                    },
+                    {
+                        "lat": 14.6039803,
+                        "lon": 120.9806179
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 795473374,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6039803,
+                        "lon": 120.9806179
+                    },
+                    {
+                        "lat": 14.6040386,
+                        "lon": 120.9802725
+                    },
+                    {
+                        "lat": 14.6041522,
+                        "lon": 120.9799947
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 833362287,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6041522,
+                        "lon": 120.9799947
+                    },
+                    {
+                        "lat": 14.6043324,
+                        "lon": 120.9795087
+                    },
+                    {
+                        "lat": 14.604378,
+                        "lon": 120.9793889
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 1072020720,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.604378,
+                        "lon": 120.9793889
+                    },
+                    {
+                        "lat": 14.6044203,
+                        "lon": 120.9792848
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 150158645,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6044203,
+                        "lon": 120.9792848
+                    },
+                    {
+                        "lat": 14.6045851,
+                        "lon": 120.9788763
+                    },
+                    {
+                        "lat": 14.6048122,
+                        "lon": 120.9782898
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 809883216,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6048122,
+                        "lon": 120.9782898
+                    },
+                    {
+                        "lat": 14.6048712,
+                        "lon": 120.9781322
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 809883215,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6048712,
+                        "lon": 120.9781322
+                    },
+                    {
+                        "lat": 14.6050769,
+                        "lon": 120.9776065
+                    },
+                    {
+                        "lat": 14.6053388,
+                        "lon": 120.9769244
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 1083811183,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6053388,
+                        "lon": 120.9769244
+                    },
+                    {
+                        "lat": 14.6054587,
+                        "lon": 120.9766053
+                    },
+                    {
+                        "lat": 14.6056716,
+                        "lon": 120.9760466
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 704477923,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6056716,
+                        "lon": 120.9760466
+                    },
+                    {
+                        "lat": 14.6057481,
+                        "lon": 120.9758412
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 907189370,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6057481,
+                        "lon": 120.9758412
+                    },
+                    {
+                        "lat": 14.6060255,
+                        "lon": 120.9751401
+                    },
+                    {
+                        "lat": 14.6061245,
+                        "lon": 120.9748775
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 1067692182,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6061245,
+                        "lon": 120.9748775
+                    },
+                    {
+                        "lat": 14.6063336,
+                        "lon": 120.9742926
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 1302144011,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6063336,
+                        "lon": 120.9742926
+                    },
+                    {
+                        "lat": 14.6064733,
+                        "lon": 120.9739067
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 1067692181,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6064733,
+                        "lon": 120.9739067
+                    },
+                    {
+                        "lat": 14.6066217,
+                        "lon": 120.9734967
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 103499338,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6066217,
+                        "lon": 120.9734967
+                    },
+                    {
+                        "lat": 14.606629,
+                        "lon": 120.9733234
+                    },
+                    {
+                        "lat": 14.6064985,
+                        "lon": 120.9727051
+                    },
+                    {
+                        "lat": 14.6063619,
+                        "lon": 120.97212
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 1067692180,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6063619,
+                        "lon": 120.97212
+                    },
+                    {
+                        "lat": 14.60619,
+                        "lon": 120.971411
+                    },
+                    {
+                        "lat": 14.6061447,
+                        "lon": 120.9712508
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 424276548,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6061447,
+                        "lon": 120.9712508
+                    },
+                    {
+                        "lat": 14.6060559,
+                        "lon": 120.9709528
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 424276549,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6060559,
+                        "lon": 120.9709528
+                    },
+                    {
+                        "lat": 14.605971,
+                        "lon": 120.9706795
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 424276550,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.605971,
+                        "lon": 120.9706795
+                    },
+                    {
+                        "lat": 14.6058164,
+                        "lon": 120.9702511
+                    }
+                ]
+            },
+            {
+                "type": "way",
+                "ref": 820063563,
+                "role": "",
+                "geometry": [
+                    {
+                        "lat": 14.6058164,
+                        "lon": 120.9702511
+                    },
+                    {
+                        "lat": 14.6064977,
+                        "lon": 120.969918
+                    }
+                ]
+            }
+        ],
+        "tags": {
+            "from": "Gastambide",
+            "name": "Jeepney Route T318: Gastambide \u2192 Divisoria via Morayta",
+            "network": "LTFRB PUJ",
+            "network:wikidata": "Q6483998",
+            "public_transport:version": "2",
+            "ref": "T318",
+            "roundtrip": "yes",
+            "route": "bus",
+            "source": "LTFRB Memorandum Circular 2020-026",
+            "to": "Divisoria",
+            "type": "route"
+        }
+    }
+]

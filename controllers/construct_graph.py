@@ -2,6 +2,29 @@ import osmnx as ox
 import folium
 import numpy as np
 
+legend_html = """
+    <div style="
+        position: absolute;
+        bottom: 100px;
+        left: 50px;
+        width: 250px;
+        height: 300px;
+        background-color: white;
+        z-index:9999;
+        font-size:24px;
+        border-radius: 5px;
+        padding: 10px;
+        box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    ">
+        <b>Legend</b><br>
+        School <i style="background:blue; width:20px; height:20px; display:inline-block;"></i><br>
+        Route <i style="background:red; width:70px; height:10px; display:inline-block;"></i><br>
+        Central Node <i style="background:yellow; width:20px; height:20px; border-radius:100%; display:inline-block;"></i><br>
+        Path <i style="background:blue; width:50px; height:5px; display:inline-block;"></i><br>
+        Junction <i style="background:purple; width:10px; height:10px; border-radius:100%; display:inline-block;"></i><br>
+    </div>
+    """
+
 
 def construct_graph(
     nodes, edges, subgraphs, landmarks, terminal_nodes, route, filename
@@ -34,6 +57,7 @@ def construct_graph(
                 """
                 ),
             ).add_to(base_map)
+
     landmarks_map = landmarks.explore(
         m=base_map,
         color="blue",
@@ -67,7 +91,7 @@ def construct_graph(
         tooltip=["osmid", "street_count"],
         popup=False,
     )
-
+    catchment_map.get_root().html.add_child(folium.Element(legend_html))
     catchment_map.save(f"{filename}.html")
 
 

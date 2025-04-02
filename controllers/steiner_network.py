@@ -34,7 +34,7 @@ def steiner_network(graph, nodes, edges, terminal_nodes):
         for key, value in sc.items():
             C = C + value
             pairs.append(key)
-            if (float(C) / float(p)) < float(d):
+            if (float(C) / float(p)) <= float(d):
                 B = {}
                 d = float(C) / float(p)
                 B[node_u, node_v] = pairs
@@ -55,7 +55,7 @@ def steiner_network(graph, nodes, edges, terminal_nodes):
     print("=================")
     print(total_distance)
     print("=================")
-    with open("routes_station.json", "w") as file:
+    with open("routes_school.json", "w") as file:
         json.dump(list(shortest_paths), file, indent=4)
     path_check(edges, list(shortest_paths))
     return route
@@ -63,7 +63,7 @@ def steiner_network(graph, nodes, edges, terminal_nodes):
 
 def preload_steiner_network(edges):
     shortest_paths = []
-    with open("routes_modified.json", "r") as file:
+    with open("routes_school_sampaloc.json", "r") as file:
         shortest_paths = json.load(file)  # Converts JSON back to a Python list
     route = edges[edges.index.isin(list(shortest_paths))]
     return route

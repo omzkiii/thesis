@@ -7,9 +7,7 @@ def select_subgraph(graph, nodes, landmarks):
     origin_nodes = {}
     dest_nodes = {}
     nodes = nodes.to_crs(epsg=3857)
-    print("DONE CONVERTING")
     landmarks = landmarks.to_crs(epsg=3857)
-    print("DONE CONVERTING")
     for _, landmark in landmarks.iterrows():
         print(landmark)
         service_nodes = []
@@ -23,6 +21,7 @@ def select_subgraph(graph, nodes, landmarks):
             dist = dist + 10
         for service in nodes[landmark_nodes].iterrows():
             service_nodes.append(service[0])
+
             for node in graph.nodes:
                 try:
                     catchment = nx.shortest_path_length(
@@ -38,6 +37,12 @@ def select_subgraph(graph, nodes, landmarks):
         dest_nodes = [node for node in catchment_area if node not in service_nodes]
         subraph = graph.subgraph(catchment_area).copy()
         subgraphs[landmark["name"]] = (subraph, origin_nodes, dest_nodes)
+
+        print("========================")
+        print(dest_nodes)
+        print(origin_nodes)
+        print(catchment_area)
+        print("========================")
     return subgraphs
 
 

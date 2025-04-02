@@ -46,7 +46,7 @@ python controllers/main.py
 
 This will simulate **500 iterations** of ODTC and TC across a given area.
 
-####  Usage:
+#### Usage:
 - If you have a **place name**:
 ```python
 evaluation("Quiapo, Manila", None, ["school", "college", "institute", "university"])
@@ -115,7 +115,7 @@ python ./main.py
 
 The program will output an HTML file.
 
-Since the algorthim takes a long time to process the program will used the generated HTML if there is any.
+Since the algorithm takes a long time to process the program will used the generated HTML if there is any.
 
 To generate a new one simply delete the HTML file of the desired location.
 
