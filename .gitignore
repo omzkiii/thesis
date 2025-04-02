@@ -2,4 +2,4 @@ env/
 Session.vim
 controllers/cache
 controllers/__pycache__
-cache
+cache/
