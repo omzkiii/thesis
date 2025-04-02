@@ -17,7 +17,7 @@ legend_html = """
         box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
     ">
         <b>Legend</b><br>
-        School <i style="background:blue; width:20px; height:20px; display:inline-block;"></i><br>
+        Landmark <i style="background:blue; width:20px; height:20px; display:inline-block;"></i><br>
         Route <i style="background:red; width:70px; height:10px; display:inline-block;"></i><br>
         Central Node <i style="background:yellow; width:20px; height:20px; border-radius:100%; display:inline-block;"></i><br>
         Path <i style="background:blue; width:50px; height:5px; display:inline-block;"></i><br>
