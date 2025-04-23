@@ -12,13 +12,13 @@ def generate(place_name, amenities):
     filename = f"{place_name} - {amenities[0]}"
     graph, nodes, edges, landmarks = get_graph(place_name, amenities=amenities)
     subgraphs = select_subgraph(graph, nodes, landmarks)
-    terminal_nodes = odtc(subgraphs)
+    # terminal_nodes = odtc(subgraphs)
     # route = steiner_network(graph, nodes, edges, terminal_nodes[0])
-    route = preload_steiner_network(edges)
+    # route = preload_steiner_network(edges)
 
-    construct_graph(
-        nodes, edges, subgraphs, landmarks, terminal_nodes[0], route, filename
-    )
+    # construct_graph(
+    #     nodes, edges, subgraphs, landmarks, terminal_nodes[0], route, filename
+    # )
 
 
 def evaluation(graph_type, location, distance, amenities):

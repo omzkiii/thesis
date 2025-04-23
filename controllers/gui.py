@@ -1,6 +1,13 @@
 import sys
 import os
-from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QComboBox, QPushButton
+from PyQt5.QtWidgets import (
+    QApplication,
+    QWidget,
+    QVBoxLayout,
+    QComboBox,
+    QPushButton,
+    QLabel,
+)
 from PyQt5.QtWebEngineWidgets import QWebEngineView
 from PyQt5.QtCore import QUrl
 
@@ -39,11 +46,13 @@ class MainApp(QWidget):
         self.generate_func = generate_func
 
         # Dropdown to select an HTML file
+        layout.addWidget(QLabel("Select Place:"))
         self.place_dropdown = QComboBox()
         self.place_dropdown.addItems(
             ["Sampaloc, Manila", "Quiapo, Manila", "Tondo, Manila"]
         )
 
+        layout.addWidget(QLabel("Select Amenities:"))
         self.amenity_dropdown = QComboBox()
         self.amenity_dropdown.addItems(["Schools", "Bus Stations", "Clinic"])
 

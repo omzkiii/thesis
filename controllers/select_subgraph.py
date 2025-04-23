@@ -8,7 +8,9 @@ def select_subgraph(graph, nodes, landmarks):
     dest_nodes = {}
     nodes = nodes.to_crs(epsg=3857)
     landmarks = landmarks.to_crs(epsg=3857)
+    no_of_landmarks = 0
     for _, landmark in landmarks.iterrows():
+        no_of_landmarks += 1
         print(landmark)
         service_nodes = []
         catchment_area = []
@@ -43,6 +45,13 @@ def select_subgraph(graph, nodes, landmarks):
         print(origin_nodes)
         print(catchment_area)
         print("========================")
+    print("========================")
+    print("========================")
+    print("========================")
+    print(f"NUMBER OF LANDMARKS: {no_of_landmarks}")
+    print("========================")
+    print("========================")
+    print("========================")
     return subgraphs
 
 
