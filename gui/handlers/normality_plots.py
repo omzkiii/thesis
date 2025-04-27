@@ -82,7 +82,7 @@ class NormalityPlotNavigator:
 
 def generate_normality_plots():
     """Creates a Tkinter window for normality test navigation."""
-    runtimes_by_type = read_runtimes_from_csv("execution_times.csv")
+    runtimes_by_type = read_runtimes_from_csv("execution_times2.csv")
 
     if not runtimes_by_type:
         print("No runtime data found!")

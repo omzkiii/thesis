@@ -88,7 +88,7 @@ if __name__ == "__main__":
                 print("Please enter a valid number for distance.")
 
     # Run settings
-    total_runs = 1
+    total_runs = 500
     successful_runs = 0
     print(f"\nRunning evaluation for {total_runs} runs...")
 

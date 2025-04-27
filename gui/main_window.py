@@ -52,7 +52,7 @@ def analyze_runtime_window():
 def plot_runtime_window():
     """Creates GUI window with box plots and bar charts for runtime analysis."""
     try:
-        csv_file_path = "execution_times.csv"
+        csv_file_path = "execution_times2.csv"
         df = pd.read_csv(csv_file_path)
         df.columns = df.columns.str.strip()
         df = df.rename(
@@ -109,7 +109,7 @@ def plot_runtime_window():
         )
 
     except FileNotFoundError:
-        print("CSV file not found. Make sure execution_times.csv is available.")
+        print("CSV file not found. Make sure execution_times2.csv is available.")
     except Exception as e:
         print(f"Error generating plot: {e}")
 

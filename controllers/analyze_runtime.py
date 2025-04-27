@@ -5,7 +5,7 @@ import csv
 from collections import defaultdict
 from scipy.stats import normaltest, ttest_rel, wilcoxon, skew, kurtosis
 
-def read_runtimes_from_csv(filename="execution_times.csv"):
+def read_runtimes_from_csv(filename="execution_times2.csv"):
     """
     Reads ODTC and TC runtimes from CSV file and organizes them by graph type.
     Returns:
@@ -27,7 +27,7 @@ def read_runtimes_from_csv(filename="execution_times.csv"):
 
     return runtimes  # Dictionary grouped by graph type
 
-def analyze_runtime(filename="execution_times.csv"):
+def analyze_runtime(filename="execution_times2.csv"):
     """
     Analyzes runtime and performs statistical tests separately for each graph type.
     Returns:
