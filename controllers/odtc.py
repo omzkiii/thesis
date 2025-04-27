@@ -5,7 +5,7 @@ import time
 from decimal import Decimal
 
 
-def get_central_node(graph, origin_nodes, dest_nodes):
+def get_central_node(graph, nodes, landmark):
     """
     Selects the central node in the graph using Origin Destination TC
 
@@ -27,6 +27,20 @@ def get_central_node(graph, origin_nodes, dest_nodes):
 
     # for analyzing runtime
     start = time.time()
+
+    dest_nodes = []
+    dist = 40
+    while not dest_nodes:
+        dest_nodes = nodes[
+            nodes["geometry"].apply(
+                lambda node: dist >= node.distance(landmark["geometry"]) >= 0
+            )
+        ].index.tolist()
+        dist = dist + 10
+
+    origin_nodes = nodes[
+        nodes["geometry"].apply(lambda node: node.distance(landmark["geometry"]) > dist)
+    ].index.tolist()
 
     for origin in origin_nodes:
         for dest in dest_nodes:
@@ -55,7 +69,7 @@ def get_central_node(graph, origin_nodes, dest_nodes):
     central_node = [k for k, v in v_ratios.items() if v == max_centrality]
     central_node = central_node[0]
 
-    return central_node
+    return central_node, len(origin_nodes), len(dest_nodes)
 
 
 def get_leafnodes(G):
@@ -95,32 +109,25 @@ def path_cost(paths, beta_value):
 
 def odtc(subgraphs):
     central_nodes = set()
-    origin_nodes = set()
-    dest_nodes = set()
+    origin_nodes = 0
+    dest_nodes = 0
     total_odtc_nodes = 0
     start_time = time.time()
     for key, values in subgraphs.items():
-        central_node = get_central_node(values[0], values[1], values[2])
-        print("=====================")
-        print(key)
-        print("origin: ", values[1])
-        print("dest: ", values[2])
-        print("central: ", central_node)
-        print("=====================\n\n")
+        central_node, no_origin_nodes, no_dest_nodes = get_central_node(
+            values[0], values[1], values[2]
+        )
         central_nodes.add(central_node)
-        origin_nodes.update(values[1])
-        dest_nodes.update(values[2])
+        origin_nodes += no_origin_nodes
+        dest_nodes += no_dest_nodes
         total_odtc_nodes += values[0].number_of_nodes()
     total_time = time.time() - start_time
-    print(central_nodes)
-    total_origin_nodes = len(origin_nodes)
-    total_dest_nodes = len(dest_nodes)
     return (
         central_nodes,
         total_time,
         len(central_nodes),
-        total_origin_nodes,
-        total_dest_nodes,
+        origin_nodes,
+        dest_nodes,
         total_odtc_nodes,
     )
 
