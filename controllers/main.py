@@ -1,11 +1,11 @@
-from .get_graph import get_graph
-from .construct_graph import construct_graph
-from .runtime import runtime
-from .odtc import odtc
-from .select_subgraph import select_subgraph
-from .steiner_network import steiner_network
-from .tc import tc
-from .steiner_network import preload_steiner_network
+from get_graph import get_graph
+from construct_graph import construct_graph
+from runtime import runtime
+from odtc import odtc
+from select_subgraph import select_subgraph
+from steiner_network import steiner_network
+from tc import tc
+from steiner_network import preload_steiner_network
 
 
 def generate(place_name, amenities):
@@ -73,7 +73,7 @@ if __name__ == "__main__":
     otherwise use the coordinates below of it
     """
 
-    graph_type = "Ring"
+    graph_type = "Scale-free"
     # evaluation("Quiapo, Manila", None, ["school", "college", "institute", "university"])
     coordinates = (14.6514, 121.0497)  # Latitude, Longitude
     distance_meters = 2000
@@ -89,7 +89,7 @@ if __name__ == "__main__":
     for run_num in range(1, total_runs + 1):
         print(f"\n=== Run {run_num}/{total_runs} ===")
         try:
-            # evaluation("Quiapo, Manila", None, ["school", "college", "institute", "university"])
+            #evaluation(graph_type, "Sampaloc, Manila", None, ["school", "college", "institute", "university"])
             evaluation(
                 graph_type,
                 coordinates,

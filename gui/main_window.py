@@ -52,7 +52,7 @@ def analyze_runtime_window():
 def plot_runtime_window():
     """Creates GUI window with box plots and bar charts for runtime analysis."""
     try:
-        csv_file_path = "execution_times.csv"
+        csv_file_path = "execution_times_rev.csv"
         df = pd.read_csv(csv_file_path)
         df.columns = df.columns.str.strip()
         df = df.rename(
