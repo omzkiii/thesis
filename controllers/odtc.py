@@ -3,6 +3,7 @@ import math
 import itertools
 import time
 from decimal import Decimal
+from shapely.ops import nearest_points
 
 
 def get_central_node(graph, nodes, landmark):
@@ -28,15 +29,33 @@ def get_central_node(graph, nodes, landmark):
     # for analyzing runtime
     start = time.time()
 
-    dest_nodes = []
-    dist = 40
-    while not dest_nodes:
-        dest_nodes = nodes[
-            nodes["geometry"].apply(
-                lambda node: dist >= node.distance(landmark["geometry"]) >= 0
-            )
-        ].index.tolist()
-        dist = dist + 10
+    # dest_nodes = []
+    # dist = 40
+    # while not dest_nodes:
+    #     dest_nodes = nodes[
+    #         nodes["geometry"].apply(
+    #             lambda node: dist >= node.distance(landmark["geometry"]) >= 0
+    #         )
+    #     ].index.tolist()
+    #     dist = dist + 10
+    #
+    # origin_nodes = nodes[
+    #     nodes["geometry"].apply(lambda node: node.distance(landmark["geometry"]) > dist)
+    # ].index.tolist()
+
+    dest_nodes = nodes[
+        nodes["geometry"].apply(lambda node: node.distance(landmark["geometry"]) <= 40)
+    ].index.tolist()
+
+    if not dest_nodes:
+        nodes["dist"] = nodes["geometry"].apply(
+            lambda node: node.distance(landmark["geometry"])
+        )
+        nearest_idx = nodes["dist"].idxmin()
+        dest_nodes = [nearest_idx]
+        dist = nodes.loc[nearest_idx, "dist"]
+    else:
+        dist = 40
 
     origin_nodes = nodes[
         nodes["geometry"].apply(lambda node: node.distance(landmark["geometry"]) > dist)
