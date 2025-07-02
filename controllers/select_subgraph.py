@@ -35,10 +35,12 @@ def select_subgraph(graph, nodes, landmarks):
                     pass
 
         print(landmark)
+        # print(nodes)
         origin_nodes = service_nodes
         dest_nodes = [node for node in catchment_area if node not in service_nodes]
         subraph = graph.subgraph(catchment_area).copy()
-        subgraphs[landmark["name"]] = (subraph, origin_nodes, dest_nodes)
+        sub_nodes = nodes[nodes.index.isin(catchment_area)]
+        subgraphs[landmark["name"]] = (subraph, sub_nodes, landmark)
 
         print("========================")
         print(dest_nodes)

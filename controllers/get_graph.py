@@ -27,7 +27,6 @@ def get_graph(location, distance=None, amenities=None):
             location,
             tags={"amenity": amenities} if amenities else {},
         )
-
     elif (
         isinstance(location, tuple) and len(location) == 2
     ):  # If location is coordinates (lat, lon)

@@ -5,6 +5,7 @@ import csv
 from collections import defaultdict
 from scipy.stats import normaltest, ttest_rel, wilcoxon, skew, kurtosis
 
+
 def read_runtimes_from_csv(filename="execution_times.csv"):
     """
     Reads ODTC and TC runtimes from CSV file and organizes them by graph type.
@@ -23,9 +24,12 @@ def read_runtimes_from_csv(filename="execution_times.csv"):
                 odtc_runtimes.append(float(row[3]))  # ODTC runtime
                 tc_runtimes.append(float(row[8]))  # TC runtime
     except FileNotFoundError:
-        raise FileNotFoundError(f"Runtime data file {filename} not found. Run evaluations first.")
+        raise FileNotFoundError(
+            f"Runtime data file {filename} not found. Run evaluations first."
+        )
 
     return runtimes  # Dictionary grouped by graph type
+
 
 def analyze_runtime(filename="execution_times.csv"):
     """
@@ -48,11 +52,17 @@ def analyze_runtime(filename="execution_times.csv"):
         tc_kurtosis = kurtosis(tc_runtimes)
 
         # Perform normality tests using D'Agostino and Pearson's test
-        odtc_p_value = normaltest(odtc_runtimes).pvalue if len(odtc_runtimes) >= 3 else None
+        odtc_p_value = (
+            normaltest(odtc_runtimes).pvalue if len(odtc_runtimes) >= 3 else None
+        )
         tc_p_value = normaltest(tc_runtimes).pvalue if len(tc_runtimes) >= 3 else None
 
-        odtc_normal = odtc_p_value is not None and odtc_p_value > 0.05  # True if ODTC is normally distributed
-        tc_normal = tc_p_value is not None and tc_p_value > 0.05  # True if TC is normally distributed
+        odtc_normal = (
+            odtc_p_value is not None and odtc_p_value > 0.05
+        )  # True if ODTC is normally distributed
+        tc_normal = (
+            tc_p_value is not None and tc_p_value > 0.05
+        )  # True if TC is normally distributed
 
         # Choose the correct statistical test per graph type
         if odtc_normal and tc_normal:
@@ -82,6 +92,7 @@ def analyze_runtime(filename="execution_times.csv"):
 
     return results  # Dictionary with results for each graph type
 
+
 def interpret_skewness(value):
     """Returns a textual interpretation of skewness."""
     if value < -0.5:
@@ -91,6 +102,7 @@ def interpret_skewness(value):
     else:
         return "Approximately Symmetrical"
 
+
 def interpret_kurtosis(value):
     """Returns a textual interpretation of kurtosis."""
     if value < 3:
@@ -99,6 +111,7 @@ def interpret_kurtosis(value):
         return "Heavy-Tailed (Leptokurtic)"
     else:
         return "Normal Tailed (Mesokurtic)"
+
 
 def show_results():
     try:
@@ -119,8 +132,12 @@ def show_results():
             print(f" - TC: {interpret_kurtosis(results['tc_kurtosis'])}")
 
             print(f"Normality Test (D'Agostino-Pearson) Results:")
-            print(f" - ODTC p-value: {results['odtc_p_value']} {'(Normal)' if results['odtc_normal'] else '(Not Normal)'}")
-            print(f" - TC p-value: {results['tc_p_value']} {'(Normal)' if results['tc_normal'] else '(Not Normal)'}")
+            print(
+                f" - ODTC p-value: {results['odtc_p_value']} {'(Normal)' if results['odtc_normal'] else '(Not Normal)'}"
+            )
+            print(
+                f" - TC p-value: {results['tc_p_value']} {'(Normal)' if results['tc_normal'] else '(Not Normal)'}"
+            )
 
             print(f"Statistical test used: {results['test_used']}")
             print(f"P-value: {results['p_value']}")
@@ -132,6 +149,7 @@ def show_results():
 
     except FileNotFoundError:
         print("No data found. Run main.py first!")
+
 
 if __name__ == "__main__":
     show_results()
