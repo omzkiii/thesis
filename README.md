@@ -122,4 +122,7 @@ To generate a new one simply delete the HTML file of the desired location.
 The HTML files are named as "app/{location} - {amenities}.html"
 
 
+# Contributions
+The `/logs` directory contains the edit history of all documents related to this thesis.
+
 
